@@ -39,3 +39,4 @@ Módulo completo para **Foundry VTT (v12 a v14+)** e sistema **D&D 5e (3.x e 4.x
 
 - Baseado nas regras do **Kibbles' Crafting Guide** por KibblesTasty.
 - Desenvolvido para Foundry VTT por **Lopes** ([NeroHeiser](https://github.com/NeroHeiser)).
+

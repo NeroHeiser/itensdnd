@@ -213,3 +213,4 @@ export class CraftingWorkshopApp extends BaseApplication {
     this.render();
   }
 }
+

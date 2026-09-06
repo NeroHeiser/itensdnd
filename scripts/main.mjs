@@ -126,3 +126,4 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
     }
   });
 });
+
