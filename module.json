@@ -93,6 +93,12 @@
     "itensdnd": {
       "version": "1.0.0"
     }
-  }
+  },
+  "url": "https://github.com/NeroHeiser/itensdnd",
+  "manifest": "https://raw.githubusercontent.com/NeroHeiser/itensdnd/main/module.json",
+  "download": "https://github.com/NeroHeiser/itensdnd/archive/refs/heads/main.zip",
+  "readme": "https://github.com/NeroHeiser/itensdnd/blob/main/README.md",
+  "bugs": "https://github.com/NeroHeiser/itensdnd/issues"
 }
+
 
