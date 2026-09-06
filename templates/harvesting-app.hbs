@@ -1,0 +1,65 @@
+<div class="itensdnd-harvesting-container flexcol">
+  <header class="harvest-header flexcol">
+    <h2><i class="fas fa-paw"></i> {{localize "ITENSDND.Harvesting.Title"}}</h2>
+    <p class="subtitle">Extraia matérias-primas, reagentes e essências de monstros derrotados com base no Kibbles' Crafting Guide.</p>
+  </header>
+
+  <div class="harvest-selectors flexcol">
+    <!-- Colhedor -->
+    <div class="form-group flexrow">
+      <label><i class="fas fa-user"></i> Personagem Colhedor:</label>
+      <select name="selectedHarvester" data-action="selectHarvester">
+        {{#each characters}}
+          <option value="{{this.id}}" {{#if (eq this.id ../harvester.id)}}selected{{/if}}>{{this.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <!-- Alvo -->
+    <div class="form-group flexrow">
+      <label><i class="fas fa-skull"></i> Criatura Alvo:</label>
+      <select name="selectedTarget" data-action="selectTarget">
+        {{#each targets}}
+          <option value="{{this.id}}" {{#if (eq this.id ../target.id)}}selected{{/if}}>{{this.name}} (ND {{this.system.details.cr}})</option>
+        {{else}}
+          <option value="">Nenhuma criatura em cena</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+
+  {{#if target}}
+    <div class="target-card flexrow">
+      <img src="{{target.img}}" width="64" height="64" class="target-img"/>
+      <div class="target-details flexcol">
+        <h3>{{target.name}}</h3>
+        <div class="tags flexrow">
+          <span class="badge cr-badge">ND {{targetCr}}</span>
+          <span class="badge type-badge">{{targetType}}</span>
+        </div>
+        <div class="check-info">
+          {{#if isRemnants}}
+            <span class="check-remnants"><i class="fas fa-sparkles"></i> {{typeInfo.label}}</span>
+          {{else}}
+            <span><strong>Teste Exigido:</strong> {{typeInfo.label}} (CD {{dc}})</span>
+            <span class="harvester-mod">Modificador do Colhedor: {{#if (gte harvesterSkillMod 0)}}+{{/if}}{{harvesterSkillMod}}</span>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <footer class="harvest-actions flexrow">
+      <button type="button" class="harvest-roll-btn" data-action="rollHarvest">
+        {{#if isRemnants}}
+          <i class="fas fa-hand-holding-magic"></i> {{localize "ITENSDND.Harvesting.RollRemnants"}}
+        {{else}}
+          <i class="fas fa-dice-d20"></i> {{localize "ITENSDND.Harvesting.RollButton"}}
+        {{/if}}
+      </button>
+    </footer>
+  {{else}}
+    <div class="no-target-box">
+      <p>{{localize "ITENSDND.Harvesting.NoTarget"}}</p>
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,97 @@
+{
+  "id": "itensdnd",
+  "title": "Itens & Sistema de Crafting (D&D 5e)",
+  "description": "Sistema completo de criação de itens, alquimia, forja, encantamento, colheita de criaturas (harvesting) e coleta baseado no Kibbles' Crafting Guide para o Foundry VTT (v12-v14) e D&D 5e.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12",
+    "maximum": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0"
+        }
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Lopes",
+      "url": "https://github.com/NeroHeiser"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/itensdnd.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "crafting-materials",
+      "label": "Materiais de Crafting",
+      "path": "packs/crafting-materials",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "crafting-recipes",
+      "label": "Receitas de Crafting",
+      "path": "packs/crafting-recipes",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "crafting-tables",
+      "label": "Tabelas de Colheita e Coleta",
+      "path": "packs/crafting-tables",
+      "type": "RollTable",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "crafting-rules",
+      "label": "Regras de Crafting e Colheita",
+      "path": "packs/crafting-rules",
+      "type": "JournalEntry",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "flags": {
+    "itensdnd": {
+      "version": "1.0.0"
+    }
+  }
+}

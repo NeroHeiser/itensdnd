@@ -1,0 +1,1301 @@
+[
+  {
+    "_id": "d7482e5eccb2bb90",
+    "name": "Recipe: Potion of Healing",
+    "type": "loot",
+    "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Potion of Healing</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 13 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>3x Common Curative Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Potion of Healing (50 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-potion-healing",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-curative-common",
+            "quantity": 3
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 13,
+        "resultItem": "Potion of Healing",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "4e94512af512ce9f",
+    "name": "Recipe: Potion of Climbing",
+    "type": "loot",
+    "img": "icons/consumables/potions/potion-tube-corked-brown.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Potion of Climbing</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Common Reactive Reagent</li><li>1x Common Poisonous Reagent</li><li>1x Uncommon Reactive Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Potion of Climbing (85 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-potion-climbing",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-reactive-common",
+            "quantity": 1
+          },
+          {
+            "key": "reagent-poisonous-common",
+            "quantity": 1
+          },
+          {
+            "key": "reagent-reactive-uncommon",
+            "quantity": 1
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 14,
+        "resultItem": "Potion of Climbing",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "d20cbe174045b5cc",
+    "name": "Recipe: Potion of Greater Healing",
+    "type": "loot",
+    "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Potion of Greater Healing</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 15 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Common Curative Reagent</li><li>2x Uncommon Curative Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Potion of Greater Healing (150 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-potion-greater-healing",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-curative-common",
+            "quantity": 1
+          },
+          {
+            "key": "reagent-curative-uncommon",
+            "quantity": 2
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 15,
+        "resultItem": "Potion of Greater Healing",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "b2c46b2c0b437b48",
+    "name": "Recipe: Alchemist's Fire",
+    "type": "loot",
+    "img": "icons/consumables/potions/bottle-bulb-corked-fire-orange.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Alchemist's Fire</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 13 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Common Reactive Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Alchemist's Fire (50 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-alchemists-fire",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-reactive-common",
+            "quantity": 2
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 13,
+        "resultItem": "Alchemist's Fire",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "4cc4f3345e33dac6",
+    "name": "Recipe: Acid Vial",
+    "type": "loot",
+    "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Acid Vial</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Common Reactive Reagent</li><li>1x Common Poisonous Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Acid Vial (25 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-acid-vial",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-reactive-common",
+            "quantity": 1
+          },
+          {
+            "key": "reagent-poisonous-common",
+            "quantity": 1
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 12,
+        "resultItem": "Acid Vial",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "943b41b44d50accf",
+    "name": "Recipe: Antitoxin",
+    "type": "loot",
+    "img": "icons/consumables/potions/potion-tube-corked-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Antitoxin</h3>\n<p><strong>Profissão:</strong> Alchemy | <strong>CD:</strong> 13 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Common Curative Reagent</li><li>1x Common Poisonous Reagent</li><li>1x Glass Vial</li></ul>\n<p><strong>Resultado:</strong> Antitoxin (50 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-antitoxin",
+        "profession": "alchemy",
+        "tool": "alchemist",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-curative-common",
+            "quantity": 2
+          },
+          {
+            "key": "reagent-poisonous-common",
+            "quantity": 1
+          },
+          {
+            "key": "glass-vial",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 13,
+        "resultItem": "Antitoxin",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "93ed7156f86f6bf9",
+    "name": "Recipe: Longsword",
+    "type": "loot",
+    "img": "icons/weapons/swords/sword-broad-steel.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Longsword</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 4 horas (2 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Steel Ingot</li><li>1x Leather Scraps</li></ul>\n<p><strong>Resultado:</strong> Longsword (15 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-longsword",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-steel",
+            "quantity": 2
+          },
+          {
+            "key": "leather-scraps",
+            "quantity": 1
+          }
+        ],
+        "time": 4,
+        "checks": 2,
+        "dc": 12,
+        "resultItem": "Longsword",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "e62953c7ce1b045c",
+    "name": "Recipe: Greatsword",
+    "type": "loot",
+    "img": "icons/weapons/swords/greatsword-crossguard-steel.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Greatsword</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 13 | <strong>Tempo:</strong> 6 horas (3 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>4x Steel Ingot</li><li>2x Leather Scraps</li></ul>\n<p><strong>Resultado:</strong> Greatsword (50 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-greatsword",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-steel",
+            "quantity": 4
+          },
+          {
+            "key": "leather-scraps",
+            "quantity": 2
+          }
+        ],
+        "time": 6,
+        "checks": 3,
+        "dc": 13,
+        "resultItem": "Greatsword",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "2a0074f765f4a8e8",
+    "name": "Recipe: Steel Shield",
+    "type": "loot",
+    "img": "icons/equipment/shield/heater-steel.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Steel Shield</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 11 | <strong>Tempo:</strong> 4 horas (2 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Steel Ingot</li><li>1x Leather Scraps</li></ul>\n<p><strong>Resultado:</strong> Shield (10 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-shield-steel",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-steel",
+            "quantity": 2
+          },
+          {
+            "key": "leather-scraps",
+            "quantity": 1
+          }
+        ],
+        "time": 4,
+        "checks": 2,
+        "dc": 11,
+        "resultItem": "Shield",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "4d7bad7c98be13d4",
+    "name": "Recipe: Breastplate",
+    "type": "loot",
+    "img": "icons/equipment/chest/breastplate-steel.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Breastplate</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 14 horas (7 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>6x Steel Ingot</li><li>2x Common Leather</li></ul>\n<p><strong>Resultado:</strong> Breastplate (400 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-breastplate",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-steel",
+            "quantity": 6
+          },
+          {
+            "key": "leather-common",
+            "quantity": 2
+          }
+        ],
+        "time": 14,
+        "checks": 7,
+        "dc": 14,
+        "resultItem": "Breastplate",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "18c2d09f2c7e62a6",
+    "name": "Recipe: Plate Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/breastplate-metal-scaled-grey.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Plate Armor</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 16 | <strong>Tempo:</strong> 30 horas (15 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>16x Steel Ingot</li><li>4x Common Leather</li></ul>\n<p><strong>Resultado:</strong> Plate Armor (1500 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-plate-armor",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-steel",
+            "quantity": 16
+          },
+          {
+            "key": "leather-common",
+            "quantity": 4
+          }
+        ],
+        "time": 30,
+        "checks": 15,
+        "dc": 16,
+        "resultItem": "Plate Armor",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "518d05b4fee044f5",
+    "name": "Enchantment: +1 Weapon",
+    "type": "loot",
+    "img": "icons/weapons/swords/sword-winged-glow-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Enchantment: +1 Weapon</h3>\n<p><strong>Profissão:</strong> Enchanting | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 8 horas (4 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Uncommon Arcane Essence</li><li>1x Uncommon Primal Essence</li></ul>\n<p><strong>Resultado:</strong> Weapon +1 (500 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-weapon-plus-one",
+        "profession": "enchanting",
+        "tool": "arcana",
+        "ability": [
+          "int"
+        ],
+        "materials": [
+          {
+            "key": "essence-arcane-uncommon",
+            "quantity": 1
+          },
+          {
+            "key": "essence-primal-uncommon",
+            "quantity": 1
+          }
+        ],
+        "time": 8,
+        "checks": 4,
+        "dc": 14,
+        "resultItem": "Weapon +1",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "dc8b7af8d8103cd6",
+    "name": "Enchantment: +1 Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/breastplate-engraved-gold.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Enchantment: +1 Armor</h3>\n<p><strong>Profissão:</strong> Enchanting | <strong>CD:</strong> 16 | <strong>Tempo:</strong> 12 horas (6 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Rare Arcane Essence</li><li>1x Rare Divine Essence</li></ul>\n<p><strong>Resultado:</strong> Armor +1 (1500 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-armor-plus-one",
+        "profession": "enchanting",
+        "tool": "arcana",
+        "ability": [
+          "int"
+        ],
+        "materials": [
+          {
+            "key": "essence-arcane-rare",
+            "quantity": 1
+          },
+          {
+            "key": "essence-divine-rare",
+            "quantity": 1
+          }
+        ],
+        "time": 12,
+        "checks": 6,
+        "dc": 16,
+        "resultItem": "Armor +1",
+        "rarity": "rare"
+      }
+    }
+  },
+  {
+    "_id": "674168d1c49cbd9a",
+    "name": "Recipe: Bag of Holding",
+    "type": "loot",
+    "img": "icons/containers/bags/sack-leather-brown.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Bag of Holding</h3>\n<p><strong>Profissão:</strong> Enchanting | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 6 horas (3 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Common Leather</li><li>1x Uncommon Arcane Essence</li></ul>\n<p><strong>Resultado:</strong> Bag of Holding (500 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-bag-of-holding",
+        "profession": "enchanting",
+        "tool": "arcana",
+        "ability": [
+          "int"
+        ],
+        "materials": [
+          {
+            "key": "leather-common",
+            "quantity": 2
+          },
+          {
+            "key": "essence-arcane-uncommon",
+            "quantity": 1
+          }
+        ],
+        "time": 6,
+        "checks": 3,
+        "dc": 14,
+        "resultItem": "Bag of Holding",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "538e02ca87aa6a6d",
+    "name": "Recipe: Leather Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/vest-leather-studded.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Leather Armor</h3>\n<p><strong>Profissão:</strong> Leatherworking | <strong>CD:</strong> 11 | <strong>Tempo:</strong> 4 horas (2 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Common Leather</li></ul>\n<p><strong>Resultado:</strong> Leather Armor (10 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-leather-armor",
+        "profession": "leatherworking",
+        "tool": "leatherworker",
+        "ability": [
+          "dex"
+        ],
+        "materials": [
+          {
+            "key": "leather-common",
+            "quantity": 2
+          }
+        ],
+        "time": 4,
+        "checks": 2,
+        "dc": 11,
+        "resultItem": "Leather Armor",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "8e2fe87a3f3acca4",
+    "name": "Recipe: Studded Leather Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/vest-leather-studded.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Studded Leather Armor</h3>\n<p><strong>Profissão:</strong> Leatherworking | <strong>CD:</strong> 13 | <strong>Tempo:</strong> 8 horas (4 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>3x Common Leather</li><li>2x Simple Parts</li></ul>\n<p><strong>Resultado:</strong> Studded Leather Armor (45 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-studded-leather",
+        "profession": "leatherworking",
+        "tool": "leatherworker",
+        "ability": [
+          "dex"
+        ],
+        "materials": [
+          {
+            "key": "leather-common",
+            "quantity": 3
+          },
+          {
+            "key": "parts-simple",
+            "quantity": 2
+          }
+        ],
+        "time": 8,
+        "checks": 4,
+        "dc": 13,
+        "resultItem": "Studded Leather Armor",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "1f5d8d178a491484",
+    "name": "Recipe: Hunting Trap",
+    "type": "loot",
+    "img": "icons/commodities/tech/cog-steel.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Hunting Trap</h3>\n<p><strong>Profissão:</strong> Tinkering | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Iron Ingot</li><li>2x Simple Parts</li></ul>\n<p><strong>Resultado:</strong> Hunting Trap (5 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-hunting-trap",
+        "profession": "tinkering",
+        "tool": "tinker",
+        "ability": [
+          "int"
+        ],
+        "materials": [
+          {
+            "key": "ingot-iron",
+            "quantity": 2
+          },
+          {
+            "key": "parts-simple",
+            "quantity": 2
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 12,
+        "resultItem": "Hunting Trap",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "929dea34a8acdcc7",
+    "name": "Recipe: Cantrip Spell Scroll",
+    "type": "loot",
+    "img": "icons/sundries/scrolls/scroll-bound-ribbon-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Cantrip Spell Scroll</h3>\n<p><strong>Profissão:</strong> Scrollscribing | <strong>CD:</strong> 11 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Common Magical Ink</li></ul>\n<p><strong>Resultado:</strong> Spell Scroll (Cantrip) (15 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-scroll-cantrip",
+        "profession": "scrollscribing",
+        "tool": "calligrapher",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "magical-ink-common",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 11,
+        "resultItem": "Spell Scroll (Cantrip)",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "a393da5decd8738a",
+    "name": "Recipe: 1st Level Spell Scroll",
+    "type": "loot",
+    "img": "icons/sundries/scrolls/scroll-bound-ribbon-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: 1st Level Spell Scroll</h3>\n<p><strong>Profissão:</strong> Scrollscribing | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Common Magical Ink</li></ul>\n<p><strong>Resultado:</strong> Spell Scroll (1st Level) (50 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-scroll-1st-level",
+        "profession": "scrollscribing",
+        "tool": "calligrapher",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "magical-ink-common",
+            "quantity": 2
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 12,
+        "resultItem": "Spell Scroll (1st Level)",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "e595be451d3253b0",
+    "name": "Recipe: 2nd Level Spell Scroll",
+    "type": "loot",
+    "img": "icons/sundries/scrolls/scroll-bound-ribbon-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: 2nd Level Spell Scroll</h3>\n<p><strong>Profissão:</strong> Scrollscribing | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 4 horas (2 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>2x Uncommon Magical Ink</li></ul>\n<p><strong>Resultado:</strong> Spell Scroll (2nd Level) (200 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-scroll-2nd-level",
+        "profession": "scrollscribing",
+        "tool": "calligrapher",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "magical-ink-uncommon",
+            "quantity": 2
+          }
+        ],
+        "time": 4,
+        "checks": 2,
+        "dc": 14,
+        "resultItem": "Spell Scroll (2nd Level)",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "a167794a37211fdf",
+    "name": "Recipe: 3rd Level Spell Scroll",
+    "type": "loot",
+    "img": "icons/sundries/scrolls/scroll-bound-ribbon-blue.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: 3rd Level Spell Scroll</h3>\n<p><strong>Profissão:</strong> Scrollscribing | <strong>CD:</strong> 15 | <strong>Tempo:</strong> 8 horas (4 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>4x Uncommon Magical Ink</li></ul>\n<p><strong>Resultado:</strong> Spell Scroll (3rd Level) (400 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-scroll-3rd-level",
+        "profession": "scrollscribing",
+        "tool": "calligrapher",
+        "ability": [
+          "int",
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "magical-ink-uncommon",
+            "quantity": 4
+          }
+        ],
+        "time": 8,
+        "checks": 4,
+        "dc": 15,
+        "resultItem": "Spell Scroll (3rd Level)",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "e1506e2644ac6667",
+    "name": "Recipe: Wand of the War Mage +1",
+    "type": "loot",
+    "img": "icons/weapons/wands/wand-carved-gold.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Wand of the War Mage +1</h3>\n<p><strong>Profissão:</strong> Wandwhittling | <strong>CD:</strong> 14 | <strong>Tempo:</strong> 6 horas (3 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Uncommon Arcane Essence</li><li>2x Uncommon Reactive Reagent</li></ul>\n<p><strong>Resultado:</strong> Wand of the War Mage +1 (500 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-wand-warmage-plus-one",
+        "profession": "wandwhittling",
+        "tool": "woodcarver",
+        "ability": [
+          "dex",
+          "int"
+        ],
+        "materials": [
+          {
+            "key": "essence-arcane-uncommon",
+            "quantity": 1
+          },
+          {
+            "key": "reagent-reactive-uncommon",
+            "quantity": 2
+          }
+        ],
+        "time": 6,
+        "checks": 3,
+        "dc": 14,
+        "resultItem": "Wand of the War Mage +1",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "bdb93969d0e019d9",
+    "name": "Recipe: Hearty Trail Rations",
+    "type": "loot",
+    "img": "icons/consumables/food/rations-meat-bread.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Hearty Trail Rations</h3>\n<p><strong>Profissão:</strong> Cooking | <strong>CD:</strong> 10 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Common Curative Reagent</li></ul>\n<p><strong>Resultado:</strong> Hearty Rations (5 days) (2 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-hearty-rations",
+        "profession": "cooking",
+        "tool": "cook",
+        "ability": [
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-curative-common",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 10,
+        "resultItem": "Hearty Rations (5 days)",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "a4d4371486882ae8",
+    "name": "Recipe: Invigorating Feast",
+    "type": "loot",
+    "img": "icons/consumables/food/roast-chicken.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Invigorating Feast</h3>\n<p><strong>Profissão:</strong> Cooking | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>3x Common Curative Reagent</li><li>1x Common Reactive Reagent</li></ul>\n<p><strong>Resultado:</strong> Common Feast (15 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-common-feast",
+        "profession": "cooking",
+        "tool": "cook",
+        "ability": [
+          "wis"
+        ],
+        "materials": [
+          {
+            "key": "reagent-curative-common",
+            "quantity": 3
+          },
+          {
+            "key": "reagent-reactive-common",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 12,
+        "resultItem": "Common Feast",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "34ba872950a5b34a",
+    "name": "Upgrade: Silvered Weapon",
+    "type": "loot",
+    "img": "icons/weapons/swords/sword-broad-silver.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Upgrade: Silvered Weapon</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 12 | <strong>Tempo:</strong> 2 horas (1 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>1x Silver Ingot</li></ul>\n<p><strong>Resultado:</strong> Silvered Weapon (100 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-upgrade-silvered-weapon",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-silver",
+            "quantity": 1
+          }
+        ],
+        "time": 2,
+        "checks": 1,
+        "dc": 12,
+        "resultItem": "Silvered Weapon",
+        "rarity": "common"
+      }
+    }
+  },
+  {
+    "_id": "ca3569d32f309306",
+    "name": "Recipe: Mithral Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/breastplate-sculpted-white.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Mithral Armor</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 16 | <strong>Tempo:</strong> 16 horas (8 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>4x Mithral Ingot</li><li>2x Common Leather</li></ul>\n<p><strong>Resultado:</strong> Mithral Armor (800 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-armor-mithral",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-mithral",
+            "quantity": 4
+          },
+          {
+            "key": "leather-common",
+            "quantity": 2
+          }
+        ],
+        "time": 16,
+        "checks": 8,
+        "dc": 16,
+        "resultItem": "Mithral Armor",
+        "rarity": "uncommon"
+      }
+    }
+  },
+  {
+    "_id": "52a99ebc61c5e4db",
+    "name": "Recipe: Adamantine Armor",
+    "type": "loot",
+    "img": "icons/equipment/chest/breastplate-engraved-grey.webp",
+    "system": {
+      "description": {
+        "value": "<h3>Recipe: Adamantine Armor</h3>\n<p><strong>Profissão:</strong> Blacksmithing | <strong>CD:</strong> 17 | <strong>Tempo:</strong> 20 horas (10 testes)</p>\n<p><strong>Materiais Necessários:</strong></p>\n<ul><li>6x Adamantine Ingot</li><li>2x Common Leather</li></ul>\n<p><strong>Resultado:</strong> Adamantine Armor (1200 gp)</p>",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true
+    },
+    "flags": {
+      "itensdnd": {
+        "isRecipe": true,
+        "recipeKey": "recipe-armor-adamantine",
+        "profession": "blacksmithing",
+        "tool": "smith",
+        "ability": [
+          "str"
+        ],
+        "materials": [
+          {
+            "key": "ingot-adamantine",
+            "quantity": 6
+          },
+          {
+            "key": "leather-common",
+            "quantity": 2
+          }
+        ],
+        "time": 20,
+        "checks": 10,
+        "dc": 17,
+        "resultItem": "Adamantine Armor",
+        "rarity": "uncommon"
+      }
+    }
+  }
+]

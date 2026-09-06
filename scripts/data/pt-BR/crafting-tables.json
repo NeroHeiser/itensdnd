@@ -1,0 +1,642 @@
+[
+  {
+    "_id": "4aebb7c2e7fb84db",
+    "name": "Colheita de Criaturas (ND 0–4)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Tabela de materiais e reagentes colhidos de monstros, dragões, aberrações e construtos de ND 0 a 4.</p>",
+    "results": [
+      {
+        "_id": "4c74cc08185cb7da",
+        "type": 0,
+        "text": "Nenhum componente aproveitável",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": null,
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "1371232cc2fa1249",
+        "type": 0,
+        "text": "1x Reagente Venenoso Comum",
+        "weight": 30,
+        "range": [
+          21,
+          50
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-poisonous-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "d7e6c6a2a883615d",
+        "type": 0,
+        "text": "1x Reagente Curativo Comum",
+        "weight": 20,
+        "range": [
+          51,
+          70
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "77ef024ffad6eab7",
+        "type": 0,
+        "text": "1x Reagente Reativo Comum",
+        "weight": 10,
+        "range": [
+          71,
+          80
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "9c67c03e35482e22",
+        "type": 0,
+        "text": "1x Peças Refinadas ou Couro Raro",
+        "weight": 15,
+        "range": [
+          81,
+          95
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "parts-fancy",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "87f97ce157e9b440",
+        "type": 0,
+        "text": "1x Essência Primitiva ou Arcana Comum",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-primal-common",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-0-4"
+      }
+    }
+  },
+  {
+    "_id": "3452a0f178c4e681",
+    "name": "Colheita de Criaturas (ND 5–10)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Tabela de materiais e essências colhidos de criaturas de ND 5 a 10.</p>",
+    "results": [
+      {
+        "_id": "5395aeb4c2db5a88",
+        "type": 0,
+        "text": "1x Reagente Reativo Comum",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "914891ec01e27ac1",
+        "type": 0,
+        "text": "1x Reagente Curativo Incomum",
+        "weight": 30,
+        "range": [
+          21,
+          50
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "beb55fe0f97316bb",
+        "type": 0,
+        "text": "1x Reagente Venenoso Incomum",
+        "weight": 20,
+        "range": [
+          51,
+          70
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-poisonous-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "4c7fec364ad963a7",
+        "type": 0,
+        "text": "1x Reagente Reativo Incomum",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "89f19c06bd474f50",
+        "type": 0,
+        "text": "1x Essência Incomum (Arcana/Primitiva)",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "cbaa09accf65ffa1",
+        "type": 0,
+        "text": "1x Essência Rara ou Escama Preciosa",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-rare",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-5-10"
+      }
+    }
+  },
+  {
+    "_id": "f4dcd07641ba5e92",
+    "name": "Colheita de Criaturas (ND 11–16)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Tabela de materiais raros, essências e peças esotéricas de criaturas de ND 11 a 16.</p>",
+    "results": [
+      {
+        "_id": "441d736bc5e832e7",
+        "type": 0,
+        "text": "1x Reagente Reativo Incomum",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "7b798a86159af51a",
+        "type": 0,
+        "text": "1x Reagente Curativo Raro",
+        "weight": 30,
+        "range": [
+          21,
+          50
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "f7d9b3acc9c63ce6",
+        "type": 0,
+        "text": "1x Reagente Venenoso Raro",
+        "weight": 20,
+        "range": [
+          51,
+          70
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-poisonous-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "fe187537a88eb885",
+        "type": 0,
+        "text": "1x Peças Esotéricas ou Escama de Dragão",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "parts-esoteric",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "d52bbb687baa9269",
+        "type": 0,
+        "text": "1x Essência Rara (Arcana/Divina/Primitiva)",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "8df8ca7d9932ae41",
+        "type": 0,
+        "text": "1x Essência Muito Rara",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-very-rare",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-11-16"
+      }
+    }
+  },
+  {
+    "_id": "352362a2fada279b",
+    "name": "Colheita de Criaturas Lendárias (ND 17+)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Tabela mítica de materiais de grandes dragões anciãos, arquidemônios e titãs de ND 17 ou superior.</p>",
+    "results": [
+      {
+        "_id": "caf25f463dcd3e31",
+        "type": 0,
+        "text": "1x Reagente Reativo Raro",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "2d0f9cdf51f3489b",
+        "type": 0,
+        "text": "1x Reagente Muito Raro",
+        "weight": 25,
+        "range": [
+          21,
+          45
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-very-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "fc877c74707338da",
+        "type": 0,
+        "text": "1x Essência Muito Rara",
+        "weight": 25,
+        "range": [
+          46,
+          70
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-very-rare",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "d63eda0e2a1338c8",
+        "type": 0,
+        "text": "2x Escamas de Dragão / Peças Esotéricas",
+        "weight": 20,
+        "range": [
+          71,
+          90
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "hide-dragon-scale",
+            "qty": 2
+          }
+        }
+      },
+      {
+        "_id": "154e9a95ece0703c",
+        "type": 0,
+        "text": "1x Essência Lendária (Arcana/Divina/Primitiva)",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-arcane-legendary",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-17-plus"
+      }
+    }
+  },
+  {
+    "_id": "32ea145bd3ae4adf",
+    "name": "Resíduos Mágicos (ND 0–4)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Resíduos energéticos deixados por Celestiais, Corruptores e Elementais ao serem destruídos.</p>",
+    "results": [
+      {
+        "_id": "c45a318aa479f8be",
+        "type": 0,
+        "text": "Nenhum resíduo condensado",
+        "weight": 50,
+        "range": [
+          1,
+          50
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": null,
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "2354fa7753038cd1",
+        "type": 0,
+        "text": "1x Reagente Reativo Comum",
+        "weight": 25,
+        "range": [
+          51,
+          75
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "c2dc4590b8b63047",
+        "type": 0,
+        "text": "1x Reagente Curativo ou Venenoso Comum",
+        "weight": 15,
+        "range": [
+          76,
+          90
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "571b01bf75b3953f",
+        "type": 0,
+        "text": "1x Essência Divina ou Arcana Comum",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-divine-common",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-remnants-0-4"
+      }
+    }
+  },
+  {
+    "_id": "366d5c268bd6eda7",
+    "name": "Coleta na Natureza (Gathering)",
+    "img": "icons/svg/d20-grey.svg",
+    "description": "<p>Busca de ervas, fungos, minérios e recursos naturais durante viagens ou descansos.</p>",
+    "results": [
+      {
+        "_id": "b8e51513a4b26987",
+        "type": 0,
+        "text": "Nenhum recurso especial encontrado",
+        "weight": 25,
+        "range": [
+          1,
+          25
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": null,
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "d1f811eeab47328f",
+        "type": 0,
+        "text": "1d4 Reagentes Curativos Comuns",
+        "weight": 35,
+        "range": [
+          26,
+          60
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-curative-common",
+            "qty": 2
+          }
+        }
+      },
+      {
+        "_id": "89915479ecfad794",
+        "type": 0,
+        "text": "1d2 Reagentes Venenosos Comuns",
+        "weight": 20,
+        "range": [
+          61,
+          80
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-poisonous-common",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "7d328a4e81bec40d",
+        "type": 0,
+        "text": "1x Reagente Reativo Incomum",
+        "weight": 15,
+        "range": [
+          81,
+          95
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "reagent-reactive-uncommon",
+            "qty": 1
+          }
+        }
+      },
+      {
+        "_id": "ab78daf9f5afa98c",
+        "type": 0,
+        "text": "1x Essência Primitiva Comum",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false,
+        "flags": {
+          "itensdnd": {
+            "itemKey": "essence-primal-common",
+            "qty": 1
+          }
+        }
+      }
+    ],
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "gathering-wilderness"
+      }
+    }
+  }
+]

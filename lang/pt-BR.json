@@ -1,0 +1,104 @@
+{
+  "ITENSDND": {
+    "Title": "Itens & Sistema de Crafting",
+    "Settings": {
+      "EnableSheetButton": {
+        "Name": "Botão na Ficha de Personagem",
+        "Hint": "Exibe um botão da Oficina de Criação no cabeçalho das fichas de personagens de D&D 5e."
+      },
+      "AutoSyncCompendiums": {
+        "Name": "Sincronização Automática de Compêndios",
+        "Hint": "Sincroniza e atualiza os compêndios de materiais, receitas e tabelas de acordo com o idioma do mundo."
+      },
+      "SyncedLanguage": {
+        "Name": "Idioma Sincronizado",
+        "Hint": "Armazena a última versão do idioma sincronizada nos compêndios."
+      },
+      "Menu": {
+        "Name": "Abrir Oficina de Criação",
+        "Label": "Oficina de Criação",
+        "Hint": "Abre o painel interativo de criação de itens e alquimia."
+      },
+      "HarvestMenu": {
+        "Name": "Abrir Painel de Colheita",
+        "Label": "Colheita de Criaturas",
+        "Hint": "Abre o painel de colheita rápida para o alvo selecionado."
+      }
+    },
+    "Workshop": {
+      "Title": "Oficina de Criação",
+      "Actor": "Artesão / Personagem",
+      "NoActor": "Nenhum personagem selecionado",
+      "Professions": {
+        "alchemy": "Alquimia",
+        "blacksmithing": "Ferraria / Forja",
+        "enchanting": "Encantamento",
+        "leatherworking": "Trabalho em Couro",
+        "tinkering": "Engenharia / Geringonças",
+        "scrollscribing": "Escriba de Pergaminhos",
+        "wandwhittling": "Lapidação de Varinhas",
+        "cooking": "Culinária",
+        "woodcarving": "Entalhe em Madeira",
+        "runecarving": "Gravação de Runas",
+        "poisoncraft": "Venefício"
+      },
+      "Filters": {
+        "All": "Todas as Receitas",
+        "CraftableOnly": "Apenas as que Posso Criar",
+        "SearchPlaceholder": "Buscar receita ou item..."
+      },
+      "Recipe": {
+        "DC": "CD",
+        "Time": "Tempo",
+        "Hours": "horas",
+        "Tool": "Ferramenta",
+        "Ability": "Atributo",
+        "Rarity": "Raridade",
+        "Materials": "Materiais Necessários",
+        "Requires": "Requisitos",
+        "Progress": "Progresso",
+        "StartCrafting": "Iniciar Criação",
+        "Roll2Hours": "Trabalhar (2 Horas)",
+        "Take10": "Trabalho Seguro (Take 10)",
+        "Cancel": "Cancelar Projeto",
+        "ResetProgress": "Reiniciar",
+        "Status": {
+          "NotStarted": "Não iniciado",
+          "InProgress": "Em andamento",
+          "Completed": "Concluído",
+          "Failed": "Falhou (3 falhas consecutivas)"
+        }
+      },
+      "Notifications": {
+        "NoMaterials": "Você não possui todos os materiais necessários para iniciar esta receita.",
+        "CraftSuccess": "Progresso realizado com sucesso! (+2 horas)",
+        "CraftFailure": "Falha na tentativa. Nenhum progresso foi adicionado.",
+        "CraftDestroyed": "Três falhas consecutivas! Os materiais foram irremediavelmente arruinados.",
+        "CraftComplete": "Item criado com sucesso! Adicionado ao inventário.",
+        "Take10Complete": "Item finalizado com segurança através de Take 10!",
+        "SelectActorFirst": "Por favor, selecione ou controle um personagem para usar a oficina."
+      }
+    },
+    "Harvesting": {
+      "Title": "Colheita de Criaturas (Harvesting)",
+      "Target": "Criatura Alvo",
+      "NoTarget": "Selecione um token de criatura no mapa.",
+      "CreatureType": "Tipo de Criatura",
+      "CR": "Nível de Desafio (ND)",
+      "CheckRequired": "Teste Necessário",
+      "RollButton": "Efetuar Colheita",
+      "RollRemnants": "Coletar Resíduos Mágicos",
+      "Success": "Colheita bem-sucedida! Foram obtidos materiais.",
+      "Failure": "Falha na colheita. Os materiais foram danificados ou se degradaram."
+    },
+    "Chat": {
+      "CraftRoll": "Teste de Criação",
+      "HarvestRoll": "Teste de Colheita",
+      "Formula": "Fórmula",
+      "Result": "Resultado",
+      "ProgressMade": "Progresso",
+      "ItemCompleted": "Item Concluído!",
+      "MaterialsConsumed": "Materiais Consumidos"
+    }
+  }
+}

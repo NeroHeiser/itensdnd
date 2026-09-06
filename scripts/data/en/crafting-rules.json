@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "6b2c9137079460b7",
+    "name": "Rules: Quick Crafting Guide",
+    "pages": [
+      {
+        "_id": "361eeaa2fc277f8d",
+        "name": "Rules: Quick Crafting Guide",
+        "type": "text",
+        "text": {
+          "content": "<h1>Item Crafting System (Kibbles' Crafting Guide)</h1>\n<p>This crafting system is designed for the adventuring lifestyle: fast, intuitive, and paced in <strong>2-hour increments</strong> (ideal for short rests, camp actions, or travel downtime).</p>\n\n<h3>How Crafting Works:</h3>\n<ol>\n  <li><strong>Select an Item:</strong> Choose the recipe you want to craft.</li>\n  <li><strong>Gather Materials:</strong> Materials can be purchased, looted, harvested from creatures, or gathered in the wilderness.</li>\n  <li><strong>Crafting Modifier:</strong>\n    <code>Crafting Modifier = Tool Proficiency Bonus + Relevant Ability Score Modifier</code>\n  </li>\n  <li><strong>Progress in 2-Hour Blocks:</strong> For every 2 hours spent, roll 1d20 + Crafting Modifier against the recipe's DC.\n    <ul>\n      <li><strong>Success:</strong> Add 2 hours of progress toward completion.</li>\n      <li><strong>Failure:</strong> No progress made. If you fail <strong>3 times in a row</strong>, the craft fails and materials are ruined.</li>\n    </ul>\n  </li>\n  <li><strong>Completion:</strong> Once total progress equals the required time, the item is finished!</li>\n  <li><strong>Taking 10:</strong> You can take 10 by doubling the crafting time if 10 + your Crafting Modifier equals or exceeds the DC.</li>\n</ol>",
+          "format": 1
+        },
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "flags": {
+      "itensdnd": {
+        "ruleKey": "rule-quick-summary"
+      }
+    }
+  },
+  {
+    "_id": "f1e3f917d2996b52",
+    "name": "Rules: Creature Harvesting",
+    "pages": [
+      {
+        "_id": "4403d978fd127d79",
+        "name": "Rules: Creature Harvesting",
+        "type": "text",
+        "text": {
+          "content": "<h1>Creature Harvesting and Magical Remnants</h1>\n<p>Upon defeating monsters, adventurers can harvest valuable reagents and essences instead of mundane loot.</p>\n\n<h3>Required Skills:</h3>\n<ul>\n  <li><strong>Dragons and Monstrosities:</strong> Wisdom (Medicine)</li>\n  <li><strong>Constructs:</strong> Intelligence (Arcana)</li>\n  <li><strong>Plants:</strong> Intelligence (Nature)</li>\n  <li><strong>Beasts and Basic Hide:</strong> Wisdom (Survival)</li>\n</ul>\n<p>Basic or exotic harvesting takes <strong>10 minutes</strong>. Celestials, Elementals, and Fiends leave behind <strong>Magical Remnants</strong> in 1 minute without requiring a check.</p>",
+          "format": 1
+        },
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "flags": {
+      "itensdnd": {
+        "ruleKey": "rule-harvesting"
+      }
+    }
+  }
+]

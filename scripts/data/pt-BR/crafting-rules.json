@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "6b2c9137079460b7",
+    "name": "Regras: Guia Prático de Crafting",
+    "pages": [
+      {
+        "_id": "361eeaa2fc277f8d",
+        "name": "Regras: Guia Prático de Crafting",
+        "type": "text",
+        "text": {
+          "content": "<h1>Sistema de Criação de Itens (Kibbles' Crafting Guide)</h1>\n<p>O sistema de crafting é projetado para o estilo de vida aventureiro: rápido, intuitivo e com tempo medido em blocos de <strong>2 horas</strong> (perfeito para descansos curtos, acampamentos ou viagens).</p>\n\n<h3>Como Funciona o Processo:</h3>\n<ol>\n  <li><strong>Escolha o Item:</strong> Selecione a receita que deseja produzir.</li>\n  <li><strong>Reúna os Materiais:</strong> Materiais podem ser comprados, saqueados, colhidos de monstros (<em>Harvesting</em>) ou coletados na natureza (<em>Gathering</em>).</li>\n  <li><strong>Modificador de Criação:</strong>\n    <code>Modificador de Crafting = Bônus de Proficiência da Ferramenta + Modificador de Atributo Relevante</code>\n  </li>\n  <li><strong>Progresso em 2 Horas:</strong> A cada 2 horas dedicadas ao trabalho, role 1d20 + Modificador de Crafting contra a CD da receita.\n    <ul>\n      <li><strong>Sucesso:</strong> Você adiciona 2 horas de progresso ao projeto.</li>\n      <li><strong>Falha:</strong> Nenhum progresso é adicionado. Se falhar <strong>3 vezes consecutivas</strong>, o projeto falha e todos os materiais são destruídos.</li>\n    </ul>\n  </li>\n  <li><strong>Finalização:</strong> Quando o progresso acumulado atingir o tempo total da receita, o item é concluído!</li>\n  <li><strong>Regra do \"Take 10\":</strong> Você pode optar por não rolar dados e garantir o sucesso dobrando o tempo necessário da receita, desde que 10 + seu Modificador de Crafting atinja ou supere a CD da receita.</li>\n</ol>\n\n<h3>Referência de Ferramentas e Atributos:</h3>\n<table border=\"1\" cellpadding=\"4\" style=\"border-collapse: collapse; width: 100%;\">\n  <thead>\n    <tr style=\"background: #2a2a2a; color: #fff;\">\n      <th>Profissão</th>\n      <th>Ferramenta Relacionada</th>\n      <th>Atributo Relevante</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>Alquimia</td><td>Suprimentos de Alquimista</td><td>Inteligência ou Sabedoria</td></tr>\n    <tr><td>Ferraria / Forja</td><td>Ferramentas de Ferreiro</td><td>Força</td></tr>\n    <tr><td>Encantamento</td><td>Arcanismo</td><td>Inteligência</td></tr>\n    <tr><td>Trabalho em Couro</td><td>Ferramentas de Coureiro</td><td>Destreza</td></tr>\n    <tr><td>Geringonças / Tinkering</td><td>Ferramentas de Latoeiro</td><td>Inteligência</td></tr>\n    <tr><td>Escriba de Pergaminhos</td><td>Suprimentos de Calígrafo</td><td>Inteligência ou Sabedoria</td></tr>\n    <tr><td>Lapidação de Varinhas</td><td>Ferramentas de Entalhador</td><td>Destreza ou Inteligência</td></tr>\n    <tr><td>Culinária</td><td>Utensílios de Cozinheiro</td><td>Sabedoria</td></tr>\n  </tbody>\n</table>",
+          "format": 1
+        },
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "flags": {
+      "itensdnd": {
+        "ruleKey": "rule-quick-summary"
+      }
+    }
+  },
+  {
+    "_id": "f1e3f917d2996b52",
+    "name": "Regras: Colheita de Criaturas (Harvesting)",
+    "pages": [
+      {
+        "_id": "4403d978fd127d79",
+        "name": "Regras: Colheita de Criaturas (Harvesting)",
+        "type": "text",
+        "text": {
+          "content": "<h1>Colheita de Criaturas e Resíduos Mágicos</h1>\n<p>Ao derrotar monstros e seres fantásticos, os aventureiros podem colher matérias-primas valiosas em vez de encontrar apenas moedas mundanas.</p>\n\n<h3>Perícias Necessárias:</h3>\n<ul>\n  <li><strong>Dragões e Monstruosidades:</strong> Sabedoria (Medicina)</li>\n  <li><strong>Construtos:</strong> Inteligência (Arcanismo)</li>\n  <li><strong>Plantas:</strong> Inteligência (Natureza)</li>\n  <li><strong>Feras e Couro Básico:</strong> Sabedoria (Sobrevivência)</li>\n</ul>\n\n<p>A colheita leva cerca de <strong>10 minutos</strong>. Se a criatura for propícia tanto para colheita básica (carne/couro) quanto colheita exótica, o segundo teste é realizado com <em>Desvantagem</em>.</p>\n<p>Seres como Celestiais, Elementais e Ínferos não deixam corpos, mas sim <strong>Resíduos Mágicos (Remnants)</strong> que se condensam em 1 minuto sem necessidade de teste.</p>",
+          "format": 1
+        },
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "flags": {
+      "itensdnd": {
+        "ruleKey": "rule-harvesting"
+      }
+    }
+  }
+]

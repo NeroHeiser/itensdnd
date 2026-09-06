@@ -1,0 +1,104 @@
+{
+  "ITENSDND": {
+    "Title": "Items & Crafting System",
+    "Settings": {
+      "EnableSheetButton": {
+        "Name": "Character Sheet Header Button",
+        "Hint": "Displays a Crafting Workshop button in the header of D&D 5e actor sheets."
+      },
+      "AutoSyncCompendiums": {
+        "Name": "Automatic Compendium Synchronization",
+        "Hint": "Automatically synchronizes materials, recipes, and roll tables according to the world language."
+      },
+      "SyncedLanguage": {
+        "Name": "Synced Language",
+        "Hint": "Stores the last language version synchronized to compendiums."
+      },
+      "Menu": {
+        "Name": "Open Crafting Workshop",
+        "Label": "Crafting Workshop",
+        "Hint": "Opens the interactive crafting and alchemy workshop panel."
+      },
+      "HarvestMenu": {
+        "Name": "Open Creature Harvesting",
+        "Label": "Harvesting Panel",
+        "Hint": "Opens the creature harvesting panel for the selected token."
+      }
+    },
+    "Workshop": {
+      "Title": "Crafting Workshop",
+      "Actor": "Crafter / Character",
+      "NoActor": "No character selected",
+      "Professions": {
+        "alchemy": "Alchemy",
+        "blacksmithing": "Blacksmithing",
+        "enchanting": "Enchanting",
+        "leatherworking": "Leatherworking",
+        "tinkering": "Tinkering",
+        "scrollscribing": "Scrollscribing",
+        "wandwhittling": "Wand Whittling",
+        "cooking": "Cooking",
+        "woodcarving": "Woodcarving",
+        "runecarving": "Runecarving",
+        "poisoncraft": "Poisoncraft"
+      },
+      "Filters": {
+        "All": "All Recipes",
+        "CraftableOnly": "Craftable with My Materials",
+        "SearchPlaceholder": "Search recipe or item..."
+      },
+      "Recipe": {
+        "DC": "DC",
+        "Time": "Time",
+        "Hours": "hours",
+        "Tool": "Tool",
+        "Ability": "Ability",
+        "Rarity": "Raridade",
+        "Materials": "Required Materials",
+        "Requires": "Requirements",
+        "Progress": "Progress",
+        "StartCrafting": "Start Crafting",
+        "Roll2Hours": "Work (2 Hours)",
+        "Take10": "Safe Work (Take 10)",
+        "Cancel": "Cancel Project",
+        "ResetProgress": "Reset",
+        "Status": {
+          "NotStarted": "Not started",
+          "InProgress": "In progress",
+          "Completed": "Completed",
+          "Failed": "Failed (3 consecutive failures)"
+        }
+      },
+      "Notifications": {
+        "NoMaterials": "You do not have all required materials to start this recipe.",
+        "CraftSuccess": "Progress made successfully! (+2 hours)",
+        "CraftFailure": "Check failed. No progress was made.",
+        "CraftDestroyed": "Three consecutive failures! All materials were ruined.",
+        "CraftComplete": "Item crafted successfully! Added to inventory.",
+        "Take10Complete": "Item completed safely using Take 10!",
+        "SelectActorFirst": "Please select or control a character to use the workshop."
+      }
+    },
+    "Harvesting": {
+      "Title": "Creature Harvesting",
+      "Target": "Target Creature",
+      "NoTarget": "Select a creature token on the map.",
+      "CreatureType": "Creature Type",
+      "CR": "Challenge Rating (CR)",
+      "CheckRequired": "Required Check",
+      "RollButton": "Perform Harvest",
+      "RollRemnants": "Gather Remnants",
+      "Success": "Harvest succeeded! Materials obtained.",
+      "Failure": "Harvest failed. Materials were damaged or degraded."
+    },
+    "Chat": {
+      "CraftRoll": "Crafting Check",
+      "HarvestRoll": "Harvesting Check",
+      "Formula": "Formula",
+      "Result": "Result",
+      "ProgressMade": "Progress",
+      "ItemCompleted": "Item Completed!",
+      "MaterialsConsumed": "Materials Consumed"
+    }
+  }
+}
