@@ -81,6 +81,11 @@ Hooks.once("init", () => {
   if (!Handlebars.helpers.or) {
     Handlebars.registerHelper("or", (a, b) => a || b);
   }
+  // Pré-carregamento de templates Handlebars
+  loadTemplates([
+    "modules/itensdnd/templates/crafting-app.hbs",
+    "modules/itensdnd/templates/harvesting-app.hbs"
+  ]);
 });
 
 /**
@@ -102,8 +107,8 @@ Hooks.once("ready", async () => {
       HarvestingEngine,
       CraftingWorkshopApp,
       HarvestingApp,
-      openWorkshop: (actor) => new CraftingWorkshopApp({ actor }).render(true),
-      openHarvesting: (target, harvester) => new HarvestingApp({ target, harvester }).render(true),
+      openWorkshop: (actor) => new CraftingWorkshopApp({ actor }).render({ force: true }),
+      openHarvesting: (target, harvester) => new HarvestingApp({ target, harvester }).render({ force: true }),
       syncCompendiums: (force = false) => CompendiumSync.syncAllPacks({ force, silent: false })
     };
   }
@@ -113,7 +118,10 @@ Hooks.once("ready", async () => {
  * Injeção de botão no cabeçalho das fichas de personagem (D&D 5e Actor Sheet).
  */
 Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
-  if (!game.settings.get(MODULE_ID, "enableSheetButton")) return;
+  try {
+    if (!game.settings.get(MODULE_ID, "enableSheetButton")) return;
+  } catch (e) {}
+
   const actor = sheet.actor;
   if (!actor || actor.type !== "character") return;
 
@@ -122,8 +130,9 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
     class: "itensdnd-sheet-btn",
     icon: "fas fa-hammer",
     onclick: () => {
-      new CraftingWorkshopApp({ actor }).render(true);
+      new CraftingWorkshopApp({ actor }).render({ force: true });
     }
   });
 });
+
 
