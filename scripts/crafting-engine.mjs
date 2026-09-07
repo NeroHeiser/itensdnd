@@ -44,8 +44,12 @@ export class CraftingEngine {
     // Fallback para arquivo JSON direto se o compêndio ainda não estiver montado
     const isPt = game.i18n?.lang?.startsWith("pt");
     const lang = isPt ? "pt-BR" : "en";
-    const res = await fetch(`modules/${MODULE_ID}/scripts/data/${lang}/crafting-recipes.json`);
-    if (res.ok) {
+    const baseRoute = typeof foundry !== "undefined" && foundry.utils?.getRoute ? foundry.utils.getRoute(`modules/${MODULE_ID}`) : `/modules/${MODULE_ID}`;
+    let res = await fetch(`${baseRoute}/scripts/data/${lang}/crafting-recipes.json`).catch(() => null);
+    if (!res || !res.ok) {
+      res = await fetch(`modules/${MODULE_ID}/scripts/data/${lang}/crafting-recipes.json`).catch(() => null);
+    }
+    if (res && res.ok) {
       const data = await res.json();
       return data.map(d => ({
         id: d._id,

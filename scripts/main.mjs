@@ -65,6 +65,45 @@ Hooks.once("init", () => {
     restricted: false
   });
 
+  game.settings.registerMenu(MODULE_ID, "syncMenu", {
+    name: "ITENSDND.Settings.SyncMenu.Name",
+    label: "ITENSDND.Settings.SyncMenu.Label",
+    hint: "ITENSDND.Settings.SyncMenu.Hint",
+    icon: "fas fa-sync-alt",
+    type: class SyncCompendiumsForm extends FormApplication {
+      static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+          title: "Sincronizar Compêndios de Crafting",
+          template: "templates/generic-form.html",
+          width: 400,
+          height: "auto"
+        });
+      }
+      async render() {
+        new Dialog({
+          title: "Sincronizar Compêndios",
+          content: "<p>Deseja sincronizar e carregar todos os <strong>478 itens criáveis, 478 receitas, 92 materiais e 15 tabelas</strong> do Kibbles nos compêndios?</p>",
+          buttons: {
+            confirm: {
+              icon: '<i class="fas fa-sync"></i>',
+              label: "Sincronizar Agora",
+              callback: async () => {
+                ui.notifications?.info("Iniciando sincronização dos compêndios...");
+                await CompendiumSync.syncAllPacks({ force: true, silent: false });
+              }
+            },
+            cancel: {
+              icon: '<i class="fas fa-times"></i>',
+              label: "Cancelar"
+            }
+          },
+          default: "confirm"
+        }).render(true);
+      }
+    },
+    restricted: true
+  });
+
   // Registrar helpers auxiliares do Handlebars caso não estejam disponíveis
   if (!Handlebars.helpers.multiply) {
     Handlebars.registerHelper("multiply", (a, b) => (Number(a) || 0) * (Number(b) || 0));
@@ -94,9 +133,9 @@ Hooks.once("init", () => {
 Hooks.once("ready", async () => {
   console.log("Itens & Sistema de Crafting D&D 5e | Sistema pronto!");
 
-  // Sincronização automática dos compêndios para o Mestre
-  if (game.user.isGM && game.settings.get(MODULE_ID, "autoSyncCompendiums")) {
-    await CompendiumSync.syncAllPacks({ silent: true });
+  // Sincronização automática ou recuperação de compêndios vazios
+  if (game.user.isGM) {
+    await CompendiumSync.checkAndSyncAllPacks({ silent: false });
   }
 
   // Exportar API global do módulo
@@ -149,7 +188,7 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
   addSheetWorkshopButton(sheet, buttons);
 });
 
-// 3. Fallback visual no render caso o tema altere os hooks nativos
+// 3. Injeção direta no render da ficha (tanto no topo da janela quanto no painel de descanso)
 Hooks.on("renderActorSheet", (app, html) => {
   try {
     if (!game.settings.get(MODULE_ID, "enableSheetButton")) return;
@@ -161,7 +200,9 @@ Hooks.on("renderActorSheet", (app, html) => {
   const root = html instanceof HTMLElement ? html : html[0];
   if (!root) return;
 
-  const header = root.querySelector(".window-header");
+  // 1. Injetar na barra de título da janela (.window-header)
+  const windowApp = root.closest(".window-app") || document.getElementById(app.id) || (app.element ? (app.element[0] || app.element) : null);
+  const header = windowApp?.querySelector(".window-header");
   if (header && !header.querySelector(".itensdnd-sheet-btn")) {
     const btn = document.createElement("a");
     btn.className = "header-button control itensdnd-sheet-btn";
@@ -177,6 +218,23 @@ Hooks.on("renderActorSheet", (app, html) => {
     } else {
       header.appendChild(btn);
     }
+  }
+
+  // 2. Injetar botão elegante dentro da ficha do D&D 5e v3 (ao lado dos botões de descanso)
+  const restContainer = root.querySelector(".sheet-header .header-actions, .sheet-header .character-details, [data-action='rest']");
+  if (restContainer && !root.querySelector(".itensdnd-sheet-inner-btn")) {
+    const craftBtn = document.createElement("button");
+    craftBtn.type = "button";
+    craftBtn.className = "itensdnd-sheet-inner-btn";
+    craftBtn.title = game.i18n.localize("ITENSDND.Settings.Menu.Label") || "Oficina de Criação";
+    craftBtn.innerHTML = '<i class="fas fa-hammer"></i>';
+    craftBtn.style.cssText = "width: 28px; height: 28px; border-radius: 4px; margin-left: 6px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid #795548; color: #ffb74d;";
+    craftBtn.onclick = (ev) => {
+      ev.preventDefault();
+      new CraftingWorkshopApp({ actor }).render({ force: true });
+    };
+    const targetParent = restContainer.parentElement || restContainer;
+    targetParent.appendChild(craftBtn);
   }
 });
 

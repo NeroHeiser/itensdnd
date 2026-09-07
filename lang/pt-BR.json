@@ -23,6 +23,11 @@
         "Name": "Abrir Painel de Colheita",
         "Label": "Colheita de Criaturas",
         "Hint": "Abre o painel de colheita rápida para o alvo selecionado."
+      },
+      "SyncMenu": {
+        "Name": "Sincronização dos Compêndios",
+        "Label": "Sincronizar Compêndios de Crafting",
+        "Hint": "Força o recarregamento imediato de todos os 478 itens, receitas, materiais e tabelas do Kibbles."
       }
     },
     "Workshop": {

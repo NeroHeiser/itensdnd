@@ -42,6 +42,34 @@ export class CompendiumSync {
   ];
 
   /**
+   * Verifica se algum pacote está vazio e realiza a sincronização necessária.
+   */
+  static async checkAndSyncAllPacks({ silent = true } = {}) {
+    if (!game.user.isGM) return;
+    let anyEmpty = false;
+
+    for (const packInfo of this.PACKS) {
+      const pack = game.packs.get(`${MODULE_ID}.${packInfo.id}`);
+      if (pack) {
+        const idx = await pack.getIndex();
+        if (idx.size === 0) {
+          anyEmpty = true;
+          break;
+        }
+      }
+    }
+
+    let autoSync = true;
+    try {
+      autoSync = game.settings.get(MODULE_ID, "autoSyncCompendiums");
+    } catch (e) {}
+
+    if (anyEmpty || autoSync) {
+      await this.syncAllPacks({ force: anyEmpty, silent: silent && !anyEmpty });
+    }
+  }
+
+  /**
    * Sincroniza todos os pacotes do módulo se estiverem vazios, com IDs inválidos ou se for forçado.
    * @param {object} options
    * @param {boolean} [options.force=false] Força a sobrescrita dos itens
@@ -62,6 +90,7 @@ export class CompendiumSync {
     const langChanged = storedLang !== langFolder;
 
     let syncedCount = 0;
+    const baseRoute = typeof foundry !== "undefined" && foundry.utils?.getRoute ? foundry.utils.getRoute(`modules/${MODULE_ID}`) : `/modules/${MODULE_ID}`;
 
     for (const packInfo of this.PACKS) {
       const packKey = `${MODULE_ID}.${packInfo.id}`;
@@ -74,16 +103,24 @@ export class CompendiumSync {
 
       // Se o compêndio estiver bloqueado, desbloqueia temporariamente para gravação
       const wasLocked = pack.locked;
-      if (wasLocked) await pack.configure({ locked: false });
+      if (wasLocked) {
+        try { await pack.configure({ locked: false }); } catch (e) { pack.locked = false; }
+      }
 
       try {
         const index = await pack.getIndex();
         const hasInvalidIds = index.some(e => !/^[a-zA-Z0-9]{16}$/.test(e._id));
 
-        // Carrega o arquivo JSON do idioma ativo (pt-BR ou en)
-        const dataUrl = `modules/${MODULE_ID}/scripts/data/${langFolder}/${packInfo.file}`;
-        const response = await fetch(dataUrl);
-        if (!response.ok) {
+        // Carrega o arquivo JSON do idioma ativo com rota absoluta segura
+        const dataUrl = `${baseRoute}/scripts/data/${langFolder}/${packInfo.file}`;
+        let response = await fetch(dataUrl).catch(() => null);
+
+        // Fallback sem rota caso a rota padrão não responda
+        if (!response || !response.ok) {
+          response = await fetch(`modules/${MODULE_ID}/scripts/data/${langFolder}/${packInfo.file}`).catch(() => null);
+        }
+
+        if (!response || !response.ok) {
           console.error(`itensdnd | Falha ao carregar arquivo de dados: ${dataUrl}`);
           continue;
         }
@@ -94,20 +131,29 @@ export class CompendiumSync {
         if (shouldSync) {
           console.log(`itensdnd | Sincronizando compêndio ${packKey} com ${documentsData.length} registros (${langFolder})...`);
 
-          // Limpa documentos antigos se estiver forçando ou mudando de idioma
+          // Limpa documentos antigos em lotes
           if (index.size > 0) {
-            const existingIds = Array.from(index.map(e => e._id));
-            await pack.documentClass.deleteDocuments(existingIds, { pack: packKey });
+            const existingIds = Array.from(index.map(e => e.id || e._id));
+            for (let i = 0; i < existingIds.length; i += 100) {
+              await pack.documentClass.deleteDocuments(existingIds.slice(i, i + 100), { pack: packKey });
+            }
           }
 
-          // Cria os novos documentos no pacote
-          await pack.documentClass.createDocuments(documentsData, { pack: packKey, keepId: true });
+          // Cria os novos documentos no pacote em lotes seguros para evitar limite de socket
+          const batchSize = 100;
+          for (let i = 0; i < documentsData.length; i += batchSize) {
+            const batch = documentsData.slice(i, i + batchSize);
+            await pack.documentClass.createDocuments(batch, { pack: packKey, keepId: true });
+          }
+
           syncedCount++;
         }
       } catch (err) {
         console.error(`itensdnd | Erro durante sincronização de ${packKey}:`, err);
       } finally {
-        if (wasLocked) await pack.configure({ locked: true });
+        if (wasLocked) {
+          try { await pack.configure({ locked: true }); } catch (e) { pack.locked = true; }
+        }
       }
     }
 

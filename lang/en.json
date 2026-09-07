@@ -23,6 +23,11 @@
         "Name": "Open Creature Harvesting",
         "Label": "Harvesting Panel",
         "Hint": "Opens the creature harvesting panel for the selected token."
+      },
+      "SyncMenu": {
+        "Name": "Compendium Synchronization",
+        "Label": "Sync Crafting Compendiums",
+        "Hint": "Forces the immediate reload of all 478 items, recipes, materials, and tables from Kibbles."
       }
     },
     "Workshop": {
