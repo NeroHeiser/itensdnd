@@ -902,12 +902,12 @@ def main():
             r_id = make_id(f"res-{t['key']}-{idx}")
             weight = (res["range"][1] - res["range"][0] + 1)
             results_pt.append({
-                "_id": r_id, "type": 0, "text": res["text_pt"],
+                "_id": r_id, "type": "text", "text": res["text_pt"],
                 "img": "icons/svg/d20-black.svg", "weight": weight,
                 "range": res["range"], "drawn": False
             })
             results_en.append({
-                "_id": r_id, "type": 0, "text": res["text_en"],
+                "_id": r_id, "type": "text", "text": res["text_en"],
                 "img": "icons/svg/d20-black.svg", "weight": weight,
                 "range": res["range"], "drawn": False
             })
@@ -998,12 +998,12 @@ def main():
             r_id = make_id(f"res-{b_key}-{idx}")
             weight = (rng[1] - rng[0] + 1)
             res_pt.append({
-                "_id": r_id, "type": 0, "text": txt_pt,
+                "_id": r_id, "type": "text", "text": txt_pt,
                 "img": "icons/svg/d20-black.svg", "weight": weight,
                 "range": rng, "drawn": False
             })
             res_en.append({
-                "_id": r_id, "type": 0, "text": txt_en,
+                "_id": r_id, "type": "text", "text": txt_en,
                 "img": "icons/svg/d20-black.svg", "weight": weight,
                 "range": rng, "drawn": False
             })
@@ -1041,12 +1041,12 @@ def main():
     for idx, (rng, txt_pt, txt_en) in enumerate(chaos_ranges):
         r_id = make_id(f"res-chaos-{idx}")
         c_res_pt.append({
-            "_id": r_id, "type": 0, "text": txt_pt,
+            "_id": r_id, "type": "text", "text": txt_pt,
             "img": "icons/svg/d20-black.svg", "weight": (rng[1] - rng[0] + 1),
             "range": rng, "drawn": False
         })
         c_res_en.append({
-            "_id": r_id, "type": 0, "text": txt_en,
+            "_id": r_id, "type": "text", "text": txt_en,
             "img": "icons/svg/d20-black.svg", "weight": (rng[1] - rng[0] + 1),
             "range": rng, "drawn": False
         })
@@ -1082,8 +1082,8 @@ def main():
     m_res_en = []
     for idx, (rng, txt_pt, txt_en) in enumerate(metals_ranges):
         r_id = make_id(f"res-salv-met-{idx}")
-        m_res_pt.append({"_id": r_id, "type": 0, "text": txt_pt, "img": "icons/svg/d20-black.svg", "weight": (rng[1]-rng[0]+1), "range": rng, "drawn": False})
-        m_res_en.append({"_id": r_id, "type": 0, "text": txt_en, "img": "icons/svg/d20-black.svg", "weight": (rng[1]-rng[0]+1), "range": rng, "drawn": False})
+        m_res_pt.append({"_id": r_id, "type": "text", "text": txt_pt, "img": "icons/svg/d20-black.svg", "weight": (rng[1]-rng[0]+1), "range": rng, "drawn": False})
+        m_res_en.append({"_id": r_id, "type": "text", "text": txt_en, "img": "icons/svg/d20-black.svg", "weight": (rng[1]-rng[0]+1), "range": rng, "drawn": False})
 
     tbl_m_base = {
         "_id": salvage_metals_id, "img": "icons/commodities/metal/ingot-iron.webp", "formula": "1d100",

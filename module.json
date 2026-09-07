@@ -2,7 +2,7 @@
   "id": "itensdnd",
   "title": "Itens & Sistema de Crafting (D&D 5e)",
   "description": "Sistema completo de criação de itens, alquimia, forja, encantamento, colheita de criaturas (harvesting) e coleta baseado no Kibbles' Crafting Guide para o Foundry VTT (v12-v14) e D&D 5e.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibility": {
     "minimum": "12",
     "verified": "12",
@@ -102,7 +102,7 @@
   ],
   "flags": {
     "itensdnd": {
-      "version": "1.1.1"
+      "version": "1.1.2"
     }
   },
   "url": "https://github.com/NeroHeiser/itensdnd",

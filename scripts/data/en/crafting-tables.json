@@ -16,7 +16,7 @@
     "results": [
       {
         "_id": "dc3b25a4cbd2fedb",
-        "type": 0,
+        "type": "text",
         "text": "No salvageable components",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -28,7 +28,7 @@
       },
       {
         "_id": "ddbcb61a2f890454",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 30,
@@ -40,7 +40,7 @@
       },
       {
         "_id": "587ee4a56ad11c6b",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -52,7 +52,7 @@
       },
       {
         "_id": "0b560c9843364493",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -64,7 +64,7 @@
       },
       {
         "_id": "c8fbe044f68582f5",
-        "type": 0,
+        "type": "text",
         "text": "1x Fancy Parts or Rare Hide",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -76,7 +76,7 @@
       },
       {
         "_id": "79482e92c7428e68",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Primal or Arcane Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -105,7 +105,7 @@
     "results": [
       {
         "_id": "12aafbb4f997f41f",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -117,7 +117,7 @@
       },
       {
         "_id": "33dc985d4e108e24",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 30,
@@ -129,7 +129,7 @@
       },
       {
         "_id": "5aeab8f25765b005",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -141,7 +141,7 @@
       },
       {
         "_id": "b3fb707455ce3d7b",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -153,7 +153,7 @@
       },
       {
         "_id": "00f24f00696085a1",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Essence (Arcane/Primal)",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -165,7 +165,7 @@
       },
       {
         "_id": "6cf9275bb9d1c207",
-        "type": 0,
+        "type": "text",
         "text": "1x Rare Essence or Precious Scale",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -194,7 +194,7 @@
     "results": [
       {
         "_id": "334310422308ed07",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -206,7 +206,7 @@
       },
       {
         "_id": "a8c1b35c553f8abf",
-        "type": 0,
+        "type": "text",
         "text": "1x Rare Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 30,
@@ -218,7 +218,7 @@
       },
       {
         "_id": "6480dacbdfa752f4",
-        "type": 0,
+        "type": "text",
         "text": "1x Rare Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -230,7 +230,7 @@
       },
       {
         "_id": "7616cb18b907de3c",
-        "type": 0,
+        "type": "text",
         "text": "1x Esoteric Parts or Dragon Scale",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -242,7 +242,7 @@
       },
       {
         "_id": "96cbed05cda5d415",
-        "type": 0,
+        "type": "text",
         "text": "1x Rare Essence (Arcane/Divine/Primal)",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -254,7 +254,7 @@
       },
       {
         "_id": "82c32fa2d3a9fb85",
-        "type": 0,
+        "type": "text",
         "text": "1x Very Rare Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -283,7 +283,7 @@
     "results": [
       {
         "_id": "c0dec78ecb0c1c6d",
-        "type": 0,
+        "type": "text",
         "text": "1x Rare Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -295,7 +295,7 @@
       },
       {
         "_id": "dd5e7684b338b39c",
-        "type": 0,
+        "type": "text",
         "text": "1x Very Rare Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -307,7 +307,7 @@
       },
       {
         "_id": "10bdc1374900a473",
-        "type": 0,
+        "type": "text",
         "text": "1x Very Rare Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -319,7 +319,7 @@
       },
       {
         "_id": "719c81bc076e3e2e",
-        "type": 0,
+        "type": "text",
         "text": "2x Dragon Scales / Esoteric Parts",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -331,7 +331,7 @@
       },
       {
         "_id": "62366ae9464dc2a2",
-        "type": 0,
+        "type": "text",
         "text": "1x Legendary Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -360,7 +360,7 @@
     "results": [
       {
         "_id": "cbc46d470b0e922c",
-        "type": 0,
+        "type": "text",
         "text": "No condensed remnants",
         "img": "icons/svg/d20-black.svg",
         "weight": 50,
@@ -372,7 +372,7 @@
       },
       {
         "_id": "f3c751611dac4381",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -384,7 +384,7 @@
       },
       {
         "_id": "fd8c8973a94be0c1",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Curative or Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -396,7 +396,7 @@
       },
       {
         "_id": "6f5ebd7ca854d09d",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Divine or Arcane Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -425,7 +425,7 @@
     "results": [
       {
         "_id": "0dd0fa7009465421",
-        "type": 0,
+        "type": "text",
         "text": "No special resources found",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -437,7 +437,7 @@
       },
       {
         "_id": "a35cd8b63a864257",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Curative Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 35,
@@ -449,7 +449,7 @@
       },
       {
         "_id": "597f159ae308820f",
-        "type": 0,
+        "type": "text",
         "text": "1d2 Common Poisonous Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -461,7 +461,7 @@
       },
       {
         "_id": "a75e3e2d501c933f",
-        "type": 0,
+        "type": "text",
         "text": "1x Uncommon Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -473,7 +473,7 @@
       },
       {
         "_id": "de9038953526c207",
-        "type": 0,
+        "type": "text",
         "text": "1x Common Primal Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -502,7 +502,7 @@
     "results": [
       {
         "_id": "a29bb89147af7e48",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Firewood",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -514,7 +514,7 @@
       },
       {
         "_id": "f5dbe38a8f775aee",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -526,7 +526,7 @@
       },
       {
         "_id": "137b3d5eb4f67ca7",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Quality Branches",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -538,7 +538,7 @@
       },
       {
         "_id": "6bfdea61b8904bc9",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Curative Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -550,7 +550,7 @@
       },
       {
         "_id": "edd7ab908d63b1fc",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Branch + 1d2 Reactive Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -562,7 +562,7 @@
       },
       {
         "_id": "09b09b4f026d1fb8",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -574,7 +574,7 @@
       },
       {
         "_id": "ebdca8854c55fd71",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Primal Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -603,7 +603,7 @@
     "results": [
       {
         "_id": "a181997a66fe28e5",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Metal Scraps",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -615,7 +615,7 @@
       },
       {
         "_id": "7e3569c73b1c0e87",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -627,7 +627,7 @@
       },
       {
         "_id": "aa22c75f7c43009d",
-        "type": 0,
+        "type": "text",
         "text": "1 Adamant Ore Chunk",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -639,7 +639,7 @@
       },
       {
         "_id": "43fb993885b7a359",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Reactive Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -651,7 +651,7 @@
       },
       {
         "_id": "0c12ed4999c6ce90",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -663,7 +663,7 @@
       },
       {
         "_id": "90b86d09993c4d04",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Arcane Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -692,7 +692,7 @@
     "results": [
       {
         "_id": "51f1dfebcc8e33d9",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Murky Water & Wet Herbs",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -704,7 +704,7 @@
       },
       {
         "_id": "8812b4c5b4b1651d",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -716,7 +716,7 @@
       },
       {
         "_id": "c151e18a57cec0d7",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Poisonous Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -728,7 +728,7 @@
       },
       {
         "_id": "20adee12129be494",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Poisonous Reagent + 1 Reactive",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -740,7 +740,7 @@
       },
       {
         "_id": "bbf74e4e4a6fb4c3",
-        "type": 0,
+        "type": "text",
         "text": "1 Medium Insect Carapace",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -752,7 +752,7 @@
       },
       {
         "_id": "990663fefb565217",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Primal Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -781,7 +781,7 @@
     "results": [
       {
         "_id": "6493064d7ba5e39e",
-        "type": 0,
+        "type": "text",
         "text": "1d6 Hide Scraps",
         "img": "icons/svg/d20-black.svg",
         "weight": 30,
@@ -793,7 +793,7 @@
       },
       {
         "_id": "4aa6a118934c6f1c",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Reactive Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -805,7 +805,7 @@
       },
       {
         "_id": "6865e12ced8e0040",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Desert Reptile Scales",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -817,7 +817,7 @@
       },
       {
         "_id": "2eac2ae56fc2abc9",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Poisonous Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -829,7 +829,7 @@
       },
       {
         "_id": "c6eda9682862a7dd",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Divine Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -858,7 +858,7 @@
     "results": [
       {
         "_id": "514f70d7072d83e8",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Luminescent Fungi",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -870,7 +870,7 @@
       },
       {
         "_id": "937ca5c7136f730f",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Reactive Reagent + 1 Poisonous",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -882,7 +882,7 @@
       },
       {
         "_id": "a27c645d7485bbc6",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Poisonous Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -894,7 +894,7 @@
       },
       {
         "_id": "5469d3a619d4db90",
-        "type": 0,
+        "type": "text",
         "text": "1 Esoteric Part / Rare Ore",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -906,7 +906,7 @@
       },
       {
         "_id": "b5f2b65025000cb9",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Arcane Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -918,7 +918,7 @@
       },
       {
         "_id": "f966a3fe584c377c",
-        "type": 0,
+        "type": "text",
         "text": "1 Uncommon Arcane Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 5,
@@ -947,7 +947,7 @@
     "results": [
       {
         "_id": "63500131ed35060d",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Shells & Dried Seaweed",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -959,7 +959,7 @@
       },
       {
         "_id": "d9128e595fe5c163",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -971,7 +971,7 @@
       },
       {
         "_id": "8a23e5d70a3bbfd6",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Sea Creature Scales",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -983,7 +983,7 @@
       },
       {
         "_id": "7a8fd731e8fcf949",
-        "type": 0,
+        "type": "text",
         "text": "1d2 Uncommon Curative Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -995,7 +995,7 @@
       },
       {
         "_id": "f986b6af99632518",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Primal Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -1024,7 +1024,7 @@
     "results": [
       {
         "_id": "a109c2eae0408e23",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Fresh Supplies / Plant Fibers",
         "img": "icons/svg/d20-black.svg",
         "weight": 30,
@@ -1036,7 +1036,7 @@
       },
       {
         "_id": "f8e132be25727fd4",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Curative Reagent",
         "img": "icons/svg/d20-black.svg",
         "weight": 25,
@@ -1048,7 +1048,7 @@
       },
       {
         "_id": "08e3183be0d4b063",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Common Curative Reagents",
         "img": "icons/svg/d20-black.svg",
         "weight": 20,
@@ -1060,7 +1060,7 @@
       },
       {
         "_id": "915b1a6edb9530a6",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Hide Scraps",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -1072,7 +1072,7 @@
       },
       {
         "_id": "9acd3cf032c596cb",
-        "type": 0,
+        "type": "text",
         "text": "1 Common Divine Essence",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,
@@ -1101,7 +1101,7 @@
     "results": [
       {
         "_id": "6249470935092b16",
-        "type": 0,
+        "type": "text",
         "text": "1d4 hostile swarms of rats under the effect of Fire Shield.",
         "img": "icons/svg/d20-black.svg",
         "weight": 1,
@@ -1113,7 +1113,7 @@
       },
       {
         "_id": "c29765804d17d744",
-        "type": 0,
+        "type": "text",
         "text": "A small piece of a star that violently explodes (3d12 fire, DC 15 Dex half).",
         "img": "icons/svg/d20-black.svg",
         "weight": 2,
@@ -1125,7 +1125,7 @@
       },
       {
         "_id": "826f01307159ae58",
-        "type": 0,
+        "type": "text",
         "text": "A small wooden toy looking quite old.",
         "img": "icons/svg/d20-black.svg",
         "weight": 2,
@@ -1137,7 +1137,7 @@
       },
       {
         "_id": "ccf6bf1da7a9638e",
-        "type": 0,
+        "type": "text",
         "text": "1d4 delicious fresh fish (+10 temp HP if cooked within 1 hour).",
         "img": "icons/svg/d20-black.svg",
         "weight": 2,
@@ -1149,7 +1149,7 @@
       },
       {
         "_id": "0c6cac91fd0db760",
-        "type": 0,
+        "type": "text",
         "text": "Another identical box, slightly smaller: it's a hostile Mimic!",
         "img": "icons/svg/d20-black.svg",
         "weight": 2,
@@ -1161,7 +1161,7 @@
       },
       {
         "_id": "a00a59111c6cfb2c",
-        "type": 0,
+        "type": "text",
         "text": "Nothing at all.",
         "img": "icons/svg/d20-black.svg",
         "weight": 2,
@@ -1173,7 +1173,7 @@
       },
       {
         "_id": "9903f52caa883c73",
-        "type": 0,
+        "type": "text",
         "text": "1 glowing Rare Arcane Essence.",
         "img": "icons/svg/d20-black.svg",
         "weight": 1,
@@ -1202,7 +1202,7 @@
     "results": [
       {
         "_id": "66c9d4c8832d862a",
-        "type": 0,
+        "type": "text",
         "text": "1d4 Metal Scraps",
         "img": "icons/svg/d20-black.svg",
         "weight": 40,
@@ -1214,7 +1214,7 @@
       },
       {
         "_id": "328db3c06ef2627b",
-        "type": 0,
+        "type": "text",
         "text": "1 Iron Ingot",
         "img": "icons/svg/d20-black.svg",
         "weight": 35,
@@ -1226,7 +1226,7 @@
       },
       {
         "_id": "2b5ddb393c05dc8d",
-        "type": 0,
+        "type": "text",
         "text": "1 Steel Ingot",
         "img": "icons/svg/d20-black.svg",
         "weight": 15,
@@ -1238,7 +1238,7 @@
       },
       {
         "_id": "c908caba837e723c",
-        "type": 0,
+        "type": "text",
         "text": "1d2 Steel Ingots + 1d4 Metal Scraps",
         "img": "icons/svg/d20-black.svg",
         "weight": 10,

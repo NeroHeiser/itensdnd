@@ -1228,7 +1228,7 @@ def build_tables_json(lang: str):
             text = res["text_pt"] if lang == "pt-BR" else res["text_en"]
             res_doc = {
                 "_id": res_id,
-                "type": 0, # Text
+                "type": "text",
                 "text": text,
                 "weight": res["range"][1] - res["range"][0] + 1,
                 "range": res["range"],
