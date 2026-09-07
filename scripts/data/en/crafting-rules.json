@@ -1,48 +1,41 @@
 [
   {
-    "_id": "6b2c9137079460b7",
-    "name": "Rules: Quick Crafting Guide",
+    "_id": "4c43726393e21d7b",
+    "name": "Official Crafting Guide & Rules Mechanics",
     "pages": [
       {
-        "_id": "361eeaa2fc277f8d",
-        "name": "Rules: Quick Crafting Guide",
+        "_id": "3af7e1d34bac8cb3",
+        "name": "Core Mechanics",
         "type": "text",
         "text": {
-          "content": "<h1>Item Crafting System (Kibbles' Crafting Guide)</h1>\n<p>This crafting system is designed for the adventuring lifestyle: fast, intuitive, and paced in <strong>2-hour increments</strong> (ideal for short rests, camp actions, or travel downtime).</p>\n\n<h3>How Crafting Works:</h3>\n<ol>\n  <li><strong>Select an Item:</strong> Choose the recipe you want to craft.</li>\n  <li><strong>Gather Materials:</strong> Materials can be purchased, looted, harvested from creatures, or gathered in the wilderness.</li>\n  <li><strong>Crafting Modifier:</strong>\n    <code>Crafting Modifier = Tool Proficiency Bonus + Relevant Ability Score Modifier</code>\n  </li>\n  <li><strong>Progress in 2-Hour Blocks:</strong> For every 2 hours spent, roll 1d20 + Crafting Modifier against the recipe's DC.\n    <ul>\n      <li><strong>Success:</strong> Add 2 hours of progress toward completion.</li>\n      <li><strong>Failure:</strong> No progress made. If you fail <strong>3 times in a row</strong>, the craft fails and materials are ruined.</li>\n    </ul>\n  </li>\n  <li><strong>Completion:</strong> Once total progress equals the required time, the item is finished!</li>\n  <li><strong>Taking 10:</strong> You can take 10 by doubling the crafting time if 10 + your Crafting Modifier equals or exceeds the DC.</li>\n</ol>",
+          "content": "\n    <h2>Core Crafting Mechanics (Kibbles' Crafting Guide)</h2>\n    <p>Kibbles' crafting system allows adventurers to produce mundane and magical items in a balanced, dynamic, and engaging way.</p>\n    \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Crafting Check</h3>\n            <p style=\"margin: 0 0 4px 0;\">Every 2 hours of work produces one crafting check; a success adds 2 hours of progress.</p>\n            <small style=\"color: #666;\">Source Pages: 5, 6</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Failure</h3>\n            <p style=\"margin: 0 0 4px 0;\">A failed check produces no progress. Three consecutive failures lose the reserved materials and all progress.</p>\n            <small style=\"color: #666;\">Source Pages: 6, 43</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Take 10</h3>\n            <p style=\"margin: 0 0 4px 0;\">Taking 10 doubles each check to 4 hours and uses 10 + related ability modifier + tool proficiency bonus as the result.</p>\n            <small style=\"color: #666;\">Source Pages: 5, 7</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Workday Limit</h3>\n            <p style=\"margin: 0 0 4px 0;\">A full workday normally contributes no more than 8 hours to a crafting project.</p>\n            <small style=\"color: #666;\">Source Pages: 7</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Rest Crafting</h3>\n            <p style=\"margin: 0 0 4px 0;\">During a long rest, the craft camp action can contribute up to 2 hours if the character does nothing else besides crafting and sleeping; perception is impaired while doing so.</p>\n            <small style=\"color: #666;\">Source Pages: 6</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Tool Requirement</h3>\n            <p style=\"margin: 0 0 4px 0;\">Attempting a branch without its applicable tool is normally impossible; improvised tools are a GM option and use disadvantage.</p>\n            <small style=\"color: #666;\">Source Pages: 6</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Heat And Infrastructure</h3>\n            <p style=\"margin: 0 0 4px 0;\">Some branches require a heat source or additional workshop infrastructure at the GM's discretion; blacksmithing new items requires a forge and anvil.</p>\n            <small style=\"color: #666;\">Source Pages: 6</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Roll Bonuses</h3>\n            <p style=\"margin: 0 0 4px 0;\">Crafting checks do not receive temporary external bonuses by default; expertise is included, and full-duration help from a proficient crafter is the principal exception described by the book.</p>\n            <small style=\"color: #666;\">Source Pages: 5, 7</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Material Trade</h3>\n            <p style=\"margin: 0 0 4px 0;\">Buying materials normally uses listed value; selling to an interested buyer usually yields half value, subject to the GM and the market.</p>\n            <small style=\"color: #666;\">Source Pages: 7</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Reagent Interchangeability</h3>\n            <p style=\"margin: 0 0 4px 0;\">Curative, reactive, and poisonous reagents are interchangeable within their labeled type and rarity; they cannot be salvaged after being combined into another form.</p>\n            <small style=\"color: #666;\">Source Pages: 8</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Essence Synthesis</h3>\n            <p style=\"margin: 0 0 4px 0;\">Three same-rarity reagents can be synthesized into one essence: arcane uses one curative, one poisonous, and one reactive; primal uses three reactive; divine uses two curative and one reactive.</p>\n            <small style=\"color: #666;\">Source Pages: 8</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Essence Salvage</h3>\n            <p style=\"margin: 0 0 4px 0;\">A permanent magic item can return one essence of its rarity after a 2-hour salvage process; the item becomes nonmagical and attunement prevents the process.</p>\n            <small style=\"color: #666;\">Source Pages: 8</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Ink And Ingot</h3>\n            <p style=\"margin: 0 0 4px 0;\">Magical ink is a crafting material with a listed weight of about 0.1 lb; standard steel ingots are treated as 2 lb and 2 gp each in the material rules.</p>\n            <small style=\"color: #666;\">Source Pages: 8, 9</small>\n        </div>\n        \n        <div style=\"margin-bottom: 12px; padding: 8px; border-left: 3px solid #795548; background: rgba(0,0,0,0.03);\">\n            <h3 style=\"margin: 0 0 4px 0;\">Labor Formula</h3>\n            <p style=\"margin: 0 0 4px 0;\">The appendix uses rarity, difficulty, time, labor cost, and a risk multiplier as the variables for designing new item recipes; the book presents ranges rather than a universal import formula.</p>\n            <small style=\"color: #666;\">Source Pages: 95</small>\n        </div>\n        ",
           "format": 1
         },
-        "ownership": {
-          "default": -1
-        }
-      }
-    ],
-    "flags": {
-      "itensdnd": {
-        "ruleKey": "rule-quick-summary"
-      }
-    }
-  },
-  {
-    "_id": "f1e3f917d2996b52",
-    "name": "Rules: Creature Harvesting",
-    "pages": [
+        "sort": 100000
+      },
       {
-        "_id": "4403d978fd127d79",
-        "name": "Rules: Creature Harvesting",
+        "_id": "8cc6a6ca0a3c986a",
+        "name": "Alchemy & Modifiers",
         "type": "text",
         "text": {
-          "content": "<h1>Creature Harvesting and Magical Remnants</h1>\n<p>Upon defeating monsters, adventurers can harvest valuable reagents and essences instead of mundane loot.</p>\n\n<h3>Required Skills:</h3>\n<ul>\n  <li><strong>Dragons and Monstrosities:</strong> Wisdom (Medicine)</li>\n  <li><strong>Constructs:</strong> Intelligence (Arcana)</li>\n  <li><strong>Plants:</strong> Intelligence (Nature)</li>\n  <li><strong>Beasts and Basic Hide:</strong> Wisdom (Survival)</li>\n</ul>\n<p>Basic or exotic harvesting takes <strong>10 minutes</strong>. Celestials, Elementals, and Fiends leave behind <strong>Magical Remnants</strong> in 1 minute without requiring a check.</p>",
+          "content": "\n    <h2>Alchemy, Potions & Special Modifiers</h2>\n    <p>Alchemy allows producing healing draughts, poisons, and throwable flasks with special enhancements:</p>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead><tr style=\"background: #2e7d32; color: white;\"><th>Modifier</th><th>DC Increase</th><th>Extra Materials</th><th>Special Effect</th></tr></thead>\n        <tbody>\n            <tr><td><strong>Aerosol</strong></td><td>+8</td><td>2 extra Reactive Reagents of equal rarity</td><td>Can be broken or uncorked as an action to affect all creatures within a 5-foot radius.</td></tr>\n            <tr><td><strong>Concentrated</strong></td><td>+5</td><td>1 extra Curative or Poisonous Reagent</td><td>Numerical healing or damage dice are maximized.</td></tr>\n            <tr><td><strong>Long Lasting</strong></td><td>+4</td><td>1 extra Reactive Reagent</td><td>The duration of temporary potion effects is doubled.</td></tr>\n        </tbody>\n    </table>\n    ",
           "format": 1
         },
-        "ownership": {
-          "default": -1
-        }
+        "sort": 200000
+      },
+      {
+        "_id": "adb9429167f0f8a0",
+        "name": "Blacksmithing & Alloys",
+        "type": "text",
+        "text": {
+          "content": "\n    <h2>Blacksmithing, Alloys & Custom Modifications</h2>\n    <p>Weapons and armors can be forged using superior metals or customized with special properties:</p>\n    <table style=\"width: 100%; border-collapse: collapse;\">\n        <thead><tr style=\"background: #37474f; color: white;\"><th>Material / Modifier</th><th>DC Adjust</th><th>Weapon Properties</th><th>Armor Properties</th></tr></thead>\n        <tbody>\n            <tr><td><strong>Adamantine</strong></td><td>+5</td><td>Critical hits against objects and structures are automatic.</td><td>Converts incoming critical hits into normal hits.</td></tr>\n            <tr><td><strong>Mithral</strong></td><td>+4</td><td>Removes Heavy property or adds Finesse.</td><td>Removes Stealth disadvantage and Strength requirements.</td></tr>\n            <tr><td><strong>Silvered</strong></td><td>+2</td><td>Overcomes non-magical damage immunities of lycanthropes and fiends.</td><td>Deals 1d4 radiant damage to creatures grappling the wearer.</td></tr>\n            <tr><td><strong>Aerodynamic</strong></td><td>+4</td><td>Gains Thrown (10/30) or extends thrown range by 10/30 ft.</td><td>Stabilized fast falling speed.</td></tr>\n            <tr><td><strong>Serrated</strong></td><td>+3</td><td>Critical hits cause 1d6 ongoing bleed damage per round.</td><td>—</td></tr>\n        </tbody>\n    </table>\n    ",
+          "format": 1
+        },
+        "sort": 300000
       }
     ],
-    "flags": {
-      "itensdnd": {
-        "ruleKey": "rule-harvesting"
-      }
+    "ownership": {
+      "default": 2
     }
   }
 ]

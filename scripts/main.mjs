@@ -116,14 +116,18 @@ Hooks.once("ready", async () => {
 
 /**
  * Injeção de botão no cabeçalho das fichas de personagem (D&D 5e Actor Sheet).
+ * Suporte aprimorado para ActorSheet5eCharacter2 (dnd5e v3/v4) e fichas clássicas.
  */
-Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
+function addSheetWorkshopButton(app, buttons) {
   try {
     if (!game.settings.get(MODULE_ID, "enableSheetButton")) return;
   } catch (e) {}
 
-  const actor = sheet.actor;
+  const actor = app.actor || app.document;
   if (!actor || actor.type !== "character") return;
+
+  // Evitar duplicatas
+  if (buttons.some(b => b.class === "itensdnd-sheet-btn")) return;
 
   buttons.unshift({
     label: game.i18n.localize("ITENSDND.Settings.Menu.Label") || "Oficina",
@@ -133,6 +137,47 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
       new CraftingWorkshopApp({ actor }).render({ force: true });
     }
   });
+}
+
+// 1. Hook global de cabeçalho de aplicações (compatível com dnd5e 3+ ActorSheet5eCharacter2)
+Hooks.on("getApplicationHeaderButtons", (app, buttons) => {
+  addSheetWorkshopButton(app, buttons);
+});
+
+// 2. Hook legado de fichas de ator (ApplicationV1 e temas alternativos)
+Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
+  addSheetWorkshopButton(sheet, buttons);
+});
+
+// 3. Fallback visual no render caso o tema altere os hooks nativos
+Hooks.on("renderActorSheet", (app, html) => {
+  try {
+    if (!game.settings.get(MODULE_ID, "enableSheetButton")) return;
+  } catch (e) {}
+
+  const actor = app.actor || app.document;
+  if (!actor || actor.type !== "character") return;
+
+  const root = html instanceof HTMLElement ? html : html[0];
+  if (!root) return;
+
+  const header = root.querySelector(".window-header");
+  if (header && !header.querySelector(".itensdnd-sheet-btn")) {
+    const btn = document.createElement("a");
+    btn.className = "header-button control itensdnd-sheet-btn";
+    btn.innerHTML = '<i class="fas fa-hammer"></i> ' + (game.i18n.localize("ITENSDND.Settings.Menu.Label") || "Oficina");
+    btn.title = game.i18n.localize("ITENSDND.Settings.Menu.Hint") || "Abrir Oficina de Criação";
+    btn.onclick = (ev) => {
+      ev.preventDefault();
+      new CraftingWorkshopApp({ actor }).render({ force: true });
+    };
+    const closeBtn = header.querySelector(".close");
+    if (closeBtn) {
+      header.insertBefore(btn, closeBtn);
+    } else {
+      header.appendChild(btn);
+    }
+  }
 });
 
 

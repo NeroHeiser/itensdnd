@@ -1,642 +1,1253 @@
 [
   {
     "_id": "4aebb7c2e7fb84db",
-    "name": "Creature Harvesting (CR 0–4)",
     "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-0-4",
+        "category": "harvesting"
+      }
+    },
+    "name": "Creature Harvesting (CR 0–4)",
     "description": "<p>Table of materials and reagents harvested from monsters, dragons, aberrations, and constructs of CR 0–4.</p>",
     "results": [
       {
-        "_id": "4c74cc08185cb7da",
+        "_id": "dc3b25a4cbd2fedb",
         "type": 0,
         "text": "No salvageable components",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           1,
           20
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": null,
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "1371232cc2fa1249",
+        "_id": "ddbcb61a2f890454",
         "type": 0,
         "text": "1x Common Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 30,
         "range": [
           21,
           50
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-poisonous-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "d7e6c6a2a883615d",
+        "_id": "587ee4a56ad11c6b",
         "type": 0,
         "text": "1x Common Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           51,
           70
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "77ef024ffad6eab7",
+        "_id": "0b560c9843364493",
         "type": 0,
         "text": "1x Common Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 10,
         "range": [
           71,
           80
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "9c67c03e35482e22",
+        "_id": "c8fbe044f68582f5",
         "type": 0,
         "text": "1x Fancy Parts or Rare Hide",
+        "img": "icons/svg/d20-black.svg",
         "weight": 15,
         "range": [
           81,
           95
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "parts-fancy",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "87f97ce157e9b440",
+        "_id": "79482e92c7428e68",
         "type": 0,
         "text": "1x Common Primal or Arcane Essence",
+        "img": "icons/svg/d20-black.svg",
         "weight": 5,
         "range": [
           96,
           100
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-primal-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       }
-    ],
-    "formula": "1d100",
-    "replacement": true,
-    "displayRoll": true,
-    "flags": {
-      "itensdnd": {
-        "tableKey": "harvesting-cr-0-4"
-      }
-    }
+    ]
   },
   {
     "_id": "3452a0f178c4e681",
-    "name": "Creature Harvesting (CR 5–10)",
     "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-5-10",
+        "category": "harvesting"
+      }
+    },
+    "name": "Creature Harvesting (CR 5–10)",
     "description": "<p>Table of materials and essences harvested from creatures of CR 5–10.</p>",
     "results": [
       {
-        "_id": "5395aeb4c2db5a88",
+        "_id": "12aafbb4f997f41f",
         "type": 0,
         "text": "1x Common Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           1,
           20
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "914891ec01e27ac1",
+        "_id": "33dc985d4e108e24",
         "type": 0,
         "text": "1x Uncommon Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 30,
         "range": [
           21,
           50
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-uncommon",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "beb55fe0f97316bb",
+        "_id": "5aeab8f25765b005",
         "type": 0,
         "text": "1x Uncommon Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           51,
           70
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-poisonous-uncommon",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "4c7fec364ad963a7",
+        "_id": "b3fb707455ce3d7b",
         "type": 0,
         "text": "1x Uncommon Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 15,
         "range": [
           71,
           85
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-uncommon",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "89f19c06bd474f50",
+        "_id": "00f24f00696085a1",
         "type": 0,
         "text": "1x Uncommon Essence (Arcane/Primal)",
+        "img": "icons/svg/d20-black.svg",
         "weight": 10,
         "range": [
           86,
           95
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-uncommon",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "cbaa09accf65ffa1",
+        "_id": "6cf9275bb9d1c207",
         "type": 0,
         "text": "1x Rare Essence or Precious Scale",
+        "img": "icons/svg/d20-black.svg",
         "weight": 5,
         "range": [
           96,
           100
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-rare",
-            "qty": 1
-          }
-        }
+        "drawn": false
       }
-    ],
-    "formula": "1d100",
-    "replacement": true,
-    "displayRoll": true,
-    "flags": {
-      "itensdnd": {
-        "tableKey": "harvesting-cr-5-10"
-      }
-    }
+    ]
   },
   {
     "_id": "f4dcd07641ba5e92",
-    "name": "Creature Harvesting (CR 11–16)",
     "img": "icons/svg/d20-grey.svg",
-    "description": "<p>Table of rare materials, essences, and esoteric parts from CR 11–16 creatures.</p>",
-    "results": [
-      {
-        "_id": "441d736bc5e832e7",
-        "type": 0,
-        "text": "1x Uncommon Reactive Reagent",
-        "weight": 20,
-        "range": [
-          1,
-          20
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-uncommon",
-            "qty": 1
-          }
-        }
-      },
-      {
-        "_id": "7b798a86159af51a",
-        "type": 0,
-        "text": "1x Rare Curative Reagent",
-        "weight": 30,
-        "range": [
-          21,
-          50
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-rare",
-            "qty": 1
-          }
-        }
-      },
-      {
-        "_id": "f7d9b3acc9c63ce6",
-        "type": 0,
-        "text": "1x Rare Poisonous Reagent",
-        "weight": 20,
-        "range": [
-          51,
-          70
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-poisonous-rare",
-            "qty": 1
-          }
-        }
-      },
-      {
-        "_id": "fe187537a88eb885",
-        "type": 0,
-        "text": "1x Esoteric Parts or Dragon Scale",
-        "weight": 15,
-        "range": [
-          71,
-          85
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "parts-esoteric",
-            "qty": 1
-          }
-        }
-      },
-      {
-        "_id": "d52bbb687baa9269",
-        "type": 0,
-        "text": "1x Rare Essence (Arcane/Divine/Primal)",
-        "weight": 10,
-        "range": [
-          86,
-          95
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-rare",
-            "qty": 1
-          }
-        }
-      },
-      {
-        "_id": "8df8ca7d9932ae41",
-        "type": 0,
-        "text": "1x Very Rare Essence",
-        "weight": 5,
-        "range": [
-          96,
-          100
-        ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-very-rare",
-            "qty": 1
-          }
-        }
-      }
-    ],
     "formula": "1d100",
     "replacement": true,
     "displayRoll": true,
     "flags": {
       "itensdnd": {
-        "tableKey": "harvesting-cr-11-16"
+        "tableKey": "harvesting-cr-11-16",
+        "category": "harvesting"
       }
-    }
-  },
-  {
-    "_id": "352362a2fada279b",
-    "name": "Legendary Creature Harvesting (CR 17+)",
-    "img": "icons/svg/d20-grey.svg",
-    "description": "<p>Mythic table of materials from ancient dragons, archfiends, and titans of CR 17+.</p>",
+    },
+    "name": "Creature Harvesting (CR 11–16)",
+    "description": "<p>Table of rare materials, essences, and esoteric parts from CR 11–16 creatures.</p>",
     "results": [
       {
-        "_id": "caf25f463dcd3e31",
+        "_id": "334310422308ed07",
         "type": 0,
-        "text": "1x Rare Reactive Reagent",
+        "text": "1x Uncommon Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           1,
           20
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-rare",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "2d0f9cdf51f3489b",
+        "_id": "a8c1b35c553f8abf",
+        "type": 0,
+        "text": "1x Rare Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 30,
+        "range": [
+          21,
+          50
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "6480dacbdfa752f4",
+        "type": 0,
+        "text": "1x Rare Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          51,
+          70
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "7616cb18b907de3c",
+        "type": 0,
+        "text": "1x Esoteric Parts or Dragon Scale",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "96cbed05cda5d415",
+        "type": 0,
+        "text": "1x Rare Essence (Arcane/Divine/Primal)",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "82c32fa2d3a9fb85",
+        "type": 0,
+        "text": "1x Very Rare Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "352362a2fada279b",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "harvesting-cr-17-plus",
+        "category": "harvesting"
+      }
+    },
+    "name": "Legendary Creature Harvesting (CR 17+)",
+    "description": "<p>Mythic table of materials from ancient dragons, archfiends, and titans of CR 17+.</p>",
+    "results": [
+      {
+        "_id": "c0dec78ecb0c1c6d",
+        "type": 0,
+        "text": "1x Rare Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "dd5e7684b338b39c",
         "type": 0,
         "text": "1x Very Rare Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 25,
         "range": [
           21,
           45
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-very-rare",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "fc877c74707338da",
+        "_id": "10bdc1374900a473",
         "type": 0,
         "text": "1x Very Rare Essence",
+        "img": "icons/svg/d20-black.svg",
         "weight": 25,
         "range": [
           46,
           70
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-very-rare",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "d63eda0e2a1338c8",
+        "_id": "719c81bc076e3e2e",
         "type": 0,
         "text": "2x Dragon Scales / Esoteric Parts",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           71,
           90
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "hide-dragon-scale",
-            "qty": 2
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "154e9a95ece0703c",
+        "_id": "62366ae9464dc2a2",
         "type": 0,
         "text": "1x Legendary Essence",
+        "img": "icons/svg/d20-black.svg",
         "weight": 10,
         "range": [
           91,
           100
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-arcane-legendary",
-            "qty": 1
-          }
-        }
+        "drawn": false
       }
-    ],
+    ]
+  },
+  {
+    "_id": "32ea145bd3ae4adf",
+    "img": "icons/svg/d20-grey.svg",
     "formula": "1d100",
     "replacement": true,
     "displayRoll": true,
     "flags": {
       "itensdnd": {
-        "tableKey": "harvesting-cr-17-plus"
+        "tableKey": "harvesting-remnants-0-4",
+        "category": "harvesting"
       }
-    }
-  },
-  {
-    "_id": "32ea145bd3ae4adf",
+    },
     "name": "Magical Remnants (CR 0–4)",
-    "img": "icons/svg/d20-grey.svg",
     "description": "<p>Energetic remnants left behind by Celestials, Fiends, and Elementals upon destruction.</p>",
     "results": [
       {
-        "_id": "c45a318aa479f8be",
+        "_id": "cbc46d470b0e922c",
         "type": 0,
         "text": "No condensed remnants",
+        "img": "icons/svg/d20-black.svg",
         "weight": 50,
         "range": [
           1,
           50
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": null,
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "2354fa7753038cd1",
+        "_id": "f3c751611dac4381",
         "type": 0,
         "text": "1x Common Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 25,
         "range": [
           51,
           75
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "c2dc4590b8b63047",
+        "_id": "fd8c8973a94be0c1",
         "type": 0,
         "text": "1x Common Curative or Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 15,
         "range": [
           76,
           90
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "571b01bf75b3953f",
+        "_id": "6f5ebd7ca854d09d",
         "type": 0,
         "text": "1x Common Divine or Arcane Essence",
+        "img": "icons/svg/d20-black.svg",
         "weight": 10,
         "range": [
           91,
           100
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-divine-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       }
-    ],
+    ]
+  },
+  {
+    "_id": "366d5c268bd6eda7",
+    "img": "icons/svg/d20-grey.svg",
     "formula": "1d100",
     "replacement": true,
     "displayRoll": true,
     "flags": {
       "itensdnd": {
-        "tableKey": "harvesting-remnants-0-4"
+        "tableKey": "gathering-wilderness",
+        "category": "harvesting"
       }
-    }
-  },
-  {
-    "_id": "366d5c268bd6eda7",
+    },
     "name": "Wilderness Gathering",
-    "img": "icons/svg/d20-grey.svg",
     "description": "<p>Foraging herbs, fungi, ores, and natural resources while traveling or resting.</p>",
     "results": [
       {
-        "_id": "b8e51513a4b26987",
+        "_id": "0dd0fa7009465421",
         "type": 0,
         "text": "No special resources found",
+        "img": "icons/svg/d20-black.svg",
         "weight": 25,
         "range": [
           1,
           25
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": null,
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "d1f811eeab47328f",
+        "_id": "a35cd8b63a864257",
         "type": 0,
         "text": "1d4 Common Curative Reagents",
+        "img": "icons/svg/d20-black.svg",
         "weight": 35,
         "range": [
           26,
           60
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-curative-common",
-            "qty": 2
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "89915479ecfad794",
+        "_id": "597f159ae308820f",
         "type": 0,
         "text": "1d2 Common Poisonous Reagents",
+        "img": "icons/svg/d20-black.svg",
         "weight": 20,
         "range": [
           61,
           80
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-poisonous-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "7d328a4e81bec40d",
+        "_id": "a75e3e2d501c933f",
         "type": 0,
         "text": "1x Uncommon Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
         "weight": 15,
         "range": [
           81,
           95
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "reagent-reactive-uncommon",
-            "qty": 1
-          }
-        }
+        "drawn": false
       },
       {
-        "_id": "ab78daf9f5afa98c",
+        "_id": "de9038953526c207",
         "type": 0,
         "text": "1x Common Primal Essence",
+        "img": "icons/svg/d20-black.svg",
         "weight": 5,
         "range": [
           96,
           100
         ],
-        "drawn": false,
-        "flags": {
-          "itensdnd": {
-            "itemKey": "essence-primal-common",
-            "qty": 1
-          }
-        }
+        "drawn": false
       }
-    ],
+    ]
+  },
+  {
+    "_id": "c11c40b7ca6ddd26",
+    "img": "icons/svg/d20-grey.svg",
     "formula": "1d100",
     "replacement": true,
     "displayRoll": true,
     "flags": {
       "itensdnd": {
-        "tableKey": "gathering-wilderness"
+        "tableKey": "forage-forest",
+        "category": "foraging"
       }
-    }
+    },
+    "name": "Table: Foraging: Forest & Woodlands",
+    "description": "<p>Official foraging roll table for Foraging: Forest & Woodlands (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "a29bb89147af7e48",
+        "type": 0,
+        "text": "1d4 Firewood",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "f5dbe38a8f775aee",
+        "type": 0,
+        "text": "1 Common Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          21,
+          40
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "137b3d5eb4f67ca7",
+        "type": 0,
+        "text": "1d4 Quality Branches",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          41,
+          60
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "6bfdea61b8904bc9",
+        "type": 0,
+        "text": "1d4 Common Curative Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          61,
+          80
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "edd7ab908d63b1fc",
+        "type": 0,
+        "text": "1 Uncommon Branch + 1d2 Reactive Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          81,
+          90
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "09b09b4f026d1fb8",
+        "type": 0,
+        "text": "1 Uncommon Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          91,
+          95
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "ebdca8854c55fd71",
+        "type": 0,
+        "text": "1 Common Primal Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "811c332f09e4eaaa",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-mountain",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Mountain & Hills",
+    "description": "<p>Official foraging roll table for Foraging: Mountain & Hills (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "a181997a66fe28e5",
+        "type": 0,
+        "text": "1d4 Metal Scraps",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          1,
+          25
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "7e3569c73b1c0e87",
+        "type": 0,
+        "text": "1 Common Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          26,
+          50
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "aa22c75f7c43009d",
+        "type": 0,
+        "text": "1 Adamant Ore Chunk",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          51,
+          70
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "43fb993885b7a359",
+        "type": 0,
+        "text": "1d4 Common Reactive Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "0c12ed4999c6ce90",
+        "type": 0,
+        "text": "1 Uncommon Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "90b86d09993c4d04",
+        "type": 0,
+        "text": "1 Common Arcane Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "7fcf8b05be7a9c76",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-swamp",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Swamp & Marshes",
+    "description": "<p>Official foraging roll table for Foraging: Swamp & Marshes (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "51f1dfebcc8e33d9",
+        "type": 0,
+        "text": "1d4 Murky Water & Wet Herbs",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "8812b4c5b4b1651d",
+        "type": 0,
+        "text": "1 Common Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          21,
+          45
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "c151e18a57cec0d7",
+        "type": 0,
+        "text": "1d4 Common Poisonous Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          46,
+          70
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "20adee12129be494",
+        "type": 0,
+        "text": "1 Uncommon Poisonous Reagent + 1 Reactive",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "bbf74e4e4a6fb4c3",
+        "type": 0,
+        "text": "1 Medium Insect Carapace",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "990663fefb565217",
+        "type": 0,
+        "text": "1 Common Primal Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "e1085ea2ad405415",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-desert",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Desert & Wastes",
+    "description": "<p>Official foraging roll table for Foraging: Desert & Wastes (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "6493064d7ba5e39e",
+        "type": 0,
+        "text": "1d6 Hide Scraps",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 30,
+        "range": [
+          1,
+          30
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "4aa6a118934c6f1c",
+        "type": 0,
+        "text": "1 Common Reactive Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          31,
+          55
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "6865e12ced8e0040",
+        "type": 0,
+        "text": "1d4 Desert Reptile Scales",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          56,
+          75
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "2eac2ae56fc2abc9",
+        "type": 0,
+        "text": "1 Uncommon Poisonous Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          76,
+          90
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "c6eda9682862a7dd",
+        "type": 0,
+        "text": "1 Common Divine Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "2eb4a5e800cfd532",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-underdark",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Underdark & Caverns",
+    "description": "<p>Official foraging roll table for Foraging: Underdark & Caverns (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "514f70d7072d83e8",
+        "type": 0,
+        "text": "1d4 Common Luminescent Fungi",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          1,
+          20
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "937ca5c7136f730f",
+        "type": 0,
+        "text": "1 Common Reactive Reagent + 1 Poisonous",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          21,
+          45
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "a27c645d7485bbc6",
+        "type": 0,
+        "text": "1d4 Common Poisonous Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          46,
+          70
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "5469d3a619d4db90",
+        "type": 0,
+        "text": "1 Esoteric Part / Rare Ore",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          71,
+          85
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "b5f2b65025000cb9",
+        "type": 0,
+        "text": "1 Common Arcane Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          86,
+          95
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "f966a3fe584c377c",
+        "type": 0,
+        "text": "1 Uncommon Arcane Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 5,
+        "range": [
+          96,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "275468299dfa1dfb",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-coastal",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Coastal & Water",
+    "description": "<p>Official foraging roll table for Foraging: Coastal & Water (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "63500131ed35060d",
+        "type": 0,
+        "text": "1d4 Shells & Dried Seaweed",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          1,
+          25
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "d9128e595fe5c163",
+        "type": 0,
+        "text": "1 Common Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          26,
+          50
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "8a23e5d70a3bbfd6",
+        "type": 0,
+        "text": "1d4 Sea Creature Scales",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          51,
+          75
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "7a8fd731e8fcf949",
+        "type": 0,
+        "text": "1d2 Uncommon Curative Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          76,
+          90
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "f986b6af99632518",
+        "type": 0,
+        "text": "1 Common Primal Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "6e06ef9b629b1797",
+    "img": "icons/svg/d20-grey.svg",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "forage-plains",
+        "category": "foraging"
+      }
+    },
+    "name": "Table: Foraging: Plains & Grasslands",
+    "description": "<p>Official foraging roll table for Foraging: Plains & Grasslands (DC 10/12/14).</p>",
+    "results": [
+      {
+        "_id": "a109c2eae0408e23",
+        "type": 0,
+        "text": "1d4 Fresh Supplies / Plant Fibers",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 30,
+        "range": [
+          1,
+          30
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "f8e132be25727fd4",
+        "type": 0,
+        "text": "1 Common Curative Reagent",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 25,
+        "range": [
+          31,
+          55
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "08e3183be0d4b063",
+        "type": 0,
+        "text": "1d4 Common Curative Reagents",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 20,
+        "range": [
+          56,
+          75
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "915b1a6edb9530a6",
+        "type": 0,
+        "text": "1d4 Hide Scraps",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          76,
+          90
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "9acd3cf032c596cb",
+        "type": 0,
+        "text": "1 Common Divine Essence",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "1970d4d02a049d92",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "formula": "1d12",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "quantum-chaos-box",
+        "category": "special"
+      }
+    },
+    "name": "Table: Quantum Chaos Box",
+    "description": "<p>Random effects upon opening a Quantum Chaos Box (Kibbles' Crafting Guide p. 84).</p>",
+    "results": [
+      {
+        "_id": "6249470935092b16",
+        "type": 0,
+        "text": "1d4 hostile swarms of rats under the effect of Fire Shield.",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 1,
+        "range": [
+          1,
+          1
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "c29765804d17d744",
+        "type": 0,
+        "text": "A small piece of a star that violently explodes (3d12 fire, DC 15 Dex half).",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 2,
+        "range": [
+          2,
+          3
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "826f01307159ae58",
+        "type": 0,
+        "text": "A small wooden toy looking quite old.",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 2,
+        "range": [
+          4,
+          5
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "ccf6bf1da7a9638e",
+        "type": 0,
+        "text": "1d4 delicious fresh fish (+10 temp HP if cooked within 1 hour).",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 2,
+        "range": [
+          6,
+          7
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "0c6cac91fd0db760",
+        "type": 0,
+        "text": "Another identical box, slightly smaller: it's a hostile Mimic!",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 2,
+        "range": [
+          8,
+          9
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "a00a59111c6cfb2c",
+        "type": 0,
+        "text": "Nothing at all.",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 2,
+        "range": [
+          10,
+          11
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "9903f52caa883c73",
+        "type": 0,
+        "text": "1 glowing Rare Arcane Essence.",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 1,
+        "range": [
+          12,
+          12
+        ],
+        "drawn": false
+      }
+    ]
+  },
+  {
+    "_id": "ba4ddf8e6f8182cc",
+    "img": "icons/commodities/metal/ingot-iron.webp",
+    "formula": "1d100",
+    "replacement": true,
+    "displayRoll": true,
+    "flags": {
+      "itensdnd": {
+        "tableKey": "salvage-metals",
+        "category": "salvage"
+      }
+    },
+    "name": "Table: Salvage Metallic Equipment",
+    "description": "<p>Break down metal equipment into ingots and metal scraps.</p>",
+    "results": [
+      {
+        "_id": "66c9d4c8832d862a",
+        "type": 0,
+        "text": "1d4 Metal Scraps",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 40,
+        "range": [
+          1,
+          40
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "328db3c06ef2627b",
+        "type": 0,
+        "text": "1 Iron Ingot",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 35,
+        "range": [
+          41,
+          75
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "2b5ddb393c05dc8d",
+        "type": 0,
+        "text": "1 Steel Ingot",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 15,
+        "range": [
+          76,
+          90
+        ],
+        "drawn": false
+      },
+      {
+        "_id": "c908caba837e723c",
+        "type": 0,
+        "text": "1d2 Steel Ingots + 1d4 Metal Scraps",
+        "img": "icons/svg/d20-black.svg",
+        "weight": 10,
+        "range": [
+          91,
+          100
+        ],
+        "drawn": false
+      }
+    ]
   }
 ]

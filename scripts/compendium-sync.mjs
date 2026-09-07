@@ -22,6 +22,12 @@ export class CompendiumSync {
       label: "Receitas de Crafting"
     },
     {
+      id: "crafting-items",
+      file: "crafting-items.json",
+      documentName: "Item",
+      label: "Itens Criáveis (Kibbles)"
+    },
+    {
       id: "crafting-tables",
       file: "crafting-tables.json",
       documentName: "RollTable",

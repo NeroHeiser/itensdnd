@@ -334,29 +334,64 @@ export class CraftingEngine {
   }
 
   /**
-   * Cria o item resultante no inventário do personagem.
+   * Cria o item resultante no inventário do personagem, buscando o item real no compêndio.
    * @param {Actor} actor
    * @param {object} recipe
    */
   static async awardCraftedItem(actor, recipe) {
-    const itemData = {
-      name: recipe.resultItem || recipe.name.replace(/^Receita: |^Recipe: /, ""),
-      type: "consumable",
-      img: recipe.img || "icons/commodities/treasure/chest-wooden.webp",
-      system: {
-        description: { value: `<p>Item criado na Oficina de Criação por ${actor.name}.</p>` },
-        quantity: 1,
-        rarity: recipe.rarity || "common"
-      }
-    };
+    const resName = recipe.resultItem || recipe.name.replace(/^Receita: |^Recipe: /, "");
+    let finalItemData = null;
 
-    // Ajusta tipo de item com base na profissão
-    if (recipe.profession === "blacksmithing") {
-      itemData.type = recipe.name.toLowerCase().includes("armadura") || recipe.name.toLowerCase().includes("armor") || recipe.name.toLowerCase().includes("escudo") || recipe.name.toLowerCase().includes("shield") ? "equipment" : "weapon";
+    // 1. Tentar obter o item oficial do compêndio de itens criáveis
+    try {
+      const pack = game.packs.get("itensdnd.crafting-items");
+      if (pack) {
+        await pack.getIndex();
+        const targetId = recipe.flags?.itensdnd?.resultItemId || recipe.resultItemId;
+        let compendiumDoc = null;
+
+        if (targetId) {
+          compendiumDoc = await pack.getDocument(targetId).catch(() => null);
+        }
+        if (!compendiumDoc) {
+          const entry = pack.index.find(e => e.name === resName || e.name.toLowerCase() === resName.toLowerCase());
+          if (entry) {
+            compendiumDoc = await pack.getDocument(entry._id).catch(() => null);
+          }
+        }
+
+        if (compendiumDoc) {
+          finalItemData = compendiumDoc.toObject();
+          delete finalItemData._id;
+          if (finalItemData.system) {
+            finalItemData.system.quantity = 1;
+          }
+        }
+      }
+    } catch (err) {
+      console.warn("Itens & Sistema de Crafting | Não foi possível recuperar do compêndio, usando fallback:", err);
     }
 
-    await actor.createEmbeddedDocuments("Item", [itemData]);
-    ui.notifications?.info(`${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftComplete")}: ${itemData.name}`);
+    // 2. Fallback estruturado caso o compêndio não esteja disponível
+    if (!finalItemData) {
+      finalItemData = {
+        name: resName,
+        type: "consumable",
+        img: recipe.img || "icons/commodities/treasure/chest-wooden.webp",
+        system: {
+          description: { value: `<p>Item criado na Oficina de Criação por ${actor.name}.</p>` },
+          quantity: 1,
+          rarity: recipe.rarity || "common"
+        }
+      };
+
+      if (recipe.profession === "blacksmithing") {
+        finalItemData.type = recipe.name.toLowerCase().includes("armadura") || recipe.name.toLowerCase().includes("armor") || recipe.name.toLowerCase().includes("escudo") || recipe.name.toLowerCase().includes("shield") ? "equipment" : "weapon";
+      }
+    }
+
+    await actor.createEmbeddedDocuments("Item", [finalItemData]);
+    ui.notifications?.info(`${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftComplete")}: ${finalItemData.name}`);
   }
 
   /**

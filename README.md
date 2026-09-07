@@ -14,24 +14,35 @@ Módulo completo para **Foundry VTT (v12 a v14+)** e sistema **D&D 5e (3.x e 4.x
    - Sistema de progresso em blocos de 2 horas, controle da regra de 3 falhas consecutivas e suporte à regra de "Take 10".
    - Criação automática do item finalizado no inventário e consumo proporcional de materiais.
 
-2. **Sistema de Colheita de Criaturas (Harvesting & Remnants)**:
+2. **Sistema de Colheita e Coleta (Harvesting & Foraging)**:
    - Ferramenta de colheita rápida com detecção automática do ND (Nível de Desafio) e tipo de criatura (Dragões, Feras, Construtos, Aberrações, Mortos-vivos, Celestiais, etc.).
+   - Tabelas de Forragem por Bioma (Floresta, Montanha, Pântano, Deserto, Subterrâneo, Costeiro, Planícies).
+   - Tabelas de Desmanche/Salvamento (recuperação de lingotes e sucatas de itens de metal e couro).
+   - Tabela da Caixa do Caos Quântico (*Quantum Chaos Box*).
    - Testes de perícia integrados (Medicina, Arcanismo, Sobrevivência, Natureza).
    - Distribuição direta de reagentes, essências, peças e carapaças para o jogador ou token alvo.
 
 3. **Compêndios Completos e Bilíngues (`pt-BR` / `en`)**:
-   - **Materiais de Criação**: Reagentes, lingotes de metal, essências mágicas, couros, carapaças e tintas arcanas.
-   - **Receitas de Criação**: Fórmulas com custo de ingredientes, CD, tempo e ferramentas necessárias.
-   - **Tabelas de Rolagem**: Tabelas de colheita divididas por ND (0–4, 5–10, 11–16, 17+) e tabelas de busca de recursos na natureza.
-   - **Manuais de Regras**: Entradas de diário explicativas sobre o fluxo de criação, regras de descanso e funcionamento das profissões.
+   - **Itens Criáveis (`crafting-items`)**: 478 itens finais com atributos reais do D&D 5e (consumíveis, armas, armaduras e itens maravilhosos).
+   - **Materiais de Criação (`crafting-materials`)**: 92 materiais fundamentais, reagentes, lingotes, essências, couros e peças.
+   - **Receitas de Criação (`crafting-recipes`)**: 478 fórmulas vinculadas aos itens finais com custo de ingredientes, CD, tempo e ferramentas.
+   - **Tabelas de Rolagem (`crafting-tables`)**: 15 tabelas funcionais d100 e d12 para colheita, forragem, salvamento e caos quântico.
+   - **Manuais de Regras (`crafting-rules`)**: Diário oficial com as 14 mecânicas fundamentais, regras de descanso, forja de ligas metálicas (Adamantina, Mithral, Prata) e modificadores alquímicos (Aerossol, Concentrado).
 
 ---
 
-## 🛠️ Instalação
+## 🛠️ Instalação Direta no Foundry VTT
 
-1. Clone ou extraia este repositório dentro do diretório `Data/modules/itensdnd` do seu Foundry VTT.
-2. Inicie o Foundry VTT, acesse o seu mundo e ative o módulo **Itens & Sistema de Crafting (D&D 5e)** nas Configurações de Módulos.
-3. Os compêndios serão sincronizados automaticamente com o idioma do seu mundo (`pt-BR` ou `en`).
+No painel de configuração do Foundry VTT, em **Instalar Módulo**, cole o link do manifesto:
+
+```text
+https://raw.githubusercontent.com/NeroHeiser/itensdnd/main/module.json
+```
+
+Ou realize o download do arquivo ZIP:
+```text
+https://github.com/NeroHeiser/itensdnd/archive/refs/heads/main.zip
+```
 
 ---
 
