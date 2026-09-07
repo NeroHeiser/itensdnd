@@ -107,6 +107,7 @@ export class CraftingWorkshopApp extends BaseApplication {
 
     const professions = [
       { key: "alchemy", label: game.i18n.localize("ITENSDND.Workshop.Professions.alchemy"), icon: "fas fa-flask" },
+      { key: "poisoncraft", label: game.i18n.localize("ITENSDND.Workshop.Professions.poisoncraft"), icon: "fas fa-skull-crossbones" },
       { key: "blacksmithing", label: game.i18n.localize("ITENSDND.Workshop.Professions.blacksmithing"), icon: "fas fa-gavel" },
       { key: "enchanting", label: game.i18n.localize("ITENSDND.Workshop.Professions.enchanting"), icon: "fas fa-wand-magic-sparkles" },
       { key: "leatherworking", label: game.i18n.localize("ITENSDND.Workshop.Professions.leatherworking"), icon: "fas fa-shield-alt" },

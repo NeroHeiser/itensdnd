@@ -1,189 +1,189 @@
 [
   {
     "_id": "951ee0aeaf9b02b6",
-    "name": "Reagente Curativo Comum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
       "description": {
         "value": "<p>Ingrediente herbáceo ou biológico com propriedades curativas simples. Usado principalmente em poções de cura e bálsamos.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 5,
-        "denomination": "gp"
-      },
-      "rarity": "common",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-curative-common",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Reagente Curativo Comum"
   },
   {
     "_id": "dda7dbe9b2f15459",
-    "name": "Reagente Curativo Incomum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 20,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
       "description": {
         "value": "<p>Ingrediente restaurador potente colhido em ambientes mágicos ou de feras raras. Usado em Poções de Cura Maior e antídotos.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 20,
-        "denomination": "gp"
-      },
-      "rarity": "uncommon",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-curative-uncommon",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Reagente Curativo Incomum"
   },
   {
     "_id": "75c15d4ca3f4c0c0",
-    "name": "Reagente Curativo Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 100,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true,
       "description": {
         "value": "<p>Ingrediente com vitalidade mágica condensada, colhido de seres veneráveis ou plantas ancestrais.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 100,
-        "denomination": "gp"
-      },
-      "rarity": "rare",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-curative-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Reagente Curativo Raro"
   },
   {
     "_id": "fae22cc6a0aa4bad",
-    "name": "Reagente Curativo Muito Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 500,
+        "denomination": "gp"
+      },
+      "rarity": "veryRare",
+      "identified": true,
       "description": {
         "value": "<p>Substância regenerativa lendária capaz de restaurar órgãos e desfazer as piores aflições.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 500,
-        "denomination": "gp"
-      },
-      "rarity": "veryRare",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-curative-very-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "veryRare"
       }
-    }
+    },
+    "name": "Reagente Curativo Muito Raro"
   },
   {
     "_id": "5f905787b736c0cc",
-    "name": "Reagente Curativo Lendário",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 2500,
+        "denomination": "gp"
+      },
+      "rarity": "legendary",
+      "identified": true,
       "description": {
         "value": "<p>Gota mítica de essência de fênix ou lótus astral; capaz de desafiar a própria morte.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 2500,
-        "denomination": "gp"
-      },
-      "rarity": "legendary",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-curative-legendary",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "legendary"
       }
-    }
+    },
+    "name": "Reagente Curativo Lendário"
   },
   {
     "_id": "da2c71655a435143",
-    "name": "Reagente Venenoso Comum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-purple.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.1,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
       "description": {
         "value": "<p>Toxina comum extraída de fungos, cobras ou folhas tóxicas.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 0.1,
-      "price": {
-        "value": 5,
-        "denomination": "gp"
-      },
-      "rarity": "common",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-poisonous-common",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Reagente Venenoso Comum"
   },
   {
     "_id": "5fa80b0fa7df56eb",
-    "name": "Reagente Venenoso Incomum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-purple.webp",
     "system": {
-      "description": {
-        "value": "<p>Peçonha corrosiva ou neurotóxica colhida de escorpiões gigantes ou plantas carnívoras.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -192,27 +192,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Peçonha corrosiva ou neurotóxica colhida de escorpiões gigantes ou plantas carnívoras.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-poisonous-uncommon",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Reagente Venenoso Incomum"
   },
   {
     "_id": "ab3d0ac5f11eb4f6",
-    "name": "Reagente Venenoso Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-purple.webp",
     "system": {
-      "description": {
-        "value": "<p>Veneno altamente letal de criaturas como manticoras, hidras e wyverns.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -221,27 +222,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Veneno altamente letal de criaturas como manticoras, hidras e wyverns.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-poisonous-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Reagente Venenoso Raro"
   },
   {
     "_id": "5fec26f95c05a871",
-    "name": "Reagente Venenoso Muito Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-purple.webp",
     "system": {
-      "description": {
-        "value": "<p>Toxina sobrenatural colhida de demônios venenosos, dragões verdes anciãos ou abominações.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -250,27 +252,28 @@
         "denomination": "gp"
       },
       "rarity": "veryRare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Toxina sobrenatural colhida de demônios venenosos, dragões verdes anciãos ou abominações.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-poisonous-very-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "veryRare"
       }
-    }
+    },
+    "name": "Reagente Venenoso Muito Raro"
   },
   {
     "_id": "dc7487889cca7def",
-    "name": "Reagente Venenoso Lendário",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-purple.webp",
     "system": {
-      "description": {
-        "value": "<p>Veneno supremo capaz de corromper alma, matéria e carne imortal.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -279,27 +282,28 @@
         "denomination": "gp"
       },
       "rarity": "legendary",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Veneno supremo capaz de corromper alma, matéria e carne imortal.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-poisonous-legendary",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "legendary"
       }
-    }
+    },
+    "name": "Reagente Venenoso Lendário"
   },
   {
     "_id": "1819f7f3180f9269",
-    "name": "Reagente Reativo Comum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-red.webp",
     "system": {
-      "description": {
-        "value": "<p>Substância volátil básica, enxofre ou sais que catalisam reações alquímicas e explosivas.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -308,27 +312,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Substância volátil básica, enxofre ou sais que catalisam reações alquímicas e explosivas.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-reactive-common",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Reagente Reativo Comum"
   },
   {
     "_id": "b2730f60c0fa53a8",
-    "name": "Reagente Reativo Incomum",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-red.webp",
     "system": {
-      "description": {
-        "value": "<p>Composto altamente instável extraído de glândulas de fogo ou gelo de monstros.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -337,27 +342,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Composto altamente instável extraído de glândulas de fogo ou gelo de monstros.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-reactive-uncommon",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Reagente Reativo Incomum"
   },
   {
     "_id": "a61e33123425289d",
-    "name": "Reagente Reativo Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-red.webp",
     "system": {
-      "description": {
-        "value": "<p>Catalisador energético concentrado encontrado em resíduos elementais puros.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -366,27 +372,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Catalisador energético concentrado encontrado em resíduos elementais puros.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-reactive-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Reagente Reativo Raro"
   },
   {
     "_id": "2f66b3e26c6851f8",
-    "name": "Reagente Reativo Muito Raro",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-red.webp",
     "system": {
-      "description": {
-        "value": "<p>Substância elemental primordial com tremendo poder cinético e térmico.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -395,27 +402,28 @@
         "denomination": "gp"
       },
       "rarity": "veryRare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Substância elemental primordial com tremendo poder cinético e térmico.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-reactive-very-rare",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "veryRare"
       }
-    }
+    },
+    "name": "Reagente Reativo Muito Raro"
   },
   {
     "_id": "78c42c50f2710bfd",
-    "name": "Reagente Reativo Lendário",
     "type": "loot",
     "img": "icons/consumables/potions/potion-tube-corked-red.webp",
     "system": {
-      "description": {
-        "value": "<p>Célula primordial pura de caos e calor concentrado, extraída de tempestades astrais.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -424,27 +432,28 @@
         "denomination": "gp"
       },
       "rarity": "legendary",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Célula primordial pura de caos e calor concentrado, extraída de tempestades astrais.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "reagent-reactive-legendary",
+        "isMaterial": true,
         "category": "reagent",
         "rarity": "legendary"
       }
-    }
+    },
+    "name": "Reagente Reativo Lendário"
   },
   {
     "_id": "8aeb27bcaef08158",
-    "name": "Essência Arcana Comum",
     "type": "loot",
     "img": "icons/magic/symbols/runes-star-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Centelha de pura magia formulada ou destilada. Usada em encantamentos e pergaminhos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -453,27 +462,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Centelha de pura magia formulada ou destilada. Usada em encantamentos e pergaminhos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-arcane-common",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Essência Arcana Comum"
   },
   {
     "_id": "c888a491d5eb6ffa",
-    "name": "Essência Arcana Incomum",
     "type": "loot",
     "img": "icons/magic/symbols/runes-star-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Globo translúcido de poder arcano condensado de monstros mágicos de ND 5–10.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -482,27 +492,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Globo translúcido de poder arcano condensado de monstros mágicos de ND 5–10.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-arcane-uncommon",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Essência Arcana Incomum"
   },
   {
     "_id": "f188e1d159dd696b",
-    "name": "Essência Arcana Rara",
     "type": "loot",
     "img": "icons/magic/symbols/runes-star-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Poder arcano denso pulsando com energia espectral de alto nível.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -511,27 +522,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Poder arcano denso pulsando com energia espectral de alto nível.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-arcane-rare",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Essência Arcana Rara"
   },
   {
     "_id": "0872cca2cc5582ea",
-    "name": "Essência Arcana Muito Rara",
     "type": "loot",
     "img": "icons/magic/symbols/runes-star-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Poder arcano puro retirado de arquimagos ou monstros cósmicos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -540,27 +552,28 @@
         "denomination": "gp"
       },
       "rarity": "veryRare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Poder arcano puro retirado de arquimagos ou monstros cósmicos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-arcane-very-rare",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "veryRare"
       }
-    }
+    },
+    "name": "Essência Arcana Muito Rara"
   },
   {
     "_id": "6ec931c1ae7d0533",
-    "name": "Essência Arcana Lendária",
     "type": "loot",
     "img": "icons/magic/symbols/runes-star-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Essência capaz de distorcer a urdidura e sustentar artefatos permanentes.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -569,56 +582,58 @@
         "denomination": "gp"
       },
       "rarity": "legendary",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Essência capaz de distorcer a urdidura e sustentar artefatos permanentes.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-arcane-legendary",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "legendary"
       }
-    }
+    },
+    "name": "Essência Arcana Lendária"
   },
   {
     "_id": "45c9fcd4c65c6e36",
-    "name": "Essência Divina Comum",
     "type": "loot",
     "img": "icons/magic/holy/aura-light-teal.webp",
     "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 1.0,
+      "price": {
+        "value": 15,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
       "description": {
         "value": "<p>Fragmento de graça e radiância sagrada.</p>",
         "chat": "",
         "unidentified": ""
-      },
-      "source": "Kibbles' Crafting Guide",
-      "quantity": 1,
-      "weight": 1.0,
-      "price": {
-        "value": 15,
-        "denomination": "gp"
-      },
-      "rarity": "common",
-      "identified": true
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-divine-common",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Essência Divina Comum"
   },
   {
     "_id": "c044d8266e7f5ba2",
-    "name": "Essência Divina Incomum",
     "type": "loot",
     "img": "icons/magic/holy/aura-light-teal.webp",
     "system": {
-      "description": {
-        "value": "<p>Poder espiritual abençoado de celestiais menores ou servos devotos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -627,27 +642,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Poder espiritual abençoado de celestiais menores ou servos devotos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-divine-uncommon",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Essência Divina Incomum"
   },
   {
     "_id": "1daa6a306ea2d49e",
-    "name": "Essência Divina Rara",
     "type": "loot",
     "img": "icons/magic/holy/aura-light-teal.webp",
     "system": {
-      "description": {
-        "value": "<p>Luz celeste viva ou resíduo profano potente de planar venerável.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -656,27 +672,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Luz celeste viva ou resíduo profano potente de planar venerável.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-divine-rare",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Essência Divina Rara"
   },
   {
     "_id": "af668fb579e45e8d",
-    "name": "Essência Primitiva Comum",
     "type": "loot",
     "img": "icons/magic/nature/crystal-green.webp",
     "system": {
-      "description": {
-        "value": "<p>Poder cru da natureza, espíritos animais e elementos terrestres.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -685,27 +702,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Poder cru da natureza, espíritos animais e elementos terrestres.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-primal-common",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Essência Primitiva Comum"
   },
   {
     "_id": "836faffd71160921",
-    "name": "Essência Primitiva Incomum",
     "type": "loot",
     "img": "icons/magic/nature/crystal-green.webp",
     "system": {
-      "description": {
-        "value": "<p>Força vital selvagem extraída de monstros predadores ou espíritos da floresta.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -714,27 +732,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Força vital selvagem extraída de monstros predadores ou espíritos da floresta.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-primal-uncommon",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Essência Primitiva Incomum"
   },
   {
     "_id": "fbae0d43be0a598b",
-    "name": "Essência Primitiva Rara",
     "type": "loot",
     "img": "icons/magic/nature/crystal-green.webp",
     "system": {
-      "description": {
-        "value": "<p>Vigor inabalável colhido de dragões ou forças titânicas.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -743,27 +762,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Vigor inabalável colhido de dragões ou forças titânicas.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "essence-primal-rare",
+        "isMaterial": true,
         "category": "essence",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Essência Primitiva Rara"
   },
   {
     "_id": "967c5bd0ea0ebd32",
-    "name": "Lingote de Ferro",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-iron.webp",
     "system": {
-      "description": {
-        "value": "<p>Bloco de ferro bruto fundido (2 lbs). Utilizado para ferramentas, pregos e itens mundanos não bélicos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -772,27 +792,28 @@
         "denomination": "sp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Bloco de ferro bruto fundido (2 lbs). Utilizado para ferramentas, pregos e itens mundanos não bélicos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-iron",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Lingote de Ferro"
   },
   {
     "_id": "2b25d016bbd4c7e1",
-    "name": "Lingote de Aço",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-grey.webp",
     "system": {
-      "description": {
-        "value": "<p>Liga de ferro e carbono de excelente tenacidade (2 lbs). O padrão para armas e armaduras de qualidade.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -801,27 +822,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Liga de ferro e carbono de excelente tenacidade (2 lbs). O padrão para armas e armaduras de qualidade.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-steel",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Lingote de Aço"
   },
   {
     "_id": "64514006c2f7b3da",
-    "name": "Lingote de Prata",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-silver.webp",
     "system": {
-      "description": {
-        "value": "<p>Prata refinada (2 lbs). Utilizada para pratear armas contra licantropos ou joalheria sagrada.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -830,27 +852,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Prata refinada (2 lbs). Utilizada para pratear armas contra licantropos ou joalheria sagrada.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-silver",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Lingote de Prata"
   },
   {
     "_id": "7f6f0ff7e4e2e12a",
-    "name": "Lingote de Ouro",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-gold.webp",
     "system": {
-      "description": {
-        "value": "<p>Ouro puro reluzente (2 lbs). Empregado em ornamentos, douramento e condutores arcanos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -859,27 +882,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Ouro puro reluzente (2 lbs). Empregado em ornamentos, douramento e condutores arcanos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-gold",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Lingote de Ouro"
   },
   {
     "_id": "26dde7d4a8dae47d",
-    "name": "Lingote de Mithral",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-silver.webp",
     "system": {
-      "description": {
-        "value": "<p>Metal prateado extremamente leve e resistente (1 lb). Permite criar armaduras silenciosas e sem desvantagem em Furtividade.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -888,27 +912,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Metal prateado extremamente leve e resistente (1 lb). Permite criar armaduras silenciosas e sem desvantagem em Furtividade.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-mithral",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Lingote de Mithral"
   },
   {
     "_id": "792536519ee7d675",
-    "name": "Lingote de Adamantina",
     "type": "loot",
     "img": "icons/commodities/metal/ingot-engraved-grey.webp",
     "system": {
-      "description": {
-        "value": "<p>Um dos minerais mais duros conhecidos (2 lbs). Transforma acertos críticos em normais e garante golpes devastadores em objetos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -917,27 +942,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Um dos minerais mais duros conhecidos (2 lbs). Transforma acertos críticos em normais e garante golpes devastadores em objetos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "ingot-adamantine",
+        "isMaterial": true,
         "category": "ingot",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Lingote de Adamantina"
   },
   {
     "_id": "c204e15d7314dcf7",
-    "name": "Retalhos de Couro",
     "type": "loot",
     "img": "icons/commodities/leather/scrap-brown.webp",
     "system": {
-      "description": {
-        "value": "<p>Pedaços menores de couro aproveitáveis para tiras, bainhas e reparos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.5,
@@ -946,27 +972,28 @@
         "denomination": "sp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Pedaços menores de couro aproveitáveis para tiras, bainhas e reparos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "leather-scraps",
+        "isMaterial": true,
         "category": "leather",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Retalhos de Couro"
   },
   {
     "_id": "5e8af92517465afb",
-    "name": "Couro Comum",
     "type": "loot",
     "img": "icons/commodities/leather/leather-roll-tan.webp",
     "system": {
-      "description": {
-        "value": "<p>Pele curtida e tratada de gado ou animais médios. Base para armaduras leves.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -975,27 +1002,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Pele curtida e tratada de gado ou animais médios. Base para armaduras leves.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "leather-common",
+        "isMaterial": true,
         "category": "leather",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Couro Comum"
   },
   {
     "_id": "4e0900c3e4708e5c",
-    "name": "Pele Grossa",
     "type": "loot",
     "img": "icons/commodities/leather/fur-brown.webp",
     "system": {
-      "description": {
-        "value": "<p>Couro reforçado colhido de ursos, rinocerontes ou feras corpulentas.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 4.0,
@@ -1004,27 +1032,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Couro reforçado colhido de ursos, rinocerontes ou feras corpulentas.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "hide-thick",
+        "isMaterial": true,
         "category": "leather",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Pele Grossa"
   },
   {
     "_id": "6533c66eb5615338",
-    "name": "Carapaça / Escamas",
     "type": "loot",
     "img": "icons/commodities/biological/scales-tan.webp",
     "system": {
-      "description": {
-        "value": "<p>Placas rígidas e escamas colhidas de répteis gigantes, monstros ou insetos colossais.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 3.0,
@@ -1033,27 +1062,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Placas rígidas e escamas colhidas de répteis gigantes, monstros ou insetos colossais.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "hide-scaled",
+        "isMaterial": true,
         "category": "leather",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Carapaça / Escamas"
   },
   {
     "_id": "e3efe0d6f9079880",
-    "name": "Escama de Dragão",
     "type": "loot",
     "img": "icons/commodities/biological/scales-lizard-gold.webp",
     "system": {
-      "description": {
-        "value": "<p>Escama reluzente e impérvia recolhida de um dragão verdadeiro. Confere resistência elemental nativa.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 5.0,
@@ -1062,27 +1092,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Escama reluzente e impérvia recolhida de um dragão verdadeiro. Confere resistência elemental nativa.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "hide-dragon-scale",
+        "isMaterial": true,
         "category": "leather",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Escama de Dragão"
   },
   {
     "_id": "6120f70120a763b0",
-    "name": "Peças Simples",
     "type": "loot",
     "img": "icons/commodities/tech/gear-brass-brown.webp",
     "system": {
-      "description": {
-        "value": "<p>Pregos, engrenagens rudimentares, rebites e fios de ferro para engenhocas básicas.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.5,
@@ -1091,27 +1122,28 @@
         "denomination": "sp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Pregos, engrenagens rudimentares, rebites e fios de ferro para engenhocas básicas.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "parts-simple",
+        "isMaterial": true,
         "category": "parts",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Peças Simples"
   },
   {
     "_id": "19f7e7382758743c",
-    "name": "Peças Refinadas",
     "type": "loot",
     "img": "icons/commodities/tech/cog-brass.webp",
     "system": {
-      "description": {
-        "value": "<p>Molas de precisão, engrenagens balanceadas e válvulas colhidas de construtos ou artífices habilidosos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 1.0,
@@ -1120,27 +1152,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Molas de precisão, engrenagens balanceadas e válvulas colhidas de construtos ou artífices habilidosos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "parts-fancy",
+        "isMaterial": true,
         "category": "parts",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Peças Refinadas"
   },
   {
     "_id": "c14e145fa9709dd9",
-    "name": "Peças Esotéricas",
     "type": "loot",
     "img": "icons/commodities/tech/cog-steel.webp",
     "system": {
-      "description": {
-        "value": "<p>Componentes cinéticos arcanos retirados de golens e mecanismos lendários.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 2.0,
@@ -1149,27 +1182,28 @@
         "denomination": "gp"
       },
       "rarity": "rare",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Componentes cinéticos arcanos retirados de golens e mecanismos lendários.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "parts-esoteric",
+        "isMaterial": true,
         "category": "parts",
         "rarity": "rare"
       }
-    }
+    },
+    "name": "Peças Esotéricas"
   },
   {
     "_id": "19be4d9aad4655b6",
-    "name": "Tinta Mágica Comum",
     "type": "loot",
     "img": "icons/tools/scribal/inkwell-quill-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Tinta encantada para cópia e criação de pergaminhos arcanos de nível 1.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -1178,27 +1212,28 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Tinta encantada para cópia e criação de pergaminhos arcanos de nível 1.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "magical-ink-common",
+        "isMaterial": true,
         "category": "ink",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Tinta Mágica Comum"
   },
   {
     "_id": "e5c91bbc0ed45af7",
-    "name": "Tinta Mágica Incomum",
     "type": "loot",
     "img": "icons/tools/scribal/inkwell-quill-blue.webp",
     "system": {
-      "description": {
-        "value": "<p>Tinta luminosa para transcrição de pergaminhos de nível 2 e 3.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -1207,27 +1242,28 @@
         "denomination": "gp"
       },
       "rarity": "uncommon",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Tinta luminosa para transcrição de pergaminhos de nível 2 e 3.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "magical-ink-uncommon",
+        "isMaterial": true,
         "category": "ink",
         "rarity": "uncommon"
       }
-    }
+    },
+    "name": "Tinta Mágica Incomum"
   },
   {
     "_id": "68f21e75dfbf8ef4",
-    "name": "Frasco de Vidro",
     "type": "loot",
     "img": "icons/consumables/potions/bottle-empty.webp",
     "system": {
-      "description": {
-        "value": "<p>Recipiente de vidro hermético (4 oz) para poções, óleos e ácidos.</p>",
-        "chat": "",
-        "unidentified": ""
-      },
       "source": "Kibbles' Crafting Guide",
       "quantity": 1,
       "weight": 0.1,
@@ -1236,14 +1272,1442 @@
         "denomination": "gp"
       },
       "rarity": "common",
-      "identified": true
+      "identified": true,
+      "description": {
+        "value": "<p>Recipiente de vidro hermético (4 oz) para poções, óleos e ácidos.</p>",
+        "chat": "",
+        "unidentified": ""
+      }
     },
     "flags": {
       "itensdnd": {
         "materialKey": "glass-vial",
+        "isMaterial": true,
         "category": "container",
         "rarity": "common"
       }
-    }
+    },
+    "name": "Frasco de Vidro"
+  },
+  {
+    "_id": "20f21c2c376ada51",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Hide Scraps).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "hide-scraps",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Retalhos de Couro"
+  },
+  {
+    "_id": "2a0f4485907c155d",
+    "type": "loot",
+    "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 3,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Boiled Leather).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "boiled-leather",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Couro Fervido"
+  },
+  {
+    "_id": "2ee8929ed8872841",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rawhide Leather).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rawhide-leather",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Couro Cru"
+  },
+  {
+    "_id": "52691f04a25c31e1",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 3,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Tanned Leather).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "tanned-leather",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Couro Curtido"
+  },
+  {
+    "_id": "8f89e303d7aca5b1",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 30,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Large Carapace).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "large-carapace",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Carapaça Grande"
+  },
+  {
+    "_id": "f51c7b4eb5e06874",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 500,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Resistant Hide).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "resistant-hide",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Pele Resistente"
+  },
+  {
+    "_id": "8fb3854ac9e69f1d",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 600,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Resistant Leather).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "resistant-leather",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Couro Resistente"
+  },
+  {
+    "_id": "4108d02ef85a2b91",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Supplies (Salt, Staples, etc)).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "supplies-salt-staples-etc",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Suprimentos Básicos (Sal, Temperos)"
+  },
+  {
+    "_id": "4ec36840c064d219",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 100,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rare Supplies (Hard to luxury goods)).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rare-supplies-hard-to-luxury-goods",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Suprimentos Raros (Especiarias Finas)"
+  },
+  {
+    "_id": "3789fda681665c45",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Metal Scraps).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "metal-scraps",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Retalhos de Metal"
+  },
+  {
+    "_id": "26a22077a7f704a9",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Gold Scraps).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "gold-scraps",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Retalhos de Ouro"
+  },
+  {
+    "_id": "fa433b80cc3122ce",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Steel Chain (2 ft)).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "steel-chain-2-ft",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Corrente de Aço (60 cm)"
+  },
+  {
+    "_id": "e5c17383b7e7014e",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 30,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Mithril Ingot).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "mithril-ingot",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Lingote de Mithral"
+  },
+  {
+    "_id": "e7de9ca538ac730e",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 60,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Adamantine Ingot).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "adamantine-ingot",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Lingote de Adamantina"
+  },
+  {
+    "_id": "fdadf98b3c727e84",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "cp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Firewood).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "firewood",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Lenha"
+  },
+  {
+    "_id": "1dba9cf87112a1c9",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Common Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "common-branch",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Galho Comum"
+  },
+  {
+    "_id": "c984941f5df38877",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Short Haft).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "short-haft",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Cabo Curto"
+  },
+  {
+    "_id": "2290b76e0d4d5e53",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Quality Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "quality-branch",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Galho de Qualidade"
+  },
+  {
+    "_id": "72635aaaf2ddff6f",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 80,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rare Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rare-branch",
+        "isMaterial": true,
+        "rarity": "rare"
+      }
+    },
+    "name": "Galho Raro"
+  },
+  {
+    "_id": "0d7b1d797a8e377a",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2000,
+        "denomination": "gp"
+      },
+      "rarity": "legendary",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Legendary Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "legendary-branch",
+        "isMaterial": true,
+        "rarity": "legendary"
+      }
+    },
+    "name": "Galho Lendário"
+  },
+  {
+    "_id": "d47141c538762506",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 15,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Common Reagent).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "common-reagent",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Reagente Comum"
+  },
+  {
+    "_id": "2db659cc54af9531",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 1,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Glass Flask).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "glass-flask",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Frasco de Vidro"
+  },
+  {
+    "_id": "af71bb4c5388d864",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Normal Ink).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "normal-ink",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Tinta Comum"
+  },
+  {
+    "_id": "c297acd6d9d58280",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 45,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Common Essence).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "common-essence",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Essência Comum"
+  },
+  {
+    "_id": "95592450f43f827c",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 40,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Uncommon Reagent).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "uncommon-reagent",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Reagente Incomum"
+  },
+  {
+    "_id": "f391f512f870d20f",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 40,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Uncommon Magical Ink).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "uncommon-magical-ink",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Tinta Mágica Incomum"
+  },
+  {
+    "_id": "686b2c81112a6e35",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 200,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rare Reagent).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rare-reagent",
+        "isMaterial": true,
+        "rarity": "rare"
+      }
+    },
+    "name": "Reagente Raro"
+  },
+  {
+    "_id": "03eff6331c322c59",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 200,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rare Magical Ink).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rare-magical-ink",
+        "isMaterial": true,
+        "rarity": "rare"
+      }
+    },
+    "name": "Tinta Mágica Rara"
+  },
+  {
+    "_id": "496bc8d965684e61",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2000,
+        "denomination": "gp"
+      },
+      "rarity": "very rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Very Rare Reagent).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "very-rare-reagent",
+        "isMaterial": true,
+        "rarity": "very rare"
+      }
+    },
+    "name": "Reagente Muito Raro"
+  },
+  {
+    "_id": "7bc972f519b435a2",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2000,
+        "denomination": "gp"
+      },
+      "rarity": "very rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Very Rare Magical Ink).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "very-rare-magical-ink",
+        "isMaterial": true,
+        "rarity": "very rare"
+      }
+    },
+    "name": "Tinta Mágica Muito Rara"
+  },
+  {
+    "_id": "294702032aa07840",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5000,
+        "denomination": "gp"
+      },
+      "rarity": "alchemy, poisoncraft",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Legendary Reagent).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "legendary-reagent",
+        "isMaterial": true,
+        "rarity": "alchemy, poisoncraft"
+      }
+    },
+    "name": "Reagente Lendário"
+  },
+  {
+    "_id": "786cf9d04befb6d0",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5000,
+        "denomination": "gp"
+      },
+      "rarity": "legendary",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Legendary Magical Ink).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "legendary-magical-ink",
+        "isMaterial": true,
+        "rarity": "legendary"
+      }
+    },
+    "name": "Tinta Mágica Lendária"
+  },
+  {
+    "_id": "1c9af088051855c3",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Buckle).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "buckle",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Fivela de Metal"
+  },
+  {
+    "_id": "cb1705d6f14d146c",
+    "type": "loot",
+    "img": "icons/equipment/finger/ring-band-gold.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5,
+        "denomination": "cp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Length of String).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "length-of-string",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Pedaço de Corda / Fio"
+  },
+  {
+    "_id": "bc9f410c6a07c602",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Parts).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "parts",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Peças Mecânicas"
+  },
+  {
+    "_id": "f6bc48908ceab9c6",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 100,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Esoteric Parts).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "esoteric-parts",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Peças Esotéricas"
+  },
+  {
+    "_id": "13adb04822bd84a6",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5,
+        "denomination": "cp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Fletching).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "fletching",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Penas de Flecha"
+  },
+  {
+    "_id": "71c67deae2023823",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5,
+        "denomination": "sp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Wooden Stock).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "wooden-stock",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Coronha de Madeira"
+  },
+  {
+    "_id": "141462d42c80bf4e",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 2,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Hide).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "hide",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Hide"
+  },
+  {
+    "_id": "bf21b7e1ae98be36",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 4,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Medium Carapace).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "medium-carapace",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Carapaça Média"
+  },
+  {
+    "_id": "a5fef6afc8e1036b",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 10,
+        "denomination": "gp"
+      },
+      "rarity": "common",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Fancy Parts).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "fancy-parts",
+        "isMaterial": true,
+        "rarity": "common"
+      }
+    },
+    "name": "Peças Refinadas"
+  },
+  {
+    "_id": "bf5dc46d8404a979",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 25,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Uncommon Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "uncommon-branch",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Galho Incomum"
+  },
+  {
+    "_id": "01f23d900a0cf79f",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 40,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Uncommon Parchment).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "uncommon-parchment",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Pergaminho Incomum"
+  },
+  {
+    "_id": "919053eb15decc50",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 600,
+        "denomination": "gp"
+      },
+      "rarity": "uncommon",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Tough Leather).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "tough-leather",
+        "isMaterial": true,
+        "rarity": "uncommon"
+      }
+    },
+    "name": "Couro Reforçado"
+  },
+  {
+    "_id": "3f608dba6acda800",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 700,
+        "denomination": "gp"
+      },
+      "rarity": "rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Rare Essence).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "rare-essence",
+        "isMaterial": true,
+        "rarity": "rare"
+      }
+    },
+    "name": "Essência Rara"
+  },
+  {
+    "_id": "95d6721f9ab3c907",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 800,
+        "denomination": "gp"
+      },
+      "rarity": "very rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Very Rare Branch).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "very-rare-branch",
+        "isMaterial": true,
+        "rarity": "very rare"
+      }
+    },
+    "name": "Galho Muito Raro"
+  },
+  {
+    "_id": "2cdda2b3a5e9db9b",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 7000,
+        "denomination": "gp"
+      },
+      "rarity": "very rare",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Very Rare Essence).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "very-rare-essence",
+        "isMaterial": true,
+        "rarity": "very rare"
+      }
+    },
+    "name": "Essência Muito Rara"
+  },
+  {
+    "_id": "eb26c8f634d4741f",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 5000,
+        "denomination": "gp"
+      },
+      "rarity": "legendary",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Legendary Parchment).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "legendary-parchment",
+        "isMaterial": true,
+        "rarity": "legendary"
+      }
+    },
+    "name": "Pergaminho Lendário"
+  },
+  {
+    "_id": "0c50a59c279167b8",
+    "type": "loot",
+    "img": "icons/commodities/treasure/chest-wooden.webp",
+    "system": {
+      "source": "Kibbles' Crafting Guide",
+      "quantity": 1,
+      "weight": 0.5,
+      "price": {
+        "value": 25000,
+        "denomination": "gp"
+      },
+      "rarity": "legendary",
+      "identified": true,
+      "description": {
+        "value": "<p>Material oficial de criação do Kibbles' Crafting Guide (Legendary Essence).</p>",
+        "chat": "",
+        "unidentified": ""
+      }
+    },
+    "flags": {
+      "itensdnd": {
+        "materialKey": "legendary-essence",
+        "isMaterial": true,
+        "rarity": "legendary"
+      }
+    },
+    "name": "Essência Lendária"
   }
 ]
