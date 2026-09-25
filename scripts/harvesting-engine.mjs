@@ -187,13 +187,35 @@ export class HarvestingEngine {
       </div>
     `;
 
-    await ChatMessage.create({
+    const messageData = HarvestingEngine.buildChatMessageData({
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: harvester }),
       content,
-      type: roll ? (CONST.CHAT_MESSAGE_TYPES?.ROLL ?? 5) : (CONST.CHAT_MESSAGE_TYPES?.OTHER ?? 0),
-      rolls: roll ? [roll] : []
+      rolls: roll ? [roll] : [],
+      isRoll: Boolean(roll)
     });
+
+    await ChatMessage.create(messageData);
+  }
+
+  /**
+   * Prepares chat message data conforming to Foundry V12+ style property or V11 type fallback.
+   * @param {object} params
+   * @returns {object}
+   */
+  static buildChatMessageData({ user, speaker, content, rolls, sound, isRoll = false }) {
+    const data = { user, speaker, content };
+    if (rolls) data.rolls = rolls;
+    if (sound) data.sound = sound;
+
+    if (typeof CONST !== "undefined" && CONST.CHAT_MESSAGE_STYLES) {
+      data.style = isRoll ? (CONST.CHAT_MESSAGE_STYLES.ROLL ?? 5) : (CONST.CHAT_MESSAGE_STYLES.OTHER ?? 0);
+    } else {
+      data.type = isRoll
+        ? (typeof CONST !== "undefined" ? CONST.CHAT_MESSAGE_TYPES?.ROLL ?? 5 : 5)
+        : (typeof CONST !== "undefined" ? CONST.CHAT_MESSAGE_TYPES?.OTHER ?? 0 : 0);
+    }
+    return data;
   }
 }
 

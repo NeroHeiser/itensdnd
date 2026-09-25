@@ -291,12 +291,14 @@ export class CraftingEngine {
       </div>
     `;
 
-    await ChatMessage.create({
+    const messageData = CraftingEngine.buildChatMessageData({
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor }),
       content,
-      style: CONST.CHAT_MESSAGE_STYLES?.OTHER ?? CONST.CHAT_MESSAGE_TYPES?.OTHER
+      isRoll: false
     });
+
+    await ChatMessage.create(messageData);
 
     return true;
   }
@@ -439,14 +441,36 @@ export class CraftingEngine {
       </div>
     `;
 
-    await ChatMessage.create({
+    const messageData = CraftingEngine.buildChatMessageData({
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor }),
       content,
-      type: CONST.CHAT_MESSAGE_TYPES?.ROLL ?? 5,
       rolls: [roll],
-      sound: isSuccess ? CONFIG.sounds?.dice : null
+      sound: isSuccess ? CONFIG.sounds?.dice : null,
+      isRoll: true
     });
+
+    await ChatMessage.create(messageData);
+  }
+
+  /**
+   * Prepares chat message data conforming to Foundry V12+ style property or V11 type fallback.
+   * @param {object} params
+   * @returns {object}
+   */
+  static buildChatMessageData({ user, speaker, content, rolls, sound, isRoll = false }) {
+    const data = { user, speaker, content };
+    if (rolls) data.rolls = rolls;
+    if (sound) data.sound = sound;
+
+    if (typeof CONST !== "undefined" && CONST.CHAT_MESSAGE_STYLES) {
+      data.style = isRoll ? (CONST.CHAT_MESSAGE_STYLES.ROLL ?? 5) : (CONST.CHAT_MESSAGE_STYLES.OTHER ?? 0);
+    } else {
+      data.type = isRoll
+        ? (typeof CONST !== "undefined" ? CONST.CHAT_MESSAGE_TYPES?.ROLL ?? 5 : 5)
+        : (typeof CONST !== "undefined" ? CONST.CHAT_MESSAGE_TYPES?.OTHER ?? 0 : 0);
+    }
+    return data;
   }
 }
 
