@@ -7,9 +7,9 @@ import { CraftingEngine } from "../crafting-engine.mjs";
 
 const MODULE_ID = "itensdnd";
 
-const BaseApplication = foundry.applications?.api?.HandlebarsApplicationMixin
+const BaseApplication = (typeof foundry !== "undefined" && foundry.applications?.api?.HandlebarsApplicationMixin)
   ? foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2)
-  : Application;
+  : (typeof Application !== "undefined" ? Application : class {});
 
 export class CraftingWorkshopApp extends BaseApplication {
   constructor(options = {}) {
@@ -18,6 +18,7 @@ export class CraftingWorkshopApp extends BaseApplication {
     this.activeProfession = "alchemy";
     this.selectedRecipeId = null;
     this.searchQuery = "";
+    this._preserveSearchFocus = false;
     this.craftableOnly = false;
     this.activeProject = {
       recipeId: null,
@@ -57,11 +58,40 @@ export class CraftingWorkshopApp extends BaseApplication {
   };
 
   _getPrimaryActor() {
-    const controlled = canvas.tokens?.controlled[0]?.actor;
+    const controlled = typeof canvas !== "undefined" ? canvas.tokens?.controlled[0]?.actor : null;
     if (controlled && controlled.type === "character") return controlled;
-    const userChar = game.user.character;
+    const userChar = typeof game !== "undefined" ? game.user?.character : null;
     if (userChar) return userChar;
-    return game.actors?.find(a => a.type === "character" && a.isOwner) || null;
+    return (typeof game !== "undefined" ? game.actors?.find(a => a.type === "character" && a.isOwner) : null) || null;
+  }
+
+  static filterRecipesBySearch(recipes, query) {
+    if (!query || typeof query !== "string" || !query.trim()) return recipes;
+    const q = query.trim().toLowerCase();
+    return recipes.filter(r => (
+      (r.name && r.name.toLowerCase().includes(q)) ||
+      (r.resultItem && r.resultItem.toLowerCase().includes(q))
+    ));
+  }
+
+  _onRender(context, options) {
+    super._onRender?.(context, options);
+
+    const searchInput = this.element?.querySelector('input[name="searchQuery"]');
+    if (searchInput) {
+      if (this._preserveSearchFocus) {
+        searchInput.focus();
+        const len = searchInput.value.length;
+        searchInput.setSelectionRange(len, len);
+        this._preserveSearchFocus = false;
+      }
+
+      searchInput.addEventListener("input", event => {
+        this.searchQuery = event.target.value;
+        this._preserveSearchFocus = true;
+        this.render();
+      });
+    }
   }
 
   async _prepareContext(options = {}) {
@@ -72,10 +102,7 @@ export class CraftingWorkshopApp extends BaseApplication {
     let recipes = allRecipes.filter(r => (r.profession || "alchemy") === this.activeProfession);
 
     // Filtro de busca por nome
-    if (this.searchQuery.trim()) {
-      const q = this.searchQuery.toLowerCase();
-      recipes = recipes.filter(r => r.name.toLowerCase().includes(q) || (r.resultItem && r.resultItem.toLowerCase().includes(q)));
-    }
+    recipes = CraftingWorkshopApp.filterRecipesBySearch(recipes, this.searchQuery);
 
     // Filtro de receitas criáveis
     if (this.craftableOnly && this.actor) {
