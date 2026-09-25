@@ -7,9 +7,9 @@ import { HarvestingEngine } from "../harvesting-engine.mjs";
 
 const MODULE_ID = "itensdnd";
 
-const BaseApplication = foundry.applications?.api?.HandlebarsApplicationMixin
+const BaseApplication = (typeof foundry !== "undefined" && foundry.applications?.api?.HandlebarsApplicationMixin)
   ? foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2)
-  : Application;
+  : (typeof Application !== "undefined" ? Application : class {});
 
 export class HarvestingApp extends BaseApplication {
   constructor(options = {}) {
@@ -24,7 +24,7 @@ export class HarvestingApp extends BaseApplication {
     tag: "div",
     window: {
       title: "ITENSDND.Harvesting.Title",
-      icon: "fas fa-claw-marks",
+      icon: "fas fa-paw",
       resizable: true
     },
     position: {
@@ -45,17 +45,17 @@ export class HarvestingApp extends BaseApplication {
   };
 
   _getPrimaryHarvester() {
-    const controlled = canvas.tokens?.controlled[0]?.actor;
+    const controlled = typeof canvas !== "undefined" ? canvas.tokens?.controlled[0]?.actor : null;
     if (controlled && controlled.type === "character") return controlled;
-    const userChar = game.user.character;
+    const userChar = typeof game !== "undefined" ? game.user?.character : null;
     if (userChar) return userChar;
-    return game.actors?.find(a => a.type === "character" && a.isOwner) || null;
+    return (typeof game !== "undefined" ? game.actors?.find(a => a.type === "character" && a.isOwner) : null) || null;
   }
 
   _getPrimaryTarget() {
-    const targetToken = Array.from(game.user.targets)[0]?.actor;
+    const targetToken = typeof game !== "undefined" ? Array.from(game.user?.targets || [])[0]?.actor : null;
     if (targetToken) return targetToken;
-    const tokens = canvas.tokens?.controlled || [];
+    const tokens = typeof canvas !== "undefined" ? canvas.tokens?.controlled || [] : [];
     if (tokens.length >= 2) return tokens[1].actor;
     return null;
   }
