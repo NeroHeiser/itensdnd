@@ -1,53 +1,99 @@
-# Itens & Sistema de Crafting (D&D 5e) - Foundry VTT
+# Items & Crafting System (D&D 5e)
 
-Módulo completo para **Foundry VTT (v12 a v14+)** e sistema **D&D 5e (3.x e 4.x)**, trazendo um sistema prático e dinâmico de criação de itens, alquimia, forja, encantamento, colheita de criaturas (*harvesting*) e coleta (*gathering*), baseado nas consagradas regras do **Kibbles' Crafting Guide**.
+[English](README.md) | [Português (Brasil)](README.pt-BR.md)
 
----
+[![Foundry VTT](https://img.shields.io/badge/Foundry%20VTT-v12%20|%20v14-orange.svg)](https://foundryvtt.com/)
+[![System](https://img.shields.io/badge/System-dnd5e%20v3.0%2B-blue.svg)](https://github.com/foundryvtt/dnd5e)
+[![Version](https://img.shields.io/badge/version-v1.2.0-blue.svg)](module.json)
+[![Tests](https://img.shields.io/badge/tests-26%20passed-brightgreen.svg)](tests/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## ⚙️ Principais Funcionalidades
-
-1. **Oficina de Criação Interativa (ApplicationV2)**:
-   - Interface moderna e responsiva aberta diretamente da ficha do personagem ou menu de ferramentas.
-   - Navegação por profissões (Alquimia, Forja, Encantamento, Couro, Varinhas, Pergaminhos, Culinária, etc.).
-   - Filtro inteligente de receitas realizáveis com base nos materiais presentes no inventário do personagem.
-   - Cálculo automático do modificador de criação: `Proficiência da Ferramenta + Modificador de Atributo Relevante`.
-   - Sistema de progresso em blocos de 2 horas, controle da regra de 3 falhas consecutivas e suporte à regra de "Take 10".
-   - Criação automática do item finalizado no inventário e consumo proporcional de materiais.
-
-2. **Sistema de Colheita e Coleta (Harvesting & Foraging)**:
-   - Ferramenta de colheita rápida com detecção automática do ND (Nível de Desafio) e tipo de criatura (Dragões, Feras, Construtos, Aberrações, Mortos-vivos, Celestiais, etc.).
-   - Tabelas de Forragem por Bioma (Floresta, Montanha, Pântano, Deserto, Subterrâneo, Costeiro, Planícies).
-   - Tabelas de Desmanche/Salvamento (recuperação de lingotes e sucatas de itens de metal e couro).
-   - Tabela da Caixa do Caos Quântico (*Quantum Chaos Box*).
-   - Testes de perícia integrados (Medicina, Arcanismo, Sobrevivência, Natureza).
-   - Distribuição direta de reagentes, essências, peças e carapaças para o jogador ou token alvo.
-
-3. **Compêndios Completos e Bilíngues (`pt-BR` / `en`)**:
-   - **Itens Criáveis (`crafting-items`)**: 478 itens finais com atributos reais do D&D 5e (consumíveis, armas, armaduras e itens maravilhosos).
-   - **Materiais de Criação (`crafting-materials`)**: 92 materiais fundamentais, reagentes, lingotes, essências, couros e peças.
-   - **Receitas de Criação (`crafting-recipes`)**: 478 fórmulas vinculadas aos itens finais com custo de ingredientes, CD, tempo e ferramentas.
-   - **Tabelas de Rolagem (`crafting-tables`)**: 15 tabelas funcionais d100 e d12 para colheita, forragem, salvamento e caos quântico.
-   - **Manuais de Regras (`crafting-rules`)**: Diário oficial com as 14 mecânicas fundamentais, regras de descanso, forja de ligas metálicas (Adamantina, Mithral, Prata) e modificadores alquímicos (Aerossol, Concentrado).
+A complete crafting, alchemy, enchanting, foraging, and creature harvesting module for **Foundry Virtual Tabletop (V12 to V14+)** and **D&D 5e (v3.0+ and v4.0+)**, faithfully implementing the mechanics of the acclaimed **Kibbles' Crafting Guide** with interactive ApplicationV2 sheets and bilingual compendiums.
 
 ---
 
-## 🛠️ Instalação Direta no Foundry VTT
+## Highlights
 
-No painel de configuração do Foundry VTT, em **Instalar Módulo**, cole o link do manifesto:
+- **Interactive Crafting Workshop (ApplicationV2):** Modern, reactive interface accessible from character sheets or toolbars with real-time recipe search and focus preservation.
+- **Automated Creature Harvesting:** Automatic Challenge Rating (CR) detection and creature type mapping (Dragons, Beasts, Constructs, Aberrations, Undead, Celestials) with skill-based salvage checks.
+- **Foraging and Scavenging Hub:** Biome foraging tables (Forest, Mountain, Swamp, Desert, Underdark, Coastal, Plains), item breakdown tables, and Quantum Chaos Box integration.
+- **Bilingual Compendium Parity:** Full dual-language data (`en` and `pt-BR`) covering 478 recipes, 478 final items, 92 materials, 15 roll tables, and comprehensive rule journals.
+- **Foundry V12-V14 Modernized:** Native `ChatMessage` construction using modern `style` flags with backwards-compatible fallbacks and zero console deprecation warnings.
+- **Automated Test Suite:** Robust unit testing suite with 26 automated tests verifying domain calculations, UI state handling, icon validity, and pack integrity.
+
+---
+
+## Domain and Feature Tables
+
+### Crafting Professions
+
+| Profession | Associated Tool / Skill | Key Abilities | Primary Output |
+| :--- | :--- | :--- | :--- |
+| **Alchemy** | Alchemist's Supplies / Herbalism Kit | INT / WIS | Potions, elixirs, acids, alchemical fire, and draughts |
+| **Blacksmithing** | Smith's Tools | STR / CON | Metal weapons, heavy armors, shields, and reinforced gear |
+| **Enchanting** | Arcana Skill | INT / CHA | Magic item attunements, essences infusion, and arcane relics |
+| **Leatherworking** | Leatherworker's Tools | DEX / STR | Leather and hide armors, quivers, boots, and reinforced hides |
+| **Poisoncraft** | Poisoner's Kit | INT / DEX | Contact, ingested, inhaled, and injury toxins |
+| **Scroll Scribing** | Calligrapher's Supplies | INT / WIS | Spell scrolls, ritual sheets, and magical parchment |
+| **Tinkering** | Tinker's Tools | INT / DEX | Clockwork devices, traps, mechanical contraptions, and gadgets |
+| **Wand Whittling** | Woodcarver's Tools | INT / WIS | Spellcasting wands, staves, and wooden foci |
+| **Cooking** | Cook's Utensils | WIS / CON | Rations, hearty feasts, and temporary vitality meals |
+
+### Bilingual Compendiums
+
+| Pack Key | Document Type | Entries | Description |
+| :--- | :--- | :---: | :--- |
+| `crafting-items` | `Item` | 478 | Final craftable items with mechanical D&D 5e attributes and values |
+| `crafting-materials` | `Item` | 92 | Fundamental reagents, metal ingots, beast essences, hides, and parts |
+| `crafting-recipes` | `Item` | 478 | Structured recipes with required materials, tool DCs, and crafting times |
+| `crafting-tables` | `RollTable` | 15 | Harvesting tables by creature type/CR, biome foraging, and salvaging |
+| `crafting-rules` | `JournalEntry` | 14 | Official guide chapters covering resting, metallurgy alloys, and mechanics |
+
+---
+
+## Architecture and Interfaces
+
+- **`CraftingWorkshopApp` (`ApplicationV2`):** Tabbed interface handling active profession switches, reactive recipe filtering by search query (`filterRecipesBySearch`), inventory material reconciliation (`checkMaterials`), and 2-hour crafting progress progression.
+- **`HarvestingApp` (`ApplicationV2`):** Creature harvesting dialog providing automatic target token inspection, CR-to-DC table lookup (`getTableAndDC`), and direct ingredient distribution to player inventory.
+- **`CraftingEngine` & `HarvestingEngine`:** Pure domain logic layer computing tool proficiencies, ability modifiers, roll bonuses, and chat payload assembly (`buildChatMessageData`).
+
+---
+
+## Installation
+
+Install directly within the Foundry VTT Setup menu using the manifest link:
 
 ```text
 https://raw.githubusercontent.com/NeroHeiser/itensdnd/main/module.json
 ```
 
-Ou realize o download do arquivo ZIP:
+Or extract the zip package into your Foundry user data directory:
 ```text
-https://github.com/NeroHeiser/itensdnd/archive/refs/heads/main.zip
+<FoundryData>/Data/modules/itensdnd
 ```
 
 ---
 
-## 📜 Créditos e Licença
+## Automated Testing and Quality
 
-- Baseado nas regras do **Kibbles' Crafting Guide** por KibblesTasty.
-- Desenvolvido para Foundry VTT por **Lopes** ([NeroHeiser](https://github.com/NeroHeiser)).
+The module features native unit tests powered by the Node.js test runner:
 
+```bash
+# Run the complete test suite
+npm test
+```
+
+Validation guarantees:
+- **Domain calculations:** Verifies material aggregation, modifier calculation, and CR-to-DC tables.
+- **Data integrity:** Asserts physical existence of all 5 pack directories, valid 16-character IDs, and symmetric `en`/`pt-BR` key structures.
+- **Compatibility:** Verifies modern Foundry V12-V14 `ChatMessage` styling and FontAwesome Free icon compatibility.
+
+---
+
+## Compatibility and License
+
+- **Foundry VTT:** Verified for v12 and v14.
+- **System:** `dnd5e` v3.0+ and v4.0+.
+- **Game Design:** Based on the **Kibbles' Crafting Guide** by KibblesTasty.
+- **Module Author:** [André Luiz (Lopes / NeroHeiser)](https://github.com/NeroHeiser).
+- **License:** [MIT](LICENSE).

@@ -1,0 +1,9 @@
+{
+  "name": "itensdnd",
+  "version": "1.2.0",
+  "description": "Crafting and Harvesting System for Foundry VTT and D&D 5e based on Kibbles' Compendium",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}
