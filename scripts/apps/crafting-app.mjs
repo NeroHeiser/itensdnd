@@ -1,8 +1,3 @@
-/**
- * crafting-app.mjs
- * Interface interativa ApplicationV2 para a Oficina de Criação (Kibbles' Crafting Guide).
- */
-
 import { CraftingEngine } from "../crafting-engine.mjs";
 
 const MODULE_ID = "itensdnd";
@@ -65,6 +60,12 @@ export class CraftingWorkshopApp extends BaseApplication {
     return (typeof game !== "undefined" ? game.actors?.find(a => a.type === "character" && a.isOwner) : null) || null;
   }
 
+  /**
+   * Filters recipes matching query against recipe name or result item.
+   * @param {Array<object>} recipes
+   * @param {string} query
+   * @returns {Array<object>}
+   */
   static filterRecipesBySearch(recipes, query) {
     if (!query || typeof query !== "string" || !query.trim()) return recipes;
     const q = query.trim().toLowerCase();
@@ -98,18 +99,13 @@ export class CraftingWorkshopApp extends BaseApplication {
     const actors = game.actors?.filter(a => a.type === "character" && a.isOwner) || [];
     const allRecipes = await CraftingEngine.getRecipes();
 
-    // Filtra por profissão ativa
     let recipes = allRecipes.filter(r => (r.profession || "alchemy") === this.activeProfession);
-
-    // Filtro de busca por nome
     recipes = CraftingWorkshopApp.filterRecipesBySearch(recipes, this.searchQuery);
 
-    // Filtro de receitas criáveis
     if (this.craftableOnly && this.actor) {
       recipes = recipes.filter(r => CraftingEngine.checkMaterials(this.actor, r).hasAll);
     }
 
-    // Se nenhuma receita selecionada, pega a primeira da lista
     let selectedRecipe = recipes.find(r => r.id === this.selectedRecipeId || r.key === this.selectedRecipeId);
     if (!selectedRecipe && recipes.length > 0) {
       selectedRecipe = recipes[0];
@@ -165,7 +161,6 @@ export class CraftingWorkshopApp extends BaseApplication {
     };
   }
 
-  // Ações da Interface
   static async #onSelectActor(event, target) {
     const actorId = target.value;
     this.actor = game.actors.get(actorId) || null;
@@ -194,7 +189,6 @@ export class CraftingWorkshopApp extends BaseApplication {
     if (!recipe) return;
 
     if (this.activeProject.recipeId !== this.selectedRecipeId) {
-      // Inicia novo projeto
       const { hasAll } = CraftingEngine.checkMaterials(this.actor, recipe);
       if (!hasAll) {
         ui.notifications?.warn(game.i18n.localize("ITENSDND.Workshop.Notifications.NoMaterials"));
@@ -241,4 +235,3 @@ export class CraftingWorkshopApp extends BaseApplication {
     this.render();
   }
 }
-

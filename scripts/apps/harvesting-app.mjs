@@ -1,8 +1,3 @@
-/**
- * harvesting-app.mjs
- * Interface interativa ApplicationV2 para Colheita de Criaturas (Harvesting & Remnants).
- */
-
 import { HarvestingEngine } from "../harvesting-engine.mjs";
 
 const MODULE_ID = "itensdnd";
@@ -66,7 +61,7 @@ export class HarvestingApp extends BaseApplication {
 
     const targetCr = this.target?.system?.details?.cr ?? 1;
     const targetType = (this.target?.system?.details?.type?.value || "monstrosity").toLowerCase();
-    const typeInfo = HarvestingEngine.SKILL_REQUIREMENTS[targetType] || { skill: "sur", label: "Sobrevivência" };
+    const typeInfo = HarvestingEngine.SKILL_REQUIREMENTS[targetType] || { skill: "sur", label: "Survival" };
     const isRemnants = Boolean(typeInfo.remnants);
     const { dc } = HarvestingEngine.getTableAndDC(targetCr, isRemnants);
 
@@ -106,4 +101,3 @@ export class HarvestingApp extends BaseApplication {
     this.render();
   }
 }
-

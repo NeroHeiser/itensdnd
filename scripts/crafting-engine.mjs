@@ -1,15 +1,6 @@
-/**
- * crafting-engine.mjs
- * Motor de lógica de criação de itens para itensdnd (Kibbles' Crafting Guide).
- * Gerencia validação de inventário, cálculo de bônus, rolagens, regra de 3 falhas e Take 10.
- */
-
 const MODULE_ID = "itensdnd";
 
 export class CraftingEngine {
-  /**
-   * Mapeamento de ferramentas do Kibbles para identificadores de ferramentas do sistema dnd5e
-   */
   static TOOL_MAPPING = {
     alchemist: ["alchemist", "alchemists-supplies"],
     smith: ["smith", "smiths-tools"],
@@ -23,7 +14,7 @@ export class CraftingEngine {
   };
 
   /**
-   * Obtém todas as receitas disponíveis no compêndio ou carregadas do módulo.
+   * Retrieves all available recipes from compendium or bundled fallback data.
    * @returns {Promise<Array<object>>}
    */
   static async getRecipes() {
@@ -41,7 +32,6 @@ export class CraftingEngine {
       }
     }
 
-    // Fallback para arquivo JSON direto se o compêndio ainda não estiver montado
     const isPt = game.i18n?.lang?.startsWith("pt");
     const lang = isPt ? "pt-BR" : "en";
     const baseRoute = typeof foundry !== "undefined" && foundry.utils?.getRoute ? foundry.utils.getRoute(`modules/${MODULE_ID}`) : `/modules/${MODULE_ID}`;
@@ -63,10 +53,10 @@ export class CraftingEngine {
   }
 
   /**
-   * Verifica a quantidade de um material específico no inventário do ator.
+   * Counts the total quantity of a material key present in actor items.
    * @param {Actor} actor
    * @param {string} materialKey
-   * @returns {number} Quantidade encontrada
+   * @returns {number}
    */
   static getMaterialCount(actor, materialKey) {
     if (!actor?.items) return 0;
@@ -81,7 +71,7 @@ export class CraftingEngine {
   }
 
   /**
-   * Avalia os materiais de uma receita para o ator informado.
+   * Verifies inventory availability for all required materials in a recipe.
    * @param {Actor} actor
    * @param {object} recipe
    * @returns {{ hasAll: boolean, materialsStatus: Array<object> }}
@@ -109,8 +99,7 @@ export class CraftingEngine {
   }
 
   /**
-   * Calcula o bônus de criação (Crafting Modifier) do ator para uma determinada receita.
-   * Fórmula Kibbles: Bônus de Proficiência da Ferramenta + Modificador do Atributo Relevante
+   * Calculates actor crafting modifier based on tool proficiency and highest permitted ability.
    * @param {Actor} actor
    * @param {object} recipe
    * @returns {{ mod: number, profBonus: number, abilityMod: number, bestAbility: string, toolProficient: boolean }}
@@ -122,7 +111,6 @@ export class CraftingEngine {
     let toolProficient = false;
     let profBonus = 0;
 
-    // Caso de Encantamento (usa Arcanismo)
     if (recipe.profession === "enchanting" || recipe.tool === "arcana") {
       const arcSkill = actor.system?.skills?.arc;
       if (arcSkill) {
@@ -131,7 +119,6 @@ export class CraftingEngine {
         profBonus = isProf ? (arcSkill.value * prof) : 0;
       }
     } else {
-      // Ferramentas comuns
       const toolKeys = this.TOOL_MAPPING[recipe.tool] || [recipe.tool];
       const toolsData = actor.system?.tools || {};
 
@@ -143,7 +130,6 @@ export class CraftingEngine {
         }
       }
 
-      // Verificação em itens de ferramentas na ficha
       if (!toolProficient && actor.items) {
         for (const item of actor.items) {
           if (item.type === "tool") {
@@ -159,7 +145,6 @@ export class CraftingEngine {
         }
       }
 
-      // Suporte especial do Kibbles: Herbalismo para poções de cura e antídotos
       if (!toolProficient && recipe.profession === "alchemy") {
         const herbKeys = ["herbalism", "herbalism-kit"];
         for (const hKey of herbKeys) {
@@ -172,7 +157,6 @@ export class CraftingEngine {
       }
     }
 
-    // Seleciona o melhor atributo entre os permitidos pela receita
     const allowedAbilities = recipe.ability || ["int"];
     let bestAbility = allowedAbilities[0];
     let maxAbilityMod = -99;
@@ -196,14 +180,14 @@ export class CraftingEngine {
   }
 
   /**
-   * Realiza uma rolagem de 2 horas de trabalho no projeto.
+   * Executes a two-hour crafting work session with progress tracking and failure checks.
    * @param {Actor} actor
    * @param {object} recipe
-   * @param {object} currentProgress { hours: number, consecutiveFailures: number }
-   * @returns {Promise<object>} Resultado do teste
+   * @param {object} currentProgress
+   * @returns {Promise<object>}
    */
   static async rollCraftingAttempt(actor, recipe, currentProgress = { hours: 0, consecutiveFailures: 0 }) {
-    const { mod, bestAbility } = this.calculateCraftingModifier(actor, recipe);
+    const { mod } = this.calculateCraftingModifier(actor, recipe);
     const roll = new Roll(`1d20 + ${mod}`);
     await roll.evaluate();
 
@@ -227,16 +211,13 @@ export class CraftingEngine {
       }
     }
 
-    // Se completou com sucesso, entrega o item e consome materiais
     if (status === "completed") {
       await this.consumeMaterials(actor, recipe);
       await this.awardCraftedItem(actor, recipe);
     } else if (status === "failed") {
-      // 3 falhas destroem os materiais
       await this.consumeMaterials(actor, recipe);
     }
 
-    // Enviar mensagem rica no Chat
     await this.postCraftingChatMessage(actor, recipe, roll, isSuccess, newHours, newFailures, status, false);
 
     return {
@@ -250,7 +231,7 @@ export class CraftingEngine {
   }
 
   /**
-   * Executa a regra do Take 10 (sucesso garantido pelo dobro do tempo).
+   * Resolves crafting attempt under Take 10 rule (guaranteed success for double crafting time).
    * @param {Actor} actor
    * @param {object} recipe
    * @returns {Promise<boolean>}
@@ -260,7 +241,10 @@ export class CraftingEngine {
     const take10Score = 10 + mod;
 
     if (take10Score < recipe.dc) {
-      ui.notifications?.warn(`Seu bônus total (${mod}) + 10 = ${take10Score}, insuficiente para atingir a CD ${recipe.dc}.`);
+      ui.notifications?.warn(
+        game.i18n.format?.("ITENSDND.Workshop.Notifications.Take10Insufficient", { mod, score: take10Score, dc: recipe.dc }) ||
+        `Total modifier (${mod}) + 10 = ${take10Score}, insufficient to meet DC ${recipe.dc}.`
+      );
       return false;
     }
 
@@ -274,7 +258,6 @@ export class CraftingEngine {
     await this.consumeMaterials(actor, recipe);
     await this.awardCraftedItem(actor, recipe);
 
-    // Envia mensagem no chat
     const content = `
       <div class="itensdnd chat-card crafting-card">
         <header class="card-header flexrow">
@@ -283,7 +266,7 @@ export class CraftingEngine {
         </header>
         <div class="card-content">
           <p><strong>${game.i18n.localize("ITENSDND.Workshop.Recipe.Take10")}</strong></p>
-          <p>O artesão <strong>${actor.name}</strong> trabalhou com calma e maestria por <strong>${totalHours} horas</strong>.</p>
+          <p>${actor.name} worked carefully and diligently for ${totalHours} hours.</p>
           <p class="success-banner" style="color: #2e7d32; font-weight: bold;">
             <i class="fas fa-check-circle"></i> ${game.i18n.localize("ITENSDND.Workshop.Notifications.Take10Complete")}
           </p>
@@ -304,7 +287,7 @@ export class CraftingEngine {
   }
 
   /**
-   * Consome os materiais exigidos da ficha do personagem.
+   * Consumes required recipe materials from actor inventory.
    * @param {Actor} actor
    * @param {object} recipe
    */
@@ -340,7 +323,7 @@ export class CraftingEngine {
   }
 
   /**
-   * Cria o item resultante no inventário do personagem, buscando o item real no compêndio.
+   * Creates the resulting item document in actor inventory.
    * @param {Actor} actor
    * @param {object} recipe
    */
@@ -348,7 +331,6 @@ export class CraftingEngine {
     const resName = recipe.resultItem || recipe.name.replace(/^Receita: |^Recipe: /, "");
     let finalItemData = null;
 
-    // 1. Tentar obter o item oficial do compêndio de itens criáveis
     try {
       const pack = game.packs.get("itensdnd.crafting-items");
       if (pack) {
@@ -375,24 +357,24 @@ export class CraftingEngine {
         }
       }
     } catch (err) {
-      console.warn("Itens & Sistema de Crafting | Não foi possível recuperar do compêndio, usando fallback:", err);
+      console.warn("itensdnd | Could not retrieve item from compendium, using fallback:", err);
     }
 
-    // 2. Fallback estruturado caso o compêndio não esteja disponível
     if (!finalItemData) {
       finalItemData = {
         name: resName,
         type: "consumable",
         img: recipe.img || "icons/commodities/treasure/chest-wooden.webp",
         system: {
-          description: { value: `<p>Item criado na Oficina de Criação por ${actor.name}.</p>` },
+          description: { value: `<p>Crafted in the workshop by ${actor.name}.</p>` },
           quantity: 1,
           rarity: recipe.rarity || "common"
         }
       };
 
       if (recipe.profession === "blacksmithing") {
-        finalItemData.type = recipe.name.toLowerCase().includes("armadura") || recipe.name.toLowerCase().includes("armor") || recipe.name.toLowerCase().includes("escudo") || recipe.name.toLowerCase().includes("shield") ? "equipment" : "weapon";
+        const lower = recipe.name.toLowerCase();
+        finalItemData.type = lower.includes("armadura") || lower.includes("armor") || lower.includes("escudo") || lower.includes("shield") ? "equipment" : "weapon";
       }
     }
 
@@ -401,28 +383,32 @@ export class CraftingEngine {
   }
 
   /**
-   * Envia a mensagem com os resultados da rolagem de criação no chat.
+   * Publishes crafting check card to chat.
    */
   static async postCraftingChatMessage(actor, recipe, roll, isSuccess, newHours, newFailures, status, isTake10) {
     const successColor = isSuccess ? "#2e7d32" : "#c62828";
+    const failuresLabel = game.i18n.localize("ITENSDND.Workshop.Notifications.ConsecutiveFailures") || "Consecutive failures";
     const statusText = isSuccess
       ? `<span style="color: ${successColor}; font-weight: bold;"><i class="fas fa-check"></i> ${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftSuccess")}</span>`
-      : `<span style="color: ${successColor}; font-weight: bold;"><i class="fas fa-times"></i> ${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftFailure")} (Falhas consecutivas: ${newFailures}/3)</span>`;
+      : `<span style="color: ${successColor}; font-weight: bold;"><i class="fas fa-times"></i> ${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftFailure")} (${failuresLabel}: ${newFailures}/3)</span>`;
 
     let completionBanner = "";
     if (status === "completed") {
       completionBanner = `
         <div style="background: #e8f5e9; border: 1px solid #4caf50; padding: 6px; border-radius: 4px; margin-top: 6px; text-align: center; color: #1b5e20;">
-          <strong>🎉 ${game.i18n.localize("ITENSDND.Chat.ItemCompleted")}: ${recipe.resultItem}</strong>
+          <strong><i class="fas fa-check-circle"></i> ${game.i18n.localize("ITENSDND.Chat.ItemCompleted")}: ${recipe.resultItem}</strong>
         </div>`;
     } else if (status === "failed") {
       completionBanner = `
         <div style="background: #ffebee; border: 1px solid #f44336; padding: 6px; border-radius: 4px; margin-top: 6px; text-align: center; color: #b71c1c;">
-          <strong>💥 ${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftDestroyed")}</strong>
+          <strong><i class="fas fa-exclamation-triangle"></i> ${game.i18n.localize("ITENSDND.Workshop.Notifications.CraftDestroyed")}</strong>
         </div>`;
     }
 
     const rollHtml = await roll.render();
+    const dcLabel = game.i18n.localize("ITENSDND.Workshop.Recipe.DC") || "DC";
+    const progressLabel = game.i18n.localize("ITENSDND.Workshop.Progress") || "Progress";
+    const hoursLabel = game.i18n.localize("ITENSDND.Workshop.Recipe.Hours") || "hours";
 
     const content = `
       <div class="itensdnd chat-card crafting-card">
@@ -430,7 +416,7 @@ export class CraftingEngine {
           <img src="${recipe.img}" width="32" height="32" style="border: none; border-radius: 4px;"/>
           <div>
             <h3 style="margin: 0; font-size: 1.1em;">${recipe.name}</h3>
-            <span style="font-size: 0.85em; color: #666;">CD ${recipe.dc} | Progresso: ${newHours}/${recipe.time} horas</span>
+            <span style="font-size: 0.85em; color: #666;">${dcLabel} ${recipe.dc} | ${progressLabel}: ${newHours}/${recipe.time} ${hoursLabel}</span>
           </div>
         </header>
         <div class="card-content" style="margin-top: 6px;">
@@ -473,4 +459,3 @@ export class CraftingEngine {
     return data;
   }
 }
-

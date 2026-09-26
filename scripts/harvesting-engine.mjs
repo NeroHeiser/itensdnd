@@ -1,31 +1,22 @@
-/**
- * harvesting-engine.mjs
- * Motor de colheita de criaturas (Harvesting & Remnants) para itensdnd.
- * Baseado nas regras do Kibbles' Crafting Guide.
- */
-
 const MODULE_ID = "itensdnd";
 
 export class HarvestingEngine {
-  /**
-   * Mapeamento de tipo de criatura para perícia requerida
-   */
   static SKILL_REQUIREMENTS = {
-    dragon: { skill: "med", ability: "wis", label: "Medicina (Sabedoria)" },
-    monstrosity: { skill: "med", ability: "wis", label: "Medicina (Sabedoria)" },
-    giant: { skill: "med", ability: "wis", label: "Medicina (Sabedoria)" },
-    construct: { skill: "arc", ability: "int", label: "Arcanismo (Inteligência)" },
-    plant: { skill: "nat", ability: "int", label: "Natureza (Inteligência)" },
-    beast: { skill: "sur", ability: "wis", label: "Sobrevivência (Sabedoria)" },
-    aberration: { skill: "arc", ability: "int", label: "Arcanismo (Inteligência)" },
-    undead: { skill: "arc", ability: "int", label: "Arcanismo (Inteligência)" },
-    celestial: { remnants: true, label: "Resíduos Mágicos (Automático)" },
-    fiend: { remnants: true, label: "Resíduos Mágicos (Automático)" },
-    elemental: { remnants: true, label: "Resíduos Mágicos (Automático)" }
+    dragon: { skill: "med", ability: "wis", label: "Medicine (Wisdom)" },
+    monstrosity: { skill: "med", ability: "wis", label: "Medicine (Wisdom)" },
+    giant: { skill: "med", ability: "wis", label: "Medicine (Wisdom)" },
+    construct: { skill: "arc", ability: "int", label: "Arcana (Intelligence)" },
+    plant: { skill: "nat", ability: "int", label: "Nature (Intelligence)" },
+    beast: { skill: "sur", ability: "wis", label: "Survival (Wisdom)" },
+    aberration: { skill: "arc", ability: "int", label: "Arcana (Intelligence)" },
+    undead: { skill: "arc", ability: "int", label: "Arcana (Intelligence)" },
+    celestial: { remnants: true, label: "Magical Remnants (Automatic)" },
+    fiend: { remnants: true, label: "Magical Remnants (Automatic)" },
+    elemental: { remnants: true, label: "Magical Remnants (Automatic)" }
   };
 
   /**
-   * Determina a tabela apropriada e a CD com base no ND da criatura.
+   * Determines roll table key and DC from creature challenge rating or remnants rule.
    * @param {number} cr
    * @param {boolean} isRemnants
    * @returns {{ tableKey: string, dc: number }}
@@ -47,24 +38,24 @@ export class HarvestingEngine {
   }
 
   /**
-   * Executa o processo de colheita entre o artesão (harvester) e o alvo (target).
+   * Executes creature harvesting between harvester and target actor.
    * @param {Actor} harvester
    * @param {Actor} target
    * @param {object} options
    */
   static async performHarvest(harvester, target, options = {}) {
     if (!harvester) {
-      ui.notifications?.warn("Selecione um personagem colhedor.");
+      ui.notifications?.warn(game.i18n.localize("ITENSDND.Harvesting.Notifications.SelectHarvester") || "Select a harvesting character.");
       return;
     }
     if (!target) {
-      ui.notifications?.warn("Selecione um alvo para colheita.");
+      ui.notifications?.warn(game.i18n.localize("ITENSDND.Harvesting.Notifications.SelectTarget") || "Select a target for harvesting.");
       return;
     }
 
     const cr = target.system?.details?.cr ?? 1;
     const typeStr = (target.system?.details?.type?.value || "monstrosity").toLowerCase();
-    const typeInfo = this.SKILL_REQUIREMENTS[typeStr] || { skill: "sur", ability: "wis", label: "Sobrevivência" };
+    const typeInfo = this.SKILL_REQUIREMENTS[typeStr] || { skill: "sur", ability: "wis", label: "Survival" };
 
     const isRemnants = Boolean(typeInfo.remnants);
     const { tableKey, dc } = this.getTableAndDC(cr, isRemnants);
@@ -79,7 +70,6 @@ export class HarvestingEngine {
       isSuccess = roll.total >= dc;
     }
 
-    // Consulta a RollTable
     const pack = game.packs.get(`${MODULE_ID}.crafting-tables`);
     let table = null;
     if (pack) {
@@ -88,7 +78,7 @@ export class HarvestingEngine {
       if (entry) table = await pack.getDocument(entry._id);
     }
 
-    let resultText = "1x Reagente Comum";
+    let resultText = "Common Curative Reagent";
     let drawnItemKey = "reagent-curative-common";
     let drawnQty = 1;
 
@@ -103,19 +93,20 @@ export class HarvestingEngine {
     }
 
     if (isSuccess) {
-      // Adicionar o material colhido ao inventário do colhedor
       await this.awardHarvestMaterial(harvester, drawnItemKey, drawnQty, resultText);
     }
 
-    // Publicar mensagem no chat
     await this.postHarvestChatMessage(harvester, target, roll, dc, isSuccess, isRemnants, resultText, drawnQty);
   }
 
   /**
-   * Adiciona o material obtido à ficha do colhedor.
+   * Adds harvested material to harvester inventory.
+   * @param {Actor} harvester
+   * @param {string} itemKey
+   * @param {number} qty
+   * @param {string} label
    */
   static async awardHarvestMaterial(harvester, itemKey, qty, label) {
-    // Tenta localizar no compêndio de materiais
     const pack = game.packs.get(`${MODULE_ID}.crafting-materials`);
     let itemData = null;
 
@@ -142,7 +133,6 @@ export class HarvestingEngine {
       };
     }
 
-    // Se o item já existe no ator, soma a quantidade
     const existing = harvester.items.find(i => i.flags?.itensdnd?.materialKey === itemKey);
     if (existing) {
       const cur = existing.system?.quantity || 1;
@@ -151,11 +141,13 @@ export class HarvestingEngine {
       await harvester.createEmbeddedDocuments("Item", [itemData]);
     }
 
-    ui.notifications?.info(`Colheita concluída! +${qty}x ${itemData.name}`);
+    const completeMsg = game.i18n.format?.("ITENSDND.Harvesting.Notifications.HarvestComplete", { qty, item: itemData.name }) ||
+      `Harvesting complete: +${qty}x ${itemData.name}`;
+    ui.notifications?.info(completeMsg);
   }
 
   /**
-   * Publica o card de resultado no chat.
+   * Publishes harvest card to chat.
    */
   static async postHarvestChatMessage(harvester, target, roll, dc, isSuccess, isRemnants, resultText, qty) {
     let rollHtml = "";
@@ -164,12 +156,18 @@ export class HarvestingEngine {
     }
 
     const title = isRemnants
-      ? `Coleta de Resíduos Mágicos: ${target.name}`
-      : `Colheita de Criatura: ${target.name} (ND ${target.system?.details?.cr ?? 1})`;
+      ? `${game.i18n.localize("ITENSDND.Harvesting.RemnantsTitle") || "Magical Remnants Collection"}: ${target.name}`
+      : `${game.i18n.localize("ITENSDND.Harvesting.HarvestTitle") || "Creature Harvesting"}: ${target.name} (CR ${target.system?.details?.cr ?? 1})`;
+
+    const harvesterLabel = game.i18n.localize("ITENSDND.Harvesting.Harvester") || "Harvester";
+    const successMsg = game.i18n.format?.("ITENSDND.Harvesting.SuccessMessage", { item: resultText }) ||
+      `Success! Obtained: <strong>${resultText}</strong>`;
+    const failureMsg = game.i18n.format?.("ITENSDND.Harvesting.FailureMessage", { dc }) ||
+      `Check failed (DC ${dc}). No viable materials could be recovered.`;
 
     const statusBanner = isSuccess
-      ? `<div style="color: #2e7d32; font-weight: bold; margin-top: 4px;"><i class="fas fa-check-circle"></i> Sucesso! Obtido: <strong>${resultText}</strong></div>`
-      : `<div style="color: #c62828; font-weight: bold; margin-top: 4px;"><i class="fas fa-times-circle"></i> Falha no teste (CD ${dc}). Nenhum material íntegro pôde ser recuperado.</div>`;
+      ? `<div style="color: #2e7d32; font-weight: bold; margin-top: 4px;"><i class="fas fa-check-circle"></i> ${successMsg}</div>`
+      : `<div style="color: #c62828; font-weight: bold; margin-top: 4px;"><i class="fas fa-times-circle"></i> ${failureMsg}</div>`;
 
     const content = `
       <div class="itensdnd chat-card harvest-card">
@@ -177,7 +175,7 @@ export class HarvestingEngine {
           <img src="${target.img || 'icons/svg/mystery-man.svg'}" width="32" height="32" style="border: none; border-radius: 4px;"/>
           <div>
             <h3 style="margin: 0; font-size: 1.1em;">${title}</h3>
-            <span style="font-size: 0.85em; color: #666;">Colhedor: ${harvester.name}</span>
+            <span style="font-size: 0.85em; color: #666;">${harvesterLabel}: ${harvester.name}</span>
           </div>
         </header>
         <div class="card-content" style="margin-top: 6px;">
@@ -218,4 +216,3 @@ export class HarvestingEngine {
     return data;
   }
 }
-
