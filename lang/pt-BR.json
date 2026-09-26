@@ -34,6 +34,12 @@
       "Title": "Oficina de Criação",
       "Actor": "Artesão / Personagem",
       "NoActor": "Nenhum personagem selecionado",
+      "ModifierLabel": "Modificador de Criação",
+      "Proficiency": "Proficiência",
+      "Ability": "Atributo",
+      "Progress": "Progresso",
+      "Failures": "Falhas",
+      "NoRecipeSelected": "Selecione uma receita à esquerda para visualizar os detalhes e iniciar a criação.",
       "Professions": {
         "alchemy": "Alquimia",
         "blacksmithing": "Ferraria / Forja",
@@ -50,7 +56,8 @@
       "Filters": {
         "All": "Todas as Receitas",
         "CraftableOnly": "Apenas as que Posso Criar",
-        "SearchPlaceholder": "Buscar receita ou item..."
+        "SearchPlaceholder": "Buscar receita ou item...",
+        "EmptyRecipes": "Nenhuma receita encontrada."
       },
       "Recipe": {
         "DC": "CD",
@@ -81,20 +88,39 @@
         "CraftDestroyed": "Três falhas consecutivas! Os materiais foram irremediavelmente arruinados.",
         "CraftComplete": "Item criado com sucesso! Adicionado ao inventário.",
         "Take10Complete": "Item finalizado com segurança através de Take 10!",
+        "Take10Insufficient": "Seu bônus total ({mod}) + 10 = {score}, insuficiente para atingir a CD {dc}.",
+        "ConsecutiveFailures": "Falhas consecutivas",
         "SelectActorFirst": "Por favor, selecione ou controle um personagem para usar a oficina."
       }
     },
     "Harvesting": {
       "Title": "Colheita de Criaturas (Harvesting)",
+      "Subtitle": "Extraia matérias-primas, reagentes e essências de monstros derrotados com base no Kibbles' Crafting Guide.",
+      "Harvester": "Personagem Colhedor",
       "Target": "Criatura Alvo",
       "NoTarget": "Selecione um token de criatura no mapa.",
+      "NoCreaturesInScene": "Nenhuma criatura em cena",
       "CreatureType": "Tipo de Criatura",
-      "CR": "Nível de Desafio (ND)",
+      "CR": "ND",
       "CheckRequired": "Teste Necessário",
+      "HarvesterMod": "Modificador do Colhedor",
       "RollButton": "Efetuar Colheita",
       "RollRemnants": "Coletar Resíduos Mágicos",
+      "RemnantsTitle": "Coleta de Resíduos Mágicos",
+      "HarvestTitle": "Colheita de Criatura",
       "Success": "Colheita bem-sucedida! Foram obtidos materiais.",
-      "Failure": "Falha na colheita. Os materiais foram danificados ou se degradaram."
+      "Failure": "Falha na colheita. Os materiais foram danificados ou se degradaram.",
+      "SuccessMessage": "Sucesso! Obtido: <strong>{item}</strong>",
+      "FailureMessage": "Falha no teste (CD {dc}). Nenhum material íntegro pôde ser recuperado.",
+      "Notifications": {
+        "SelectHarvester": "Selecione um personagem colhedor.",
+        "SelectTarget": "Selecione um alvo para colheita.",
+        "HarvestComplete": "Colheita concluída! +{qty}x {item}"
+      }
+    },
+    "Compendium": {
+      "SyncStart": "Iniciando sincronização dos compêndios...",
+      "SyncSuccess": "Compêndios do sistema de Crafting sincronizados com sucesso ({lang})!"
     },
     "Chat": {
       "CraftRoll": "Teste de Criação",
@@ -107,4 +133,3 @@
     }
   }
 }
-

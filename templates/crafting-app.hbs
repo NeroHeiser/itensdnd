@@ -18,7 +18,7 @@
     </div>
   </header>
 
-  <!-- Abas de Profissão -->
+  <!-- Abas de Profissao -->
   <nav class="profession-tabs flexrow">
     {{#each professions}}
       <button type="button" class="profession-tab-btn {{#if (eq this.key ../activeProfession)}}active{{/if}}"
@@ -28,7 +28,7 @@
     {{/each}}
   </nav>
 
-  <!-- Conteúdo Principal em Duas Colunas -->
+  <!-- Conteudo Principal em Duas Colunas -->
   <div class="workshop-body flexrow">
     <!-- Coluna da Esquerda: Lista de Receitas -->
     <aside class="recipes-sidebar flexcol">
@@ -44,12 +44,12 @@
             <img src="{{this.img}}" width="32" height="32" />
             <div class="recipe-info flexcol">
               <span class="recipe-name">{{this.name}}</span>
-              <span class="recipe-meta">CD {{this.dc}} | {{this.time}}h</span>
+              <span class="recipe-meta">{{localize "ITENSDND.Workshop.Recipe.DC"}} {{this.dc}} | {{this.time}}{{localize "ITENSDND.Workshop.Recipe.Hours"}}</span>
             </div>
             <span class="rarity-tag {{this.rarity}}">{{this.rarity}}</span>
           </li>
         {{else}}
-          <li class="empty-list">Nenhuma receita encontrada.</li>
+          <li class="empty-list">{{localize "ITENSDND.Workshop.Filters.EmptyRecipes"}}</li>
         {{/each}}
       </ul>
     </aside>
@@ -62,7 +62,7 @@
           <div class="detail-title flexcol">
             <h2>{{selectedRecipe.name}}</h2>
             <div class="detail-meta-tags flexrow">
-              <span class="badge dc-badge">CD {{selectedRecipe.dc}}</span>
+              <span class="badge dc-badge">{{localize "ITENSDND.Workshop.Recipe.DC"}} {{selectedRecipe.dc}}</span>
               <span class="badge time-badge"><i class="fas fa-clock"></i> {{selectedRecipe.time}} {{localize "ITENSDND.Workshop.Recipe.Hours"}}</span>
               <span class="badge rarity-badge {{selectedRecipe.rarity}}">{{selectedRecipe.rarity}}</span>
               <span class="badge tool-badge"><i class="fas fa-wrench"></i> {{selectedRecipe.tool}}</span>
@@ -73,11 +73,11 @@
         <!-- Modificador do Personagem -->
         <section class="crafting-mod-box flexrow">
           <div class="mod-pill">
-            <span class="mod-label">Modificador de Criação:</span>
+            <span class="mod-label">{{localize "ITENSDND.Workshop.ModifierLabel"}}:</span>
             <span class="mod-value">{{#if (gte craftingMod.mod 0)}}+{{/if}}{{craftingMod.mod}}</span>
           </div>
           <div class="mod-desc">
-            (Proficiência: +{{craftingMod.profBonus}} | Atributo: {{craftingMod.bestAbility}} +{{craftingMod.abilityMod}})
+            ({{localize "ITENSDND.Workshop.Proficiency"}}: +{{craftingMod.profBonus}} | {{localize "ITENSDND.Workshop.Ability"}}: {{craftingMod.bestAbility}} +{{craftingMod.abilityMod}})
           </div>
         </section>
 
@@ -100,7 +100,7 @@
           <div class="progress-labels flexrow">
             <span><strong>{{localize "ITENSDND.Workshop.Recipe.Progress"}}:</strong> {{progress.hours}} / {{progress.total}} {{localize "ITENSDND.Workshop.Recipe.Hours"}} ({{progress.percent}}%)</span>
             {{#if (gt progress.consecutiveFailures 0)}}
-              <span class="failures-warn"><i class="fas fa-exclamation-triangle"></i> Falhas: {{progress.consecutiveFailures}}/3</span>
+              <span class="failures-warn"><i class="fas fa-exclamation-triangle"></i> {{localize "ITENSDND.Workshop.Failures"}}: {{progress.consecutiveFailures}}/3</span>
             {{/if}}
           </div>
           <div class="progress-bar-outer">
@@ -108,7 +108,7 @@
           </div>
         </section>
 
-        <!-- Botões de Ação -->
+        <!-- Botoes de Acao -->
         <footer class="action-buttons-footer flexrow">
           <button type="button" class="btn-action roll-btn" data-action="rollAttempt">
             <i class="fas fa-dice-d20"></i> {{localize "ITENSDND.Workshop.Recipe.Roll2Hours"}}
@@ -127,10 +127,9 @@
 
       {{else}}
         <div class="no-recipe-selected">
-          <p>Selecione uma receita à esquerda para visualizar os detalhes e iniciar a criação.</p>
+          <p>{{localize "ITENSDND.Workshop.NoRecipeSelected"}}</p>
         </div>
       {{/if}}
     </main>
   </div>
 </div>
-

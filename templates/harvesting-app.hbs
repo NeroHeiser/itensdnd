@@ -1,13 +1,13 @@
 <div class="itensdnd-harvesting-container flexcol">
   <header class="harvest-header flexcol">
     <h2><i class="fas fa-paw"></i> {{localize "ITENSDND.Harvesting.Title"}}</h2>
-    <p class="subtitle">Extraia matérias-primas, reagentes e essências de monstros derrotados com base no Kibbles' Crafting Guide.</p>
+    <p class="subtitle">{{localize "ITENSDND.Harvesting.Subtitle"}}</p>
   </header>
 
   <div class="harvest-selectors flexcol">
-    <!-- Colhedor -->
+    <!-- Harvester -->
     <div class="form-group flexrow">
-      <label><i class="fas fa-user"></i> Personagem Colhedor:</label>
+      <label><i class="fas fa-user"></i> {{localize "ITENSDND.Harvesting.Harvester"}}:</label>
       <select name="selectedHarvester" data-action="selectHarvester">
         {{#each characters}}
           <option value="{{this.id}}" {{#if (eq this.id ../harvester.id)}}selected{{/if}}>{{this.name}}</option>
@@ -15,14 +15,14 @@
       </select>
     </div>
 
-    <!-- Alvo -->
+    <!-- Target -->
     <div class="form-group flexrow">
-      <label><i class="fas fa-skull"></i> Criatura Alvo:</label>
+      <label><i class="fas fa-skull"></i> {{localize "ITENSDND.Harvesting.Target"}}:</label>
       <select name="selectedTarget" data-action="selectTarget">
         {{#each targets}}
-          <option value="{{this.id}}" {{#if (eq this.id ../target.id)}}selected{{/if}}>{{this.name}} (ND {{this.system.details.cr}})</option>
+          <option value="{{this.id}}" {{#if (eq this.id ../target.id)}}selected{{/if}}>{{this.name}} ({{localize "ITENSDND.Harvesting.CR"}} {{this.system.details.cr}})</option>
         {{else}}
-          <option value="">Nenhuma criatura em cena</option>
+          <option value="">{{localize "ITENSDND.Harvesting.NoCreaturesInScene"}}</option>
         {{/each}}
       </select>
     </div>
@@ -34,15 +34,15 @@
       <div class="target-details flexcol">
         <h3>{{target.name}}</h3>
         <div class="tags flexrow">
-          <span class="badge cr-badge">ND {{targetCr}}</span>
+          <span class="badge cr-badge">{{localize "ITENSDND.Harvesting.CR"}} {{targetCr}}</span>
           <span class="badge type-badge">{{targetType}}</span>
         </div>
         <div class="check-info">
           {{#if isRemnants}}
             <span class="check-remnants"><i class="fas fa-sparkles"></i> {{typeInfo.label}}</span>
           {{else}}
-            <span><strong>Teste Exigido:</strong> {{typeInfo.label}} (CD {{dc}})</span>
-            <span class="harvester-mod">Modificador do Colhedor: {{#if (gte harvesterSkillMod 0)}}+{{/if}}{{harvesterSkillMod}}</span>
+            <span><strong>{{localize "ITENSDND.Harvesting.CheckRequired"}}:</strong> {{typeInfo.label}} ({{localize "ITENSDND.Workshop.Recipe.DC"}} {{dc}})</span>
+            <span class="harvester-mod">{{localize "ITENSDND.Harvesting.HarvesterMod"}}: {{#if (gte harvesterSkillMod 0)}}+{{/if}}{{harvesterSkillMod}}</span>
           {{/if}}
         </div>
       </div>
@@ -63,4 +63,3 @@
     </div>
   {{/if}}
 </div>
-

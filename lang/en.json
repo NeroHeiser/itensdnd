@@ -34,6 +34,12 @@
       "Title": "Crafting Workshop",
       "Actor": "Crafter / Character",
       "NoActor": "No character selected",
+      "ModifierLabel": "Crafting Modifier",
+      "Proficiency": "Proficiency",
+      "Ability": "Ability",
+      "Progress": "Progress",
+      "Failures": "Failures",
+      "NoRecipeSelected": "Select a recipe from the left to view details and start crafting.",
       "Professions": {
         "alchemy": "Alchemy",
         "blacksmithing": "Blacksmithing",
@@ -50,7 +56,8 @@
       "Filters": {
         "All": "All Recipes",
         "CraftableOnly": "Craftable with My Materials",
-        "SearchPlaceholder": "Search recipe or item..."
+        "SearchPlaceholder": "Search recipe or item...",
+        "EmptyRecipes": "No recipes found."
       },
       "Recipe": {
         "DC": "DC",
@@ -58,7 +65,7 @@
         "Hours": "hours",
         "Tool": "Tool",
         "Ability": "Ability",
-        "Rarity": "Raridade",
+        "Rarity": "Rarity",
         "Materials": "Required Materials",
         "Requires": "Requirements",
         "Progress": "Progress",
@@ -81,20 +88,39 @@
         "CraftDestroyed": "Three consecutive failures! All materials were ruined.",
         "CraftComplete": "Item crafted successfully! Added to inventory.",
         "Take10Complete": "Item completed safely using Take 10!",
+        "Take10Insufficient": "Total modifier ({mod}) + 10 = {score}, insufficient to meet DC {dc}.",
+        "ConsecutiveFailures": "Consecutive failures",
         "SelectActorFirst": "Please select or control a character to use the workshop."
       }
     },
     "Harvesting": {
       "Title": "Creature Harvesting",
+      "Subtitle": "Extract raw materials, reagents, and essences from defeated monsters based on Kibbles' Crafting Guide.",
+      "Harvester": "Harvester Character",
       "Target": "Target Creature",
       "NoTarget": "Select a creature token on the map.",
+      "NoCreaturesInScene": "No creatures in scene",
       "CreatureType": "Creature Type",
-      "CR": "Challenge Rating (CR)",
+      "CR": "CR",
       "CheckRequired": "Required Check",
+      "HarvesterMod": "Harvester Modifier",
       "RollButton": "Perform Harvest",
       "RollRemnants": "Gather Remnants",
+      "RemnantsTitle": "Magical Remnants Collection",
+      "HarvestTitle": "Creature Harvesting",
       "Success": "Harvest succeeded! Materials obtained.",
-      "Failure": "Harvest failed. Materials were damaged or degraded."
+      "Failure": "Harvest failed. Materials were damaged or degraded.",
+      "SuccessMessage": "Success! Obtained: <strong>{item}</strong>",
+      "FailureMessage": "Check failed (DC {dc}). No viable materials could be recovered.",
+      "Notifications": {
+        "SelectHarvester": "Select a harvesting character.",
+        "SelectTarget": "Select a target for harvesting.",
+        "HarvestComplete": "Harvesting complete: +{qty}x {item}"
+      }
+    },
+    "Compendium": {
+      "SyncStart": "Starting compendium synchronization...",
+      "SyncSuccess": "Crafting compendiums synchronized successfully ({lang})!"
     },
     "Chat": {
       "CraftRoll": "Crafting Check",
@@ -107,4 +133,3 @@
     }
   }
 }
-
