@@ -144,7 +144,7 @@ export class CraftingEngine {
       }
 
       // Verificação em itens de ferramentas na ficha
-      if (!toolProficient) {
+      if (!toolProficient && actor.items) {
         for (const item of actor.items) {
           if (item.type === "tool") {
             const itemKey = item.system?.baseItem || item.name.toLowerCase();
