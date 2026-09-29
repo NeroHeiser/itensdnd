@@ -95,9 +95,12 @@ export class CompendiumSync {
         continue;
       }
 
+      // Ensure compendium is explicitly unlocked on the server before write operations
       const wasLocked = pack.locked;
-      if (wasLocked) {
-        try { await pack.configure({ locked: false }); } catch (e) { pack.locked = false; }
+      try {
+        await pack.configure({ locked: false });
+      } catch (err) {
+        try { pack.locked = false; } catch (_) {}
       }
 
       try {
