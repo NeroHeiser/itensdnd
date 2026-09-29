@@ -15,11 +15,6 @@ export class CraftingWorkshopApp extends BaseApplication {
     this.searchQuery = "";
     this._preserveSearchFocus = false;
     this.craftableOnly = false;
-    this.activeProject = {
-      recipeId: null,
-      hours: 0,
-      consecutiveFailures: 0
-    };
   }
 
   static DEFAULT_OPTIONS = {
@@ -51,6 +46,67 @@ export class CraftingWorkshopApp extends BaseApplication {
       template: "modules/itensdnd/templates/crafting-app.hbs"
     }
   };
+
+  /**
+   * Retrieves active crafting project state from actor flag or fallback.
+   * @param {Actor} actor
+   * @returns {{ recipeId: string|null, hours: number, consecutiveFailures: number }}
+   */
+  static getActiveProject(actor) {
+    if (!actor) {
+      return { recipeId: null, hours: 0, consecutiveFailures: 0 };
+    }
+    const flag = typeof actor.getFlag === "function"
+      ? actor.getFlag(MODULE_ID, "activeProject")
+      : actor.flags?.[MODULE_ID]?.activeProject;
+
+    if (flag && typeof flag === "object") {
+      return {
+        recipeId: flag.recipeId || null,
+        hours: Number(flag.hours) || 0,
+        consecutiveFailures: Number(flag.consecutiveFailures) || 0
+      };
+    }
+    return { recipeId: null, hours: 0, consecutiveFailures: 0 };
+  }
+
+  /**
+   * Persists active crafting project state onto the actor document.
+   * @param {Actor} actor
+   * @param {object|null} project
+   * @returns {Promise<void>}
+   */
+  static async setActiveProject(actor, project) {
+    if (!actor) return;
+    if (!project || !project.recipeId) {
+      if (typeof actor.unsetFlag === "function") {
+        await actor.unsetFlag(MODULE_ID, "activeProject");
+      } else if (actor.flags?.[MODULE_ID]) {
+        delete actor.flags[MODULE_ID].activeProject;
+      }
+    } else {
+      const data = {
+        recipeId: project.recipeId,
+        hours: Number(project.hours) || 0,
+        consecutiveFailures: Number(project.consecutiveFailures) || 0
+      };
+      if (typeof actor.setFlag === "function") {
+        await actor.setFlag(MODULE_ID, "activeProject", data);
+      } else {
+        actor.flags = actor.flags || {};
+        actor.flags[MODULE_ID] = actor.flags[MODULE_ID] || {};
+        actor.flags[MODULE_ID].activeProject = data;
+      }
+    }
+  }
+
+  getActiveProject() {
+    return CraftingWorkshopApp.getActiveProject(this.actor);
+  }
+
+  async setActiveProject(project) {
+    return CraftingWorkshopApp.setActiveProject(this.actor, project);
+  }
 
   _getPrimaryActor() {
     const controlled = typeof canvas !== "undefined" ? canvas.tokens?.controlled[0]?.actor : null;
@@ -96,8 +152,19 @@ export class CraftingWorkshopApp extends BaseApplication {
   }
 
   async _prepareContext(options = {}) {
-    const actors = game.actors?.filter(a => a.type === "character" && a.isOwner) || [];
+    const actors = (typeof game !== "undefined" ? game.actors?.filter(a => a.type === "character" && a.isOwner) : []) || [];
     const allRecipes = await CraftingEngine.getRecipes();
+
+    const activeProject = this.getActiveProject();
+
+    // Auto-select active project recipe if user hasn't explicitly picked a recipe
+    if (activeProject.recipeId && !this.selectedRecipeId) {
+      this.selectedRecipeId = activeProject.recipeId;
+      const activeRecipe = allRecipes.find(r => (r.id === activeProject.recipeId || r.key === activeProject.recipeId));
+      if (activeRecipe?.profession) {
+        this.activeProfession = activeRecipe.profession;
+      }
+    }
 
     let recipes = allRecipes.filter(r => (r.profession || "alchemy") === this.activeProfession);
     recipes = CraftingWorkshopApp.filterRecipesBySearch(recipes, this.searchQuery);
@@ -123,8 +190,8 @@ export class CraftingWorkshopApp extends BaseApplication {
       craftingMod = CraftingEngine.calculateCraftingModifier(this.actor, selectedRecipe);
     }
 
-    const currentHours = this.activeProject.recipeId === this.selectedRecipeId ? this.activeProject.hours : 0;
-    const currentFailures = this.activeProject.recipeId === this.selectedRecipeId ? this.activeProject.consecutiveFailures : 0;
+    const currentHours = activeProject.recipeId === this.selectedRecipeId ? activeProject.hours : 0;
+    const currentFailures = activeProject.recipeId === this.selectedRecipeId ? activeProject.consecutiveFailures : 0;
     const totalHoursNeeded = selectedRecipe?.time || 2;
     const progressPercent = Math.min(100, Math.round((currentHours / totalHoursNeeded) * 100));
 
@@ -163,7 +230,8 @@ export class CraftingWorkshopApp extends BaseApplication {
 
   static async #onSelectActor(event, target) {
     const actorId = target.value;
-    this.actor = game.actors.get(actorId) || null;
+    this.actor = (typeof game !== "undefined" ? game.actors?.get(actorId) : null) || null;
+    this.selectedRecipeId = null;
     this.render();
   }
 
@@ -188,21 +256,23 @@ export class CraftingWorkshopApp extends BaseApplication {
     const recipe = allRecipes.find(r => (r.id === this.selectedRecipeId || r.key === this.selectedRecipeId));
     if (!recipe) return;
 
-    if (this.activeProject.recipeId !== this.selectedRecipeId) {
+    let project = this.getActiveProject();
+    if (project.recipeId !== this.selectedRecipeId) {
       const { hasAll } = CraftingEngine.checkMaterials(this.actor, recipe);
       if (!hasAll) {
         ui.notifications?.warn(game.i18n.localize("ITENSDND.Workshop.Notifications.NoMaterials"));
         return;
       }
-      this.activeProject = { recipeId: this.selectedRecipeId, hours: 0, consecutiveFailures: 0 };
+      project = { recipeId: this.selectedRecipeId, hours: 0, consecutiveFailures: 0 };
     }
 
-    const res = await CraftingEngine.rollCraftingAttempt(this.actor, recipe, this.activeProject);
-    this.activeProject.hours = res.newHours;
-    this.activeProject.consecutiveFailures = res.newFailures;
-
+    const res = await CraftingEngine.rollCraftingAttempt(this.actor, recipe, project);
     if (res.status === "completed" || res.status === "failed") {
-      this.activeProject = { recipeId: null, hours: 0, consecutiveFailures: 0 };
+      await this.setActiveProject(null);
+    } else {
+      project.hours = res.newHours;
+      project.consecutiveFailures = res.newFailures;
+      await this.setActiveProject(project);
     }
 
     this.render();
@@ -220,13 +290,13 @@ export class CraftingWorkshopApp extends BaseApplication {
 
     const ok = await CraftingEngine.take10Crafting(this.actor, recipe);
     if (ok) {
-      this.activeProject = { recipeId: null, hours: 0, consecutiveFailures: 0 };
+      await this.setActiveProject(null);
       this.render();
     }
   }
 
   static async #onResetProject(event, target) {
-    this.activeProject = { recipeId: null, hours: 0, consecutiveFailures: 0 };
+    await this.setActiveProject(null);
     this.render();
   }
 
