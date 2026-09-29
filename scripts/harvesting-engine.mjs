@@ -16,8 +16,29 @@ export class HarvestingEngine {
   };
 
   /**
+   * Parses challenge rating into a valid positive number supporting fractional strings (e.g., "1/4", "1/2").
+   * @param {number|string} cr
+   * @returns {number}
+   */
+  static parseChallengeRating(cr) {
+    if (typeof cr === "number") return isNaN(cr) ? 0 : Math.max(0, cr);
+    if (typeof cr === "string") {
+      const trimmed = cr.trim();
+      if (trimmed.includes("/")) {
+        const [numerator, denominator] = trimmed.split("/").map(Number);
+        if (denominator && !isNaN(numerator) && !isNaN(denominator)) {
+          return Math.max(0, numerator / denominator);
+        }
+      }
+      const parsed = Number(trimmed);
+      return isNaN(parsed) ? 0 : Math.max(0, parsed);
+    }
+    return 0;
+  }
+
+  /**
    * Determines roll table key and DC from creature challenge rating or remnants rule.
-   * @param {number} cr
+   * @param {number|string} cr
    * @param {boolean} isRemnants
    * @returns {{ tableKey: string, dc: number }}
    */
@@ -26,11 +47,13 @@ export class HarvestingEngine {
       return { tableKey: "harvesting-remnants-0-4", dc: 0 };
     }
 
-    if (cr <= 4) {
+    const numericCr = this.parseChallengeRating(cr);
+
+    if (numericCr <= 4) {
       return { tableKey: "harvesting-cr-0-4", dc: 8 };
-    } else if (cr <= 10) {
+    } else if (numericCr <= 10) {
       return { tableKey: "harvesting-cr-5-10", dc: 10 };
-    } else if (cr <= 16) {
+    } else if (numericCr <= 16) {
       return { tableKey: "harvesting-cr-11-16", dc: 12 };
     } else {
       return { tableKey: "harvesting-cr-17-plus", dc: 14 };
@@ -53,7 +76,8 @@ export class HarvestingEngine {
       return;
     }
 
-    const cr = target.system?.details?.cr ?? 1;
+    const rawCr = target.system?.details?.cr ?? 1;
+    const cr = this.parseChallengeRating(rawCr);
     const typeStr = (target.system?.details?.type?.value || "monstrosity").toLowerCase();
     const typeInfo = this.SKILL_REQUIREMENTS[typeStr] || { skill: "sur", ability: "wis", label: "Survival" };
 

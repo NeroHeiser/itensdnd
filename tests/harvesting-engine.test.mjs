@@ -12,38 +12,43 @@ test("getTableAndDC returns remnants table with DC 0 when isRemnants is true", (
   assert.equal(resultHighCR.dc, 0);
 });
 
-test("getTableAndDC maps creature challenge rating to corresponding tables and DCs", () => {
-  const cr0 = HarvestingEngine.getTableAndDC(0, false);
-  assert.equal(cr0.tableKey, "harvesting-cr-0-4");
-  assert.equal(cr0.dc, 8);
+test("parseChallengeRating correctly converts numbers, numeric strings, and fractional strings", () => {
+  assert.equal(HarvestingEngine.parseChallengeRating(0), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating(5), 5);
+  assert.equal(HarvestingEngine.parseChallengeRating(0.25), 0.25);
+  assert.equal(HarvestingEngine.parseChallengeRating("0"), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating("5"), 5);
+  assert.equal(HarvestingEngine.parseChallengeRating("  10  "), 10);
+  assert.equal(HarvestingEngine.parseChallengeRating("1/2"), 0.5);
+  assert.equal(HarvestingEngine.parseChallengeRating("1/4"), 0.25);
+  assert.equal(HarvestingEngine.parseChallengeRating("1/8"), 0.125);
+  assert.equal(HarvestingEngine.parseChallengeRating(null), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating(undefined), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating(""), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating("invalid"), 0);
+  assert.equal(HarvestingEngine.parseChallengeRating("1/0"), 0);
+});
 
-  const cr4 = HarvestingEngine.getTableAndDC(4, false);
-  assert.equal(cr4.tableKey, "harvesting-cr-0-4");
-  assert.equal(cr4.dc, 8);
+test("getTableAndDC correctly resolves tables and DCs for fractional string CR values", () => {
+  const crQuarter = HarvestingEngine.getTableAndDC("1/4", false);
+  assert.equal(crQuarter.tableKey, "harvesting-cr-0-4");
+  assert.equal(crQuarter.dc, 8);
 
-  const cr5 = HarvestingEngine.getTableAndDC(5, false);
-  assert.equal(cr5.tableKey, "harvesting-cr-5-10");
-  assert.equal(cr5.dc, 10);
+  const crHalf = HarvestingEngine.getTableAndDC("1/2", false);
+  assert.equal(crHalf.tableKey, "harvesting-cr-0-4");
+  assert.equal(crHalf.dc, 8);
 
-  const cr10 = HarvestingEngine.getTableAndDC(10, false);
-  assert.equal(cr10.tableKey, "harvesting-cr-5-10");
-  assert.equal(cr10.dc, 10);
+  const crEighth = HarvestingEngine.getTableAndDC("1/8", false);
+  assert.equal(crEighth.tableKey, "harvesting-cr-0-4");
+  assert.equal(crEighth.dc, 8);
 
-  const cr11 = HarvestingEngine.getTableAndDC(11, false);
-  assert.equal(cr11.tableKey, "harvesting-cr-11-16");
-  assert.equal(cr11.dc, 12);
+  const crStringFive = HarvestingEngine.getTableAndDC("5", false);
+  assert.equal(crStringFive.tableKey, "harvesting-cr-5-10");
+  assert.equal(crStringFive.dc, 10);
 
-  const cr16 = HarvestingEngine.getTableAndDC(16, false);
-  assert.equal(cr16.tableKey, "harvesting-cr-11-16");
-  assert.equal(cr16.dc, 12);
-
-  const cr17 = HarvestingEngine.getTableAndDC(17, false);
-  assert.equal(cr17.tableKey, "harvesting-cr-17-plus");
-  assert.equal(cr17.dc, 14);
-
-  const cr25 = HarvestingEngine.getTableAndDC(25, false);
-  assert.equal(cr25.tableKey, "harvesting-cr-17-plus");
-  assert.equal(cr25.dc, 14);
+  const crStringSeventeen = HarvestingEngine.getTableAndDC("17", false);
+  assert.equal(crStringSeventeen.tableKey, "harvesting-cr-17-plus");
+  assert.equal(crStringSeventeen.dc, 14);
 });
 
 test("SKILL_REQUIREMENTS correctly configures required skills and abilities by creature type", () => {

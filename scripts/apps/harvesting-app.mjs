@@ -56,14 +56,31 @@ export class HarvestingApp extends BaseApplication {
   }
 
   async _prepareContext(options = {}) {
-    const characters = game.actors?.filter(a => a.type === "character" && a.isOwner) || [];
-    const targets = canvas.tokens?.placeables?.map(t => t.actor).filter(a => a && a.id !== this.harvester?.id) || [];
+    const characters = (typeof game !== "undefined" ? game.actors?.filter(a => a.type === "character" && a.isOwner) : []) || [];
+    
+    const seenActorIds = new Set();
+    const targets = [];
+    const placeableActors = (typeof canvas !== "undefined" ? canvas.tokens?.placeables : [])
+      ?.map(t => t.actor)
+      ?.filter(Boolean) || [];
 
-    const targetCr = this.target?.system?.details?.cr ?? 1;
+    for (const act of placeableActors) {
+      if (act.id !== this.harvester?.id && !seenActorIds.has(act.id)) {
+        seenActorIds.add(act.id);
+        targets.push(act);
+      }
+    }
+
+    if (!this.target && targets.length > 0) {
+      this.target = targets[0];
+    }
+
+    const rawCr = this.target?.system?.details?.cr ?? 1;
+    const targetCr = HarvestingEngine.parseChallengeRating(rawCr);
     const targetType = (this.target?.system?.details?.type?.value || "monstrosity").toLowerCase();
     const typeInfo = HarvestingEngine.SKILL_REQUIREMENTS[targetType] || { skill: "sur", label: "Survival" };
     const isRemnants = Boolean(typeInfo.remnants);
-    const { dc } = HarvestingEngine.getTableAndDC(targetCr, isRemnants);
+    const { dc } = HarvestingEngine.getTableAndDC(rawCr, isRemnants);
 
     let harvesterSkillMod = 0;
     if (this.harvester && !isRemnants) {
