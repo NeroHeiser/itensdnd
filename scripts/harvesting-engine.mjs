@@ -139,6 +139,7 @@ export class HarvestingEngine {
       const match = docs.find(d => d.flags?.itensdnd?.materialKey === itemKey);
       if (match) {
         itemData = match.toObject();
+        delete itemData._id;
         itemData.system.quantity = qty;
       }
     }
