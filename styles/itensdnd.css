@@ -355,6 +355,13 @@
   transition: all 0.2s;
 }
 
+.btn-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.7);
+  pointer-events: none;
+}
+
 .roll-btn {
   background: #2e7d32;
   border-color: #4caf50;

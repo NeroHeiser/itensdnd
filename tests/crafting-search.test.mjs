@@ -47,13 +47,14 @@ test("filterRecipesBySearch returns empty array when no matches found", () => {
   assert.deepEqual(results, []);
 });
 
-test("CraftingWorkshopApp initializes search query state and handles render listener", () => {
+test("CraftingWorkshopApp initializes search query state and handles render listener with debounce", async () => {
   const app = new CraftingWorkshopApp();
   assert.equal(app.searchQuery, "");
   assert.equal(app._preserveSearchFocus, false);
+  assert.equal(app.searchDebounceMs, 150);
 
-  let renderCalled = false;
-  app.render = () => { renderCalled = true; };
+  let renderCount = 0;
+  app.render = () => { renderCount++; };
 
   let inputListener = null;
   const mockInput = {
@@ -75,8 +76,20 @@ test("CraftingWorkshopApp initializes search query state and handles render list
   app._onRender();
   assert.ok(typeof inputListener === "function", "Expected input listener to be registered");
 
+  // Immediate mode when searchDebounceMs is 0
+  app.searchDebounceMs = 0;
   inputListener({ target: { value: "poison" } });
   assert.equal(app.searchQuery, "poison");
   assert.equal(app._preserveSearchFocus, true);
-  assert.equal(renderCalled, true);
+  assert.equal(renderCount, 1);
+
+  // Debounced mode when searchDebounceMs > 0
+  app.searchDebounceMs = 40;
+  inputListener({ target: { value: "elixir" } });
+  assert.equal(app.searchQuery, "elixir");
+  // Render count should still be 1 before timer fires
+  assert.equal(renderCount, 1);
+
+  await new Promise(resolve => setTimeout(resolve, 60));
+  assert.equal(renderCount, 2);
 });

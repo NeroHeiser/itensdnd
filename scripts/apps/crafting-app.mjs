@@ -15,6 +15,8 @@ export class CraftingWorkshopApp extends BaseApplication {
     this.searchQuery = "";
     this._preserveSearchFocus = false;
     this.craftableOnly = false;
+    this.searchDebounceMs = 150;
+    this._searchTimeout = null;
   }
 
   static DEFAULT_OPTIONS = {
@@ -146,7 +148,15 @@ export class CraftingWorkshopApp extends BaseApplication {
       searchInput.addEventListener("input", event => {
         this.searchQuery = event.target.value;
         this._preserveSearchFocus = true;
-        this.render();
+        if (this._searchTimeout) clearTimeout(this._searchTimeout);
+
+        if (this.searchDebounceMs > 0) {
+          this._searchTimeout = setTimeout(() => {
+            this.render();
+          }, this.searchDebounceMs);
+        } else {
+          this.render();
+        }
       });
     }
   }
@@ -207,6 +217,10 @@ export class CraftingWorkshopApp extends BaseApplication {
       { key: "cooking", label: game.i18n.localize("ITENSDND.Workshop.Professions.cooking"), icon: "fas fa-utensils" }
     ];
 
+    const canTake10 = Boolean(this.actor) && canCraft && ((10 + craftingMod.mod) >= (selectedRecipe?.dc || 0));
+    const canRoll = Boolean(this.actor) && (canCraft || currentHours > 0) && currentFailures < 3;
+    const canReset = currentHours > 0 || currentFailures > 0;
+
     return {
       actor: this.actor,
       actors,
@@ -217,6 +231,9 @@ export class CraftingWorkshopApp extends BaseApplication {
       materialsStatus,
       canCraft,
       craftingMod,
+      canTake10,
+      canRoll,
+      canReset,
       progress: {
         hours: currentHours,
         total: totalHoursNeeded,

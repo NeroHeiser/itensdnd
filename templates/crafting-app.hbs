@@ -110,15 +110,15 @@
 
         <!-- Botoes de Acao -->
         <footer class="action-buttons-footer flexrow">
-          <button type="button" class="btn-action roll-btn" data-action="rollAttempt">
+          <button type="button" class="btn-action roll-btn" data-action="rollAttempt" {{#unless canRoll}}disabled{{/unless}}>
             <i class="fas fa-dice-d20"></i> {{localize "ITENSDND.Workshop.Recipe.Roll2Hours"}}
           </button>
 
-          <button type="button" class="btn-action take10-btn" data-action="take10">
+          <button type="button" class="btn-action take10-btn" data-action="take10" {{#unless canTake10}}disabled{{/unless}}>
             <i class="fas fa-shield-alt"></i> {{localize "ITENSDND.Workshop.Recipe.Take10"}} ({{multiply selectedRecipe.time 2}}h)
           </button>
 
-          {{#if (gt progress.hours 0)}}
+          {{#if canReset}}
             <button type="button" class="btn-action reset-btn" data-action="resetProject">
               <i class="fas fa-undo"></i> {{localize "ITENSDND.Workshop.Recipe.ResetProgress"}}
             </button>
